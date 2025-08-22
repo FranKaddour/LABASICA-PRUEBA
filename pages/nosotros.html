@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - LA BASICA</title>
+    <meta name="description" content="Conoce la historia de LA BASICA, nuestra pasteleria artesanal. Somos básicos, básicamente irresistibles.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=bespoke-sans@300,301,400,401,500,501,700,701,800,801,1,2&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files - Order is important -->
+    <!-- Critical CSS loaded synchronously -->
+    <link rel="stylesheet" href="../assets/css/global/variables.css">
+    <link rel="stylesheet" href="../assets/css/global/reset.css">
+    <link rel="stylesheet" href="../assets/css/global/base.css">
+    
+    <!-- Non-critical CSS loaded asynchronously for performance -->
+    <link rel="preload" href="../assets/css/global/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/global/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Component CSS -->
+    <link rel="preload" href="../assets/css/components/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/page-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Page specific CSS -->
+    <link rel="preload" href="../assets/css/pages/nosotros.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/global/typography.css">
+        <link rel="stylesheet" href="../assets/css/global/utilities.css">
+        <link rel="stylesheet" href="../assets/css/components/header.css">
+        <link rel="stylesheet" href="../assets/css/components/footer.css">
+        <link rel="stylesheet" href="../assets/css/components/nav-bottom.css">
+        <link rel="stylesheet" href="../assets/css/components/newsletter.css">
+        <link rel="stylesheet" href="../assets/css/components/page-hero.css">
+        <link rel="stylesheet" href="../assets/css/pages/nosotros.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Modern Page Hero - Nosotros -->
+        <section class="page-hero page-hero--nosotros" role="banner" aria-labelledby="hero-title">
+            <div class="page-hero__container">
+                <div class="page-hero__content">
+                    <header class="page-hero__header">
+                        <h1 id="hero-title" class="page-hero__title">
+                            Nuestra Historia
+                        </h1>
+                        <p class="page-hero__description">
+                            Conoce la historia detrás de LA BASICA, nuestra pasión por el pan artesanal y nuestro compromiso con la calidad que nos hace únicos en cada producto.
+                        </p>
+                    </header>
+                    
+                    <div class="page-hero__actions">
+                        <a href="#values" class="page-hero__cta page-hero__cta--primary" aria-describedby="cta-description">
+                            <span>Nuestros Valores</span>
+                            <svg class="page-hero__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#team" class="page-hero__cta page-hero__cta--secondary">
+                            Conoce al Equipo
+                        </a>
+                    </div>
+                    <p id="cta-description" class="sr-only">Descubre los valores que guían nuestro trabajo diario</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Values Section -->
+        <section id="values" class="values-section">
+            <div class="content-section">
+                <div class="container">
+                    <div class="values-header">
+                        <h2>Nuestros Valores</h2>
+                        <p>Los principios que guían cada día de trabajo y cada producto que creamos con amor y dedicación.</p>
+                    </div>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Pasión</h3>
+                            <p>Cada producto que elaboramos lleva nuestra pasión por la panadería artesanal. Es el amor por lo que hacemos lo que marca la diferencia en cada bocado.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Calidad</h3>
+                            <p>Seleccionamos cuidadosamente cada ingrediente, priorizando productos locales y orgánicos para garantizar la máxima calidad en nuestros productos.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Comunidad</h3>
+                            <p>Somos parte integral de nuestra comunidad. Cada cliente es parte de nuestra familia extendida, y trabajamos para crear conexiones genuinas.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Tradición</h3>
+                            <p>Respetamos las técnicas tradicionales de panadería, combinando métodos ancestrales con innovación para crear productos únicos.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Excelencia</h3>
+                            <p>Buscamos la perfección en cada detalle, desde la masa hasta la presentación final. La excelencia es nuestro estándar, no nuestra excepción.</p>
+                        </div>
+                        
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Compromiso</h3>
+                            <p>Estamos comprometidos con nuestros clientes, nuestro equipo y nuestro impacto en la comunidad. Cada acción refleja este compromiso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="content-section">
+                <div class="container">
+                    <div class="team-header">
+                        <h2>Nuestro Equipo</h2>
+                        <p>Las personas apasionadas que hacen posible la magia de LA BASICA cada día.</p>
+                    </div>
+                    
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-info">
+                                <h3>Florencia Nuñez</h3>
+                                <div class="member-role">Maestra panadera</div>
+                                <p class="member-description">Con más de 20 años de experiencia, Florencia es el corazón y alma de nuestra panadería. Su conocimiento de las técnicas tradicionales es incomparable.</p>
+                                <div class="member-social">
+                                    <a href="#" aria-label="Instagram de Florencia Nuñez">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" aria-label="LinkedIn de Florencia Nuñez">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-info">
+                                <h3>Maria Kaddour</h3>
+                                <div class="member-role">Encargada del local</div>
+                                <p class="member-description">María Elena aporta creatividad y innovación a nuestra repostería. Sus creaciones son verdaderas obras de arte comestibles.</p>
+                                <div class="member-social">
+                                    <a href="#" aria-label="Instagram de María Elena">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" aria-label="Facebook de María Elena">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-info">
+                                <h3>Iara Nuñez</h3>
+                                <div class="member-role">Atención al cliente</div>
+                                <p class="member-description">Iara se encarga de que cada experiencia en LA BASICA sea perfecta. Su atención al detalle y calidez humana definen nuestro servicio.</p>
+                                <div class="member-social">
+                                    <a href="#" aria-label="LinkedIn de Roberto">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" aria-label="WhatsApp de Roberto">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="content-section">
+                <div class="container">
+                    <div class="faq-header">
+                        <h2>Preguntas Frecuentes</h2>
+                        <p>¿Tienes dudas? Encuentra respuestas a las consultas más comunes sobre nuestros productos y servicios.</p>
+                    </div>
+                    
+                    <!-- FAQ Categories -->
+                    <div class="faq-categories">
+                        
+                        <!-- Productos y Calidad -->
+                        <div class="faq-category">
+                            <div class="faq-category-header">
+                                <div class="faq-category-icon">
+                                    <i class="fas fa-cake-candles"></i>
+                                </div>
+                                <h3>Productos y Calidad</h3>
+                            </div>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                                        <span>¿Qué ingredientes utilizan en sus productos?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-1" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Utilizamos únicamente ingredientes de primera calidad: harinas premium, manteca fresca, huevos de granja, chocolate belga y frutas de estación. Todos nuestros productos son elaborados artesanalmente sin conservantes artificiales.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                                        <span>¿Tienen productos sin gluten o veganos?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-2" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Sí, contamos con una línea especial de productos sin gluten y opciones veganas. Preparamos panes, tortas y galletas adaptadas a diferentes necesidades alimentarias. Consultanos por disponibilidad.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                                        <span>¿Cuánto duran frescos sus productos?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-3" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Nuestros panes se mantienen frescos por 2-3 días, las tortas hasta 4 días refrigeradas, y las galletas hasta 1 semana en recipiente hermético. Te recomendamos consumir todo lo antes posible para disfrutar su máximo sabor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pedidos y Entregas -->
+                        <div class="faq-category">
+                            <div class="faq-category-header">
+                                <div class="faq-category-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3>Pedidos y Entregas</h3>
+                            </div>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                                        <span>¿Cómo puedo hacer un pedido?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-4" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Podes hacer tu pedido de tres maneras: llamando al +54 9 11 2370-9291, enviando un WhatsApp al mismo número, o visitándonos directamente en nuestro local en Saavedra.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                                        <span>¿Hacen delivery? ¿Cuáles son las zonas de entrega?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-5" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Sí, hacemos entregas en Capital Federal y zona norte del Gran Buenos Aires. El costo del delivery varía según la distancia. Para pedidos superiores a $15.000 el envío es gratuito en CABA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                                        <span>¿Cuál es el tiempo de entrega?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-6" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Para productos en stock: 2-4 horas. Para pedidos especiales como tortas personalizadas: 24-48 horas. Te recomendamos hacer pedidos con anticipación, especialmente para eventos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagos y Precios -->
+                        <div class="faq-category">
+                            <div class="faq-category-header">
+                                <div class="faq-category-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <h3>Pagos y Precios</h3>
+                            </div>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+                                        <span>¿Qué métodos de pago aceptan?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-7" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Aceptamos efectivo, todas las tarjetas de débito y crédito, transferencias bancarias y MercadoPago. En el local también podes pagar con billetera virtual (QR).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+                                        <span>¿Tienen descuentos por cantidad?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-8" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Sí, ofrecemos descuentos especiales para pedidos grandes, eventos corporativos y compras mayoristas. Consultanos por WhatsApp para conocer las promociones disponibles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-9">
+                                        <span>¿Los precios incluyen IVA?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-9" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Todos nuestros precios ya incluyen IVA. Lo que ves es lo que pagas. Para compras con factura A, consultanos previamente para informarte el precio sin impuestos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Eventos y Catering -->
+                        <div class="faq-category">
+                            <div class="faq-category-header">
+                                <div class="faq-category-icon">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <h3>Eventos y Catering</h3>
+                            </div>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-10">
+                                        <span>¿Hacen tortas personalizadas para eventos?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-10" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>¡Por supuesto! Creamos tortas personalizadas para cumpleaños, casamientos, bautismos y cualquier celebración especial. Necesitamos al menos 48 horas de anticipación para garantizar el mejor resultado.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-11">
+                                        <span>¿Ofrecen servicio de catering?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-11" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Sí, brindamos servicio de catering para eventos corporativos, reuniones familiares y celebraciones. Incluye mesa dulce completa, coffee break y opciones saladas. Consultanos por presupuestos personalizados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-12">
+                                        <span>¿Cuál es la cantidad mínima para catering?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-12" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>La cantidad mínima para servicio de catering es de 20 personas. Para eventos más pequeños podemos preparar bandejas individuales o combos especiales que retiras en el local.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Local y Horarios -->
+                        <div class="faq-category">
+                            <div class="faq-category-header">
+                                <div class="faq-category-icon">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <h3>Local y Horarios</h3>
+                            </div>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-13">
+                                        <span>¿Dónde están ubicados exactamente?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-13" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Estamos ubicados en el barrio de Saavedra, Capital Federal. Podes encontrarnos fácilmente usando el mapa de Google Maps que está en esta página, o siguiendo las indicaciones por GPS.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-14">
+                                        <span>¿Tienen estacionamiento?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-14" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Contamos con lugares de estacionamiento en la calle. La zona generalmente tiene buena disponibilidad de espacios, especialmente por las mañanas. También llegás fácil en colectivo y tren.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" aria-expanded="false" aria-controls="faq-15">
+                                        <span>¿Abren los feriados?</span>
+                                        <i class="fas fa-chevron-down faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer" id="faq-15" aria-hidden="true">
+                                        <div class="faq-answer-content">
+                                            <p>Abrimos la mayoría de los feriados con horario especial (generalmente de 8:00 a 16:00). Para fechas específicas como Navidad, Año Nuevo o feriados largos, consultá nuestras redes sociales o llamanos para confirmar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- FAQ Contact CTA -->
+                    <div class="faq-contact-cta">
+                        <div class="faq-contact-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>¿No encontraste la respuesta que buscabas?</h3>
+                        <p>Contactanos directamente y te ayudamos con cualquier consulta</p>
+                        <div class="faq-contact-buttons">
+                            <a href="https://wa.me/5491123709291" class="faq-contact-btn faq-contact-btn--whatsapp" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="../pages/contacto.html" class="faq-contact-btn faq-contact-btn--form">
+                                <i class="fas fa-envelope"></i>
+                                <span>Enviar mensaje</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Component Placeholder -->
+        <div id="newsletter-placeholder"></div>
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bottom Navigation Component Placeholder -->
+    <div id="nav-bottom-placeholder"></div>
+
+    <!-- JavaScript Files - Order is important -->
+    <!-- Critical JavaScript loaded synchronously -->
+    <script src="../assets/js/global.js" defer></script>
+    <script src="../assets/js/component-loader.js" defer></script>
+    
+    <!-- Shopping Cart System -->
+    <script src="../assets/js/product-manager.js" defer></script>
+    <script src="../assets/js/shopping-cart.js" defer></script>
+    <script src="../assets/js/cart-sync.js" defer></script>
+    
+    <!-- Component JavaScript -->
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/nav-bottom.js" defer></script>
+    <script src="../assets/js/newsletter.js" defer></script>
+    
+    <!-- Page specific JavaScript -->
+    <script src="../assets/js/pages/nosotros.js" defer></script>
+</body>
+</html>

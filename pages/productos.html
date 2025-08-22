@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - LA BASICA</title>
+    <meta name="description" content="Descubre nuestra amplia selección de productos artesanales: panes, pasteles, galletas y especialidades únicas de LA BASICA.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=bespoke-sans@300,301,400,401,500,501,700,701,800,801,1,2&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files - Order is important -->
+    <!-- Critical CSS loaded synchronously -->
+    <link rel="stylesheet" href="../assets/css/global/variables.css">
+    <link rel="stylesheet" href="../assets/css/global/reset.css">
+    <link rel="stylesheet" href="../assets/css/global/base.css">
+    
+    <!-- Non-critical CSS loaded asynchronously for performance -->
+    <link rel="preload" href="../assets/css/global/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/global/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Component CSS -->
+    <link rel="preload" href="../assets/css/components/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/page-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Page specific CSS -->
+    <link rel="preload" href="../assets/css/pages/productos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/global/typography.css">
+        <link rel="stylesheet" href="../assets/css/global/utilities.css">
+        <link rel="stylesheet" href="../assets/css/components/header.css">
+        <link rel="stylesheet" href="../assets/css/components/footer.css">
+        <link rel="stylesheet" href="../assets/css/components/nav-bottom.css">
+        <link rel="stylesheet" href="../assets/css/components/newsletter.css">
+        <link rel="stylesheet" href="../assets/css/components/page-hero.css">
+        <link rel="stylesheet" href="../assets/css/pages/productos.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Modern Page Hero - Productos -->
+        <section class="page-hero page-hero--productos" role="banner" aria-labelledby="hero-title">
+            <div class="page-hero__container">
+                <div class="page-hero__content">
+                    <header class="page-hero__header">
+                        <h1 id="hero-title" class="page-hero__title">
+                            Nuestros Productos
+                        </h1>
+                        <p class="page-hero__description">
+                            Descubre nuestra amplia selección de productos artesanales: panes, pasteles, galletas y especialidades únicas de LA BASICA.
+                        </p>
+                    </header>
+                    
+                    <div class="page-hero__actions">
+                        <a href="#products-showcase" class="page-hero__cta page-hero__cta--primary" aria-describedby="cta-description">
+                            <span>Ver Catálogo</span>
+                            <svg class="page-hero__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="/pages/contacto.html" class="page-hero__cta page-hero__cta--secondary">
+                            Pedido Especial
+                        </a>
+                    </div>
+                    <p id="cta-description" class="sr-only">Explora nuestros productos artesanales organizados por categorías</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="products-showcase">
+            <div class="content-section">
+                <div class="container">
+                    <!-- Filter Section -->
+                    <div class="filters-container">
+                        <div class="search-bar">
+                            <input type="text" id="searchInput" placeholder="Buscar productos..." class="search-input">
+                            <button class="search-btn" aria-label="Buscar">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="category-filters">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="panes">Panes</button>
+                            <button class="filter-btn" data-filter="pasteles">Pasteles</button>
+                            <button class="filter-btn" data-filter="galletas">Galletas</button>
+                            <button class="filter-btn" data-filter="especiales">Especiales</button>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product cards will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Component Placeholder -->
+        <div id="newsletter-placeholder"></div>
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bottom Navigation Component Placeholder -->
+    <div id="nav-bottom-placeholder"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files - Order is important -->
+    <!-- Critical JavaScript loaded synchronously -->
+    <script src="../assets/js/global.js" defer></script>
+    <script src="../assets/js/component-loader.js" defer></script>
+    
+    <!-- Shopping Cart System -->
+    <script src="../assets/js/product-manager.js" defer></script>
+    <script src="../assets/js/shopping-cart.js" defer></script>
+    <script src="../assets/js/cart-sync.js" defer></script>
+    
+    <!-- Component JavaScript -->
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/nav-bottom.js" defer></script>
+    <script src="../assets/js/newsletter.js" defer></script>
+    
+    <!-- Page specific JavaScript -->
+    <script src="../assets/js/pages/productos.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* ==================== PAGE HERO COMPONENT ==================== */
+
+/**
+ * Modular Page Hero Component
+ * Diseño base reutilizable con variantes específicas por página
+ */
+
+/* ==================== BASE HERO STYLES ==================== */
+
+.page-hero {
+    /* Layout */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    /* Spacing */
+    padding: calc(var(--header-height) + var(--space-4xl)) var(--content-padding) var(--space-4xl);
+    margin: 0;
+    
+    /* Background */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Effects */
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Base overlay for all heroes */
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(245, 239, 231, 0.85) 0%,
+        rgba(245, 239, 231, 0.7) 50%,
+        rgba(245, 239, 231, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+/* ==================== CONTENT STRUCTURE ==================== */
+
+.page-hero__container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--container-desktop);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-hero__content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-2xl);
+    padding: var(--space-4xl) var(--space-3xl);
+    box-shadow: 0 20px 60px rgba(112, 66, 20, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto;
+    
+    /* Animation */
+    animation: heroContentSlideUp 0.8s ease-out;
+}
+
+.page-hero__header {
+    margin-bottom: var(--space-2xl);
+}
+
+.page-hero__title {
+    font-family: var(--font-titles);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: var(--font-weight-black);
+    color: var(--primary-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: var(--line-height-tight);
+    margin: 0 0 var(--space-lg) 0;
+    text-shadow: 0 2px 4px rgba(112, 66, 20, 0.1);
+    position: relative;
+}
+
+.page-hero__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-orange), var(--light-brown));
+    border-radius: var(--border-radius-full);
+    animation: heroUnderlineExpand 0.6s ease-out 0.4s both;
+}
+
+.page-hero__description {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: var(--line-height-relaxed);
+    color: var(--text-dark);
+    margin: 0 0 var(--space-3xl) 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+/* ==================== CTA SECTION ==================== */
+
+.page-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+    margin-top: var(--space-3xl);
+}
+
+.page-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-lg) var(--space-3xl);
+    border-radius: var(--border-radius-full);
+    font-family: var(--font-titles);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.page-hero__cta:hover {
+    transform: translateY(-3px);
+      color: var(--white);
+}
+
+.page-hero__cta--primary {
+    background: linear-gradient(135deg, var(--accent-orange), var(--light-brown));
+    color: var(--white);
+    box-shadow: 0 8px 32px rgba(170, 116, 68, 0.3);
+}
+
+
+.page-hero__cta--secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-brown);
+    border: 2px solid var(--primary-brown);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.page-hero__cta--secondary:hover {
+     color: var(--primary-brown);
+}
+
+.page-hero__cta-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==================== PAGE VARIANTS ==================== */
+
+/* Nosotros - Historia y valores */
+.page-hero--nosotros {
+    background-image: url('../../../images/FONDO1.png');
+    min-height: 100vh;
+}
+
+.page-hero--nosotros::before {
+    background: linear-gradient(
+        135deg,
+        rgba(245, 239, 231, 0.6) 0%,
+        rgba(240, 224, 214, 0.5) 50%,
+        rgba(245, 239, 231, 0.6) 100%
+    );
+}
+
+.page-hero--nosotros .page-hero__title {
+    color: var(--primary-brown);
+}
+
+/* Productos - Catálogo */
+.page-hero--productos {
+    background-image: url('../../../images/FONDO1.png');
+    min-height: 100vh;
+}
+
+.page-hero--productos::before {
+    background: linear-gradient(
+        135deg,
+        rgba(245, 239, 231, 0.6) 0%,
+        rgba(240, 224, 214, 0.5) 50%,
+        rgba(245, 239, 231, 0.6) 100%
+    );
+}
+
+.page-hero--productos .page-hero__title {
+    color: var(--primary-brown);
+}
+
+/* Contacto - Comunicación */
+.page-hero--contacto {
+    background-image: url('../../../images/FONDO1.png');
+    min-height: 100vh;
+}
+
+.page-hero--contacto::before {
+    background: linear-gradient(
+        135deg,
+        rgba(245, 239, 231, 0.6) 0%,
+        rgba(240, 224, 214, 0.5) 50%,
+        rgba(245, 239, 231, 0.6) 100%
+    );
+}
+
+.page-hero--contacto .page-hero__title {
+    color: var(--primary-brown);
+}
+
+/* Perfil - Gestión de usuario */
+.page-hero--perfil {
+    background-image: url('../../../images/FONDO1.png');
+    min-height: 100vh;
+}
+
+.page-hero--perfil::before {
+    background: linear-gradient(
+        135deg,
+        rgba(245, 239, 231, 0.6) 0%,
+        rgba(240, 224, 214, 0.5) 50%,
+        rgba(245, 239, 231, 0.6) 100%
+    );
+}
+
+.page-hero--perfil .page-hero__title {
+    color: var(--primary-brown);
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes heroContentSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroUnderlineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .page-hero__container {
+        margin-top: -120px;
+        padding-top: 20px;
+    }
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+    .page-hero {
+        min-height: 100vh;
+        background-attachment: fixed;
+    }
+    
+    .page-hero__content {
+        padding: var(--space-5xl) var(--space-4xl);
+        max-width: 800px;
+    }
+    
+    .page-hero__actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-xl);
+    }
+    
+    .page-hero__cta {
+        font-size: var(--font-size-lg);
+        padding: var(--space-xl) var(--space-4xl);
+    }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .page-hero {
+        min-height: 100vh;
+        padding-top: calc(var(--header-height) + var(--space-6xl));
+        padding-bottom: var(--space-6xl);
+    }
+    
+    .page-hero__content {
+        padding: var(--space-6xl) var(--space-5xl);
+        max-width: 800px;
+    }
+    
+    .page-hero__title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+    
+    .page-hero__description {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .page-hero {
+        min-height: 100vh;
+    }
+    
+    .page-hero__content {
+        max-width: 800px;
+    }
+    
+    .page-hero__title {
+        font-size: clamp(2.8rem, 5vw, 4.5rem);
+    }
+}
+
+/* ==================== ACCESSIBILITY & PERFORMANCE ==================== */
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .page-hero__content {
+        animation: none;
+    }
+    
+    .page-hero__title::after {
+        animation: none;
+        width: 80px;
+    }
+    
+    .page-hero__cta {
+        transition: none;
+    }
+    
+    .page-hero {
+        background-attachment: scroll;
+    }
+}
+
+/* High Contrast */
+@media (prefers-contrast: high) {
+    .page-hero::before {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .page-hero__content {
+        background: var(--white);
+        border: 2px solid var(--primary-brown);
+    }
+    
+    .page-hero__title {
+        color: var(--primary-brown);
+        text-shadow: none;
+    }
+    
+    .page-hero__description {
+        color: var(--text-dark);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-hero {
+        min-height: auto;
+        background: var(--white);
+        color: var(--primary-brown);
+        padding: var(--space-2xl) 0;
+    }
+    
+    .page-hero::before {
+        display: none;
+    }
+    
+    .page-hero__content {
+        background: transparent;
+        box-shadow: none;
+        border: 1px solid var(--primary-brown);
+    }
+    
+    .page-hero__actions {
+        display: none;
+    }
+}

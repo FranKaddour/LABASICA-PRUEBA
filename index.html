@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA BASICA - Pasteleria</title>
+    <meta name="description" content="LA BASICA - Pasteleria artesanal en Morón, Buenos Aires. Panes, pasteles, galletas y especialidades únicas. Somos básicos, básicamente irresistibles.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LA BASICA - Pasteleria">
+    <meta property="og:description" content="Descubre nuestros productos artesanales hechos con amor. Somos básicos, básicamente irresistibles.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LA BASICA - Pasteleria">
+    <meta name="twitter:description" content="Descubre nuestros productos artesanales hechos con amor.")
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=bespoke-sans@300,301,400,401,500,501,700,701,800,801,1,2&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files - Order is important for proper cascading -->
+    <!-- Critical CSS loaded synchronously -->
+    <link rel="stylesheet" href="assets/css/global/variables.css">
+    <link rel="stylesheet" href="assets/css/global/reset.css">
+    <link rel="stylesheet" href="assets/css/global/base.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    
+    <!-- Non-critical CSS loaded asynchronously for performance -->
+    <link rel="preload" href="assets/css/global/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/global/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Component CSS - Preload for faster component rendering -->
+    <link rel="preload" href="assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Page specific CSS -->
+    <link rel="preload" href="assets/css/pages/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/global/typography.css">
+        <link rel="stylesheet" href="assets/css/global/utilities.css">
+        <link rel="stylesheet" href="assets/css/components/header.css">
+        <link rel="stylesheet" href="assets/css/components/footer.css">
+        <link rel="stylesheet" href="assets/css/components/nav-bottom.css">
+        <link rel="stylesheet" href="assets/css/components/newsletter.css">
+        <link rel="stylesheet" href="assets/css/pages/home.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Image Section -->
+        <section class="hero-section">
+            <div class="content-section">
+                <div class="container">
+                    <div class="hero-image-container">
+                        <img src="images/fondo0.jpg" alt="LA BASICA Local" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradient Background Section -->
+        <div class="gradient-background">
+            <!-- Top Wave -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="gradient-top-wave" preserveAspectRatio="none"><path fill="#D2B48C" fill-opacity="1" d="M0,288L8,256C16,224,32,160,48,138.7C64,117,80,139,96,170.7C112,203,128,245,144,256C160,267,176,245,192,245.3C208,245,224,267,240,266.7C256,267,272,245,288,229.3C304,213,320,203,336,186.7C352,171,368,149,384,128C400,107,416,85,432,106.7C448,128,464,192,480,208C496,224,512,192,528,176C544,160,560,160,576,181.3C592,203,608,245,624,240C640,235,656,181,672,144C688,107,704,85,720,80C736,75,752,85,768,128C784,171,800,245,816,272C832,299,848,277,864,245.3C880,213,896,171,912,160C928,149,944,171,960,170.7C976,171,992,149,1008,138.7C1024,128,1040,128,1056,154.7C1072,181,1088,235,1104,250.7C1120,267,1136,245,1152,208C1168,171,1184,117,1200,128C1216,139,1232,213,1248,213.3C1264,213,1280,139,1296,138.7C1312,139,1328,213,1344,256C1360,299,1376,309,1392,293.3C1408,277,1424,235,1432,213.3L1440,192L1440,0L1432,0C1424,0,1408,0,1392,0C1376,0,1360,0,1344,0C1328,0,1312,0,1296,0C1280,0,1264,0,1248,0C1232,0,1216,0,1200,0C1184,0,1168,0,1152,0C1136,0,1120,0,1104,0C1088,0,1072,0,1056,0C1040,0,1024,0,1008,0C992,0,976,0,960,0C944,0,928,0,912,0C896,0,880,0,864,0C848,0,832,0,816,0C800,0,784,0,768,0C752,0,736,0,720,0C704,0,688,0,672,0C656,0,640,0,624,0C608,0,592,0,576,0C560,0,544,0,528,0C512,0,496,0,480,0C464,0,448,0,432,0C416,0,400,0,384,0C368,0,352,0,336,0C320,0,304,0,288,0C272,0,256,0,240,0C224,0,208,0,192,0C176,0,160,0,144,0C128,0,112,0,96,0C80,0,64,0,48,0C32,0,16,0,8,0L0,0Z"></path></svg>
+            
+            <!-- Types of Products Catalog -->
+            <section id="catalog" class="dried-sweets content-section">
+                <div class="container">
+                    <div class="catalog-grid">
+                        <div class="hero-sweet">
+                            <img src="images/GRID1.png" alt="Producto principal" class="hero-image">
+                        </div>
+                        <div class="sweet-categories">
+                            <div class="category-item">
+                                <img src="images/GRID2.png" alt="Categoría 2" class="category-image">
+                            </div>
+                            <div class="category-item">
+                                <img src="images/GRID3.png" alt="Categoría 3" class="category-image">
+                            </div>
+                            <div class="category-item">
+                                <img src="images/GRID4.png" alt="Categoría 4" class="category-image">
+                            </div>
+                            <div class="category-item">
+                                <img src="images/GRID5.png" alt="Categoría 5" class="category-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Featured Cookies -->
+        <section class="featured-cookies content-section">
+            <!-- Featured Cookies Wave -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="featured-cookies-wave" preserveAspectRatio="none"><path fill="#D2B48C" fill-opacity="1" d="M0,288L8,256C16,224,32,160,48,138.7C64,117,80,139,96,170.7C112,203,128,245,144,256C160,267,176,245,192,245.3C208,245,224,267,240,266.7C256,267,272,245,288,229.3C304,213,320,203,336,186.7C352,171,368,149,384,128C400,107,416,85,432,106.7C448,128,464,192,480,208C496,224,512,192,528,176C544,160,560,160,576,181.3C592,203,608,245,624,240C640,235,656,181,672,144C688,107,704,85,720,80C736,75,752,85,768,128C784,171,800,245,816,272C832,299,848,277,864,245.3C880,213,896,171,912,160C928,149,944,171,960,170.7C976,171,992,149,1008,138.7C1024,128,1040,128,1056,154.7C1072,181,1088,235,1104,250.7C1120,267,1136,245,1152,208C1168,171,1184,117,1200,128C1216,139,1232,213,1248,213.3C1264,213,1280,139,1296,138.7C1312,139,1328,213,1344,256C1360,299,1376,309,1392,293.3C1408,277,1424,235,1432,213.3L1440,192L1440,0L1432,0C1424,0,1408,0,1392,0C1376,0,1360,0,1344,0C1328,0,1312,0,1296,0C1280,0,1264,0,1248,0C1232,0,1216,0,1200,0C1184,0,1168,0,1152,0C1136,0,1120,0,1104,0C1088,0,1072,0,1056,0C1040,0,1024,0,1008,0C992,0,976,0,960,0C944,0,928,0,912,0C896,0,880,0,864,0C848,0,832,0,816,0C800,0,784,0,768,0C752,0,736,0,720,0C704,0,688,0,672,0C656,0,640,0,624,0C608,0,592,0,576,0C560,0,544,0,528,0C512,0,496,0,480,0C464,0,448,0,432,0C416,0,400,0,384,0C368,0,352,0,336,0C320,0,304,0,288,0C272,0,256,0,240,0C224,0,208,0,192,0C176,0,160,0,144,0C128,0,112,0,96,0C80,0,64,0,48,0C32,0,16,0,8,0L0,0Z"></path></svg>
+            
+            <div class="container">
+                <div class="featured-cookies">
+                    <div class="cookie-card chocolate">
+                        <div class="cookie-info">
+                            <h3>Galleta de Chocolate</h3>
+                            <p class="cookie-description">GALLETA DE CHOCOLATE</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Galleta de chocolate" class="cookie-image">
+                    </div>
+                    <div class="cookie-card coconut">
+                        <div class="cookie-info">
+                            <h3>Galletas de Leche de Coco</h3>
+                            <p class="cookie-description">LECHE Y GALLETAS</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1548365328-8c6db3220e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Galletas de coco" class="cookie-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Special BOX Banner -->
+        <section class="bulky-bread-banner content-section">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content-header">
+                            <div class="banner-content-icon">
+                                <i class="fas fa-gift" aria-hidden="true"></i>
+                            </div>
+                            <h2 class="banner-content-title">Próximamente</h2>
+                        </div>
+                        
+                        <div class="banner-content-body">
+                            <div class="banner-content-features">
+                                <div class="banner-feature-item">
+                                    <div class="banner-feature-icon">
+                                        <i class="fas fa-box" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="banner-feature-text">BOX Desayuno Completo</span>
+                                </div>
+                                <div class="banner-feature-item">
+                                    <div class="banner-feature-icon">
+                                        <i class="fas fa-birthday-cake" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="banner-feature-text">BOX Celebración</span>
+                                </div>
+                                <div class="banner-feature-item">
+                                    <div class="banner-feature-icon">
+                                        <i class="fas fa-heart" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="banner-feature-text">BOX Sorpresa</span>
+                                </div>
+                                <div class="banner-feature-item">
+                                    <div class="banner-feature-icon">
+                                        <i class="fas fa-coffee" aria-hidden="true"></i>
+                                    </div>
+                                    <span class="banner-feature-text">BOX Merienda</span>
+                                </div>
+                            </div>
+                            
+                            <div class="banner-content-action">
+                                <button class="banner-content-btn">
+                                    <span>¡Quiero ser el primero!</span>
+                                    <i class="fas fa-arrow-right banner-content-btn-icon" aria-hidden="true"></i>
+                                </button>
+                                <p class="banner-content-note">Te notificaremos cuando estén disponibles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Component Placeholder -->
+        <div id="newsletter-placeholder"></div>
+
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bottom Navigation Component Placeholder -->
+    <div id="nav-bottom-placeholder"></div>
+
+    <!-- JavaScript Files - Order is important for proper initialization -->
+    <!-- Critical JavaScript loaded synchronously -->
+    <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/component-loader.js" defer></script>
+    
+    <!-- Shopping Cart System -->
+    <script src="assets/js/product-manager.js" defer></script>
+    <script src="assets/js/shopping-cart.js" defer></script>
+    <script src="assets/js/cart-sync.js" defer></script>
+    
+    <!-- Component JavaScript - Can be loaded asynchronously -->
+    <script src="assets/js/header.js" defer></script>
+    <script src="assets/js/footer.js" defer></script>
+    <script src="assets/js/nav-bottom.js" defer></script>
+    <script src="assets/js/newsletter.js" defer></script>
+    
+    <!-- Page specific JavaScript -->
+    <script src="assets/js/pages/home.js" defer></script>
+</body>
+</html>

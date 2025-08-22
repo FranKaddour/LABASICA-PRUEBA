@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - LA BASICA</title>
+    <meta name="description" content="Ponte en contacto con LA BASICA. Visítanos, escríbenos o llámanos. Estamos aquí para ayudarte.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=bespoke-sans@300,301,400,401,500,501,700,701,800,801,1,2&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files - Order is important -->
+    <!-- Critical CSS loaded synchronously -->
+    <link rel="stylesheet" href="../assets/css/global/variables.css">
+    <link rel="stylesheet" href="../assets/css/global/reset.css">
+    <link rel="stylesheet" href="../assets/css/global/base.css">
+    
+    <!-- Non-critical CSS loaded asynchronously for performance -->
+    <link rel="preload" href="../assets/css/global/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/global/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Component CSS -->
+    <link rel="preload" href="../assets/css/components/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/page-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Page specific CSS -->
+    <link rel="preload" href="../assets/css/pages/contacto.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/global/typography.css">
+        <link rel="stylesheet" href="../assets/css/global/utilities.css">
+        <link rel="stylesheet" href="../assets/css/components/header.css">
+        <link rel="stylesheet" href="../assets/css/components/footer.css">
+        <link rel="stylesheet" href="../assets/css/components/nav-bottom.css">
+        <link rel="stylesheet" href="../assets/css/components/newsletter.css">
+        <link rel="stylesheet" href="../assets/css/components/page-hero.css">
+        <link rel="stylesheet" href="../assets/css/pages/contacto.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Modern Page Hero - Contacto -->
+        <section class="page-hero page-hero--contacto" role="banner" aria-labelledby="hero-title">
+            <div class="page-hero__container">
+                <div class="page-hero__content">
+                    <header class="page-hero__header">
+                        <h1 id="hero-title" class="page-hero__title">
+                            Hablemos
+                        </h1>
+                        <p class="page-hero__description">
+                            ¿Tienes alguna pregunta, sugerencia o quieres hacer un pedido especial? Nos encantaría escucharte y ayudarte con lo que necesites. Estamos aquí para ti.
+                        </p>
+                    </header>
+                    
+                    <div class="page-hero__actions">
+                        <a href="#contact-form" class="page-hero__cta page-hero__cta--primary" aria-describedby="cta-description">
+                            <span>Enviar Mensaje</span>
+                            <svg class="page-hero__cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </a>
+                        <a href="#map" class="page-hero__cta page-hero__cta--secondary">
+                            Cómo Llegar
+                        </a>
+                    </div>
+                    <p id="cta-description" class="sr-only">Completa el formulario para contactarnos directamente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map and Hours Section Container -->
+        <div class="map-hours-container">
+            <!-- Map Section -->
+            <section id="map" class="map-section">
+                <div class="content-section">
+                    <div class="container">
+                        <div class="map-header">
+                            <h2>Cómo Llegar</h2>
+                            <p>Estamos ubicados en Saavedra, Capital Federal, fácil acceso en transporte público y privado.</p>
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.200789991419!2d-58.48372109999999!3d-34.5484712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb78124267c29%3A0x116fe56d6ecfb772!2sLA%20B%C3%81SICA%20PASTELER%C3%8DA!5e0!3m2!1ses-419!2sar!4v1755274778627!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hours Section -->
+            <section class="hours-section" id="hours-section">
+                <div class="content-section">
+                    <div class="container">
+                        <div class="hours-container">
+                            <div class="hours-header">
+                                <h2>Horarios de Atención</h2>
+                            </div>
+                            
+                            <div class="hours-card">
+                                <ul class="hours-list">
+                                    <li class="hours-item today">
+                                        <span class="hours-day">Lunes</span>
+                                        <span class="hours-time">7:00 - 20:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Martes</span>
+                                        <span class="hours-time">7:00 - 20:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Miércoles</span>
+                                        <span class="hours-time">7:00 - 20:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Jueves</span>
+                                        <span class="hours-time">7:00 - 20:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Viernes</span>
+                                        <span class="hours-time">7:00 - 21:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Sábado</span>
+                                        <span class="hours-time">7:00 - 21:00</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="hours-day">Domingo</span>
+                                        <span class="hours-time">8:00 - 20:00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Main Section -->
+        <section class="contact-main">
+            <div class="content-section">
+                <div class="container">
+                    <!-- Contact Form -->
+                    <div id="contact-form" class="contact-form-section">
+                            <h2>Envíanos un Mensaje</h2>
+                            
+                            <!-- Success/Error Messages -->
+                            <div class="form-message success" id="successMessage">
+                                <i class="fas fa-check-circle"></i>
+                                <span>¡Mensaje enviado correctamente! Te responderemos pronto.</span>
+                            </div>
+                            
+                            <div class="form-message error" id="errorMessage">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <span>Hubo un error al enviar el mensaje. Intenta nuevamente.</span>
+                            </div>
+                            
+                            <form class="contact-form" id="contactForm" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">Nombre *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                        <div class="form-error">Por favor ingresa tu nombre</div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Apellido *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                        <div class="form-error">Por favor ingresa tu apellido</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" id="email" name="email" class="form-input" required>
+                                        <div class="form-error">Por favor ingresa un email válido</div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Teléfono</label>
+                                        <input type="tel" id="phone" name="phone" class="form-input">
+                                        <div class="form-error">Por favor ingresa un teléfono válido</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Asunto *</label>
+                                    <select id="subject" name="subject" class="form-select" required>
+                                        <option value="">Selecciona un asunto</option>
+                                        <option value="pedido">Pedido Especial</option>
+                                        <option value="consulta">Consulta General</option>
+                                        <option value="catering">Catering y Eventos</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="reclamo">Reclamo</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <div class="form-error">Por favor selecciona un asunto</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Mensaje *</label>
+                                    <textarea id="message" name="message" class="form-textarea" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                                    <div class="form-error">Por favor ingresa tu mensaje</div>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Enviar Mensaje</span>
+                                    <span class="btn-loading d-none">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                    </span>
+                                </button>
+                            </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                        <div class="contact-info-section">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Visítanos</h3>
+                                <p>Saavedra, Capital Federal<br>Argentina</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Saavedra+Capital+Federal+Argentina" target="_blank" rel="noopener">Ver en Google Maps</a>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3>Llámanos</h3>
+                                <p>+54 9 11 2370-9291</p>
+                                <a href="tel:+5491123709291">Llamar ahora</a>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h3>WhatsApp</h3>
+                                <p>Mensajes y pedidos</p>
+                                <a href="https://wa.me/5491123709291" target="_blank" rel="noopener">Enviar mensaje</a>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <h3>Síguenos</h3>
+                                <p>@labasicapasteleria</p>
+                                <a href="https://www.instagram.com/labasicapasteleria/" target="_blank" rel="noopener">Ver Instagram</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Newsletter Component Placeholder -->
+        <div id="newsletter-placeholder"></div>
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bottom Navigation Component Placeholder -->
+    <div id="nav-bottom-placeholder"></div>
+
+    <!-- JavaScript Files - Order is important -->
+    <!-- Critical JavaScript loaded synchronously -->
+    <script src="../assets/js/global.js" defer></script>
+    <script src="../assets/js/component-loader.js" defer></script>
+    
+    <!-- Shopping Cart System -->
+    <script src="../assets/js/product-manager.js" defer></script>
+    <script src="../assets/js/shopping-cart.js" defer></script>
+    <script src="../assets/js/cart-sync.js" defer></script>
+    
+    <!-- Component JavaScript -->
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/nav-bottom.js" defer></script>
+    <script src="../assets/js/newsletter.js" defer></script>
+    
+    <!-- Page specific JavaScript -->
+    <script src="../assets/js/pages/contacto.js" defer></script>
+</body>
+</html>

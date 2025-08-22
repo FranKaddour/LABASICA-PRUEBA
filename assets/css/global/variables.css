@@ -1,0 +1,368 @@
+/* ==================== CSS VARIABLES ==================== */
+
+:root {
+    /* ==================== COLORS ==================== */
+    
+    /* Neutral Colors - Definidas primero para evitar referencias circulares */
+    --white: #ffffff;
+    --gray-light: #F0F0F0;
+    --gray-medium: #999;
+    --text-dark: #4A4A4A;
+    
+    /* Primary Colors */
+    --primary-bg: #8b4513;
+    --primary-brown: #8b4513;
+    --accent-orange: #aa7444;
+    --light-brown: #704214;
+    
+    /* Gradients */
+    --gradient-start: #e6aa77;
+    --gradient-end: #f0c095;
+    
+    /* ==================== PROFESSIONAL BACKGROUNDS SYSTEM ==================== */
+    
+    /* Primary Background Gradients */
+    --bg-primary: var(--primary-bg);
+    --bg-secondary: #F5EFE7;
+    --bg-tertiary: var(--gray-light);
+    
+    /* Modern Gradient Collection */
+    --gradient-hero: linear-gradient(135deg, #F5EFE7 0%, #EBE0CC 50%, #E1D5B7 100%);
+    --gradient-warm: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    --gradient-elegant: linear-gradient(180deg, #FAFAFA 0%, #F5EFE7 50%, #EBE0CC 100%);
+    --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 239, 231, 0.8) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-orange) 0%, var(--light-brown) 100%);
+    --gradient-footer: linear-gradient(180deg, var(--primary-bg) 0%, var(--gradient-start) 50%, var(--gradient-end) 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(245, 239, 231, 0.05) 0%, rgba(210, 180, 140, 0.05) 100%);
+    
+    /* Glass Morphism Effects */
+    --glass-primary: rgba(255, 255, 255, 0.95);
+    --glass-secondary: rgba(255, 255, 255, 0.8);
+    --glass-tertiary: rgba(255, 255, 255, 0.6);
+    --glass-accent: rgba(210, 105, 30, 0.1);
+    
+    /* Overlay Colors */
+    --overlay-light: rgba(255, 255, 255, 0.5);
+    --overlay-medium: rgba(255, 255, 255, 0.7);
+    --overlay-dark: rgba(0, 0, 0, 0.1);
+    --overlay-accent: rgba(210, 105, 30, 0.08);
+    
+    /* Pattern Backgrounds */
+    --pattern-dots: radial-gradient(circle at 1px 1px, rgba(139, 69, 19, 0.02) 1px, transparent 0);
+    --pattern-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+    
+    /* Neutral Colors duplicadas - eliminando */
+    
+    /* Green Tones */
+    --green-start: #B8E6E1;
+    --green-end: #A8E6CF;
+    --green-dark: #2C5530;
+    --green-medium: #5A7A5C;
+    
+    /* Accent Colors */
+    --yellow-star: #FFD54F;
+    
+    /* Hardcoded colors to consolidate */
+    --dried-sweets-bg: #D2B48C;
+    --cookie-accent: #CD853F;
+    --error-red: #FF4444;
+    
+    /* ==================== TYPOGRAPHY ==================== */
+    
+    /* Font Families */
+    --font-titles: 'Bespoke Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Font Sizes - Mobile First */
+    --font-size-xs: 0.7rem;        /* 11.2px */
+    --font-size-sm: 0.8rem;        /* 12.8px */
+    --font-size-base: 1rem;        /* 16px */
+    --font-size-lg: 1.1rem;        /* 17.6px */
+    --font-size-xl: 1.2rem;        /* 19.2px */
+    --font-size-2xl: 1.5rem;       /* 24px */
+    --font-size-3xl: 1.8rem;       /* 28.8px */
+    --font-size-4xl: 2.2rem;       /* 35.2px */
+    --font-size-5xl: 2.5rem;       /* 40px */
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.4;
+    --line-height-relaxed: 1.6;
+    
+    /* ==================== SPACING ==================== */
+    
+    /* Spacing Scale */
+    --space-xs: 5px;
+    --space-sm: 8px;
+    --space-md: 10px;
+    --space-lg: 15px;
+    --space-xl: 20px;
+    --space-2xl: 25px;
+    --space-3xl: 30px;
+    --space-4xl: 40px;
+    --space-5xl: 50px;
+    --space-6xl: 60px;
+    
+    /* Layout Spacing - Mobile First */
+    --content-padding: 15px;
+    --content-margin: 25px;
+    --section-gap: 40px;
+    
+    /* ==================== LAYOUT ==================== */
+    
+    /* Container Sizes */
+    --container-max: 400px;        /* Mobile */
+    --container-tablet: 750px;     /* Tablet */
+    --container-desktop: 1200px;   /* Desktop */
+    --container-xl: 1440px;        /* Large Desktop */
+    --container-xxl: 1800px;       /* Ultra Wide */
+    
+    /* Header */
+    --header-height: 80px;
+    
+    /* Max Widths */
+    --max-width: 100%;
+    
+    /* ==================== BORDERS & RADIUS ==================== */
+    
+    /* Border Radius */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-2xl: 20px;
+    --border-radius-full: 8px;
+    
+    /* Border Widths */
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+    --border-width-thick: 3px;
+    
+    /* ==================== SHADOWS ==================== */
+    
+    /* Box Shadows */
+    --shadow-sm: 0 2px 4px rgba(70, 34, 15, 0.05);
+    --shadow-md: 0 4px 8px rgba(70, 34, 15, 0.1);
+    --shadow-lg: 0 10px 30px rgba(70, 34, 15, 0.1);
+    --shadow-xl: 0 15px 40px rgba(70, 34, 15, 0.15);
+    --shadow-2xl: 0 20px 50px rgba(70, 34, 15, 0.2);
+    
+    /* Text Shadows */
+    --text-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.15);
+    
+    /* ==================== TRANSITIONS ==================== */
+    
+    /* Transition Durations */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* Transition Easing */
+    --ease-in: ease-in;
+    --ease-out: ease-out;
+    --ease-in-out: ease-in-out;
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Common Transitions */
+    --transition-all: all var(--transition-normal) var(--ease-in-out);
+    --transition-colors: color var(--transition-normal) var(--ease-in-out), 
+                        background-color var(--transition-normal) var(--ease-in-out);
+    --transition-transform: transform var(--transition-normal) var(--ease-in-out);
+    --transition-opacity: opacity var(--transition-normal) var(--ease-in-out);
+    
+    /* ==================== Z-INDEX ==================== */
+    
+    --z-behind: -1;
+    --z-base: 0;
+    --z-elevated: 10;
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-fixed: 900;
+    --z-modal: 1000;
+    --z-popover: 1100;
+    --z-tooltip: 1200;
+    
+    /* ==================== BREAKPOINTS (for reference) ==================== */
+    /* 
+    These are used in media queries, not as CSS variables
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1024px;
+    --bp-desktop-lg: 1440px;
+    --bp-desktop-xl: 1920px;
+    */
+    
+    /* ==================== ANIMATION ==================== */
+    
+    /* Animation Durations */
+    --animation-fast: 200ms;
+    --animation-normal: 400ms;
+    --animation-slow: 600ms;
+    
+    /* ==================== COMPONENT-SPECIFIC VARIABLES ==================== */
+    
+    /* Cards */
+    --card-padding: var(--space-lg);
+    --card-border-radius: var(--border-radius-lg);
+    --card-shadow: var(--shadow-md);
+    --card-hover-shadow: var(--shadow-xl);
+    
+    /* Buttons */
+    --button-padding-y: 12px;
+    --button-padding-x: 20px;
+    --button-border-radius: var(--border-radius-lg);
+    --button-font-weight: var(--font-weight-bold);
+    
+    /* Forms */
+    --input-padding-y: 12px;
+    --input-padding-x: 15px;
+    --input-border-radius: var(--border-radius-lg);
+    --input-border-color: var(--gray-light);
+    --input-focus-color: var(--accent-orange);
+    
+    /* Navigation */
+    --nav-item-padding: 15px;
+    --nav-item-gap: 20px;
+    
+    /* Grid */
+    --grid-gap-sm: 10px;
+    --grid-gap-md: 15px;
+    --grid-gap-lg: 20px;
+    --grid-gap-xl: 25px;
+    --grid-gap-2xl: 30px;
+}
+
+/* ==================== TABLET OVERRIDES (768px+) ==================== */
+@media (min-width: 768px) {
+    :root {
+        --content-padding: 25px;
+        --content-margin: 40px;
+        --header-height: 90px;
+        --border-radius-lg: 14px;
+        --border-radius-xl: 18px;
+        --container-max: var(--container-tablet);
+        --section-gap: 60px;
+        
+        /* Typography adjustments */
+        --font-size-3xl: 2.2rem;
+        --font-size-4xl: 2.8rem;
+        --font-size-5xl: 3rem;
+    }
+}
+
+/* ==================== DESKTOP OVERRIDES (1024px+) ==================== */
+@media (min-width: 1024px) {
+    :root {
+        --content-padding: 40px;
+        --content-margin: 60px;
+        --header-height: 100px;
+        --container-max: var(--container-desktop);
+        --section-gap: 80px;
+        
+        /* Typography adjustments */
+        --font-size-4xl: 3.2rem;
+        --font-size-5xl: 3.5rem;
+    }
+}
+
+/* ==================== LARGE DESKTOP OVERRIDES (1440px+) ==================== */
+@media (min-width: 1440px) {
+    :root {
+        --content-padding: 60px;
+        --container-max: var(--container-xl);
+        
+        /* Typography adjustments */
+        --font-size-5xl: 4rem;
+    }
+}
+
+/* ==================== ULTRA WIDE OVERRIDES (1920px+) ==================== */
+@media (min-width: 1920px) {
+    :root {
+        --container-max: var(--container-xxl);
+    }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0.01s;
+        --transition-normal: 0.01s;
+        --transition-slow: 0.01s;
+        --animation-fast: 0.01s;
+        --animation-normal: 0.01s;
+        --animation-slow: 0.01s;
+    }
+}
+
+/* ==================== HIGH CONTRAST ==================== */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-bg: #FFFFFF;
+        --text-dark: #000000;
+        --primary-brown: #857861;
+        --accent-orange: #aa7444;
+        --gray-medium: #666666;
+        
+        /* High contrast background overrides */
+        --gradient-hero: #FFFFFF;
+        --gradient-warm: #F5F5F5;
+        --gradient-elegant: #FFFFFF;
+        --gradient-card: #FFFFFF;
+        --gradient-glass: #FFFFFF;
+        --gradient-accent: #857861;
+        --gradient-footer: #F5F5F5;
+        --gradient-subtle: #FFFFFF;
+        
+        --glass-primary: #FFFFFF;
+        --glass-secondary: #F5F5F5;
+        --glass-tertiary: #EEEEEE;
+        --glass-accent: #E0E0E0;
+    }
+}
+
+/* ==================== DARK MODE PREPARATION ==================== */
+/* 
+Future dark mode variables can be added here:
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg: #1a1a1a;
+        --text-dark: #ffffff;
+        etc...
+    }
+}
+*/
+
+/* ==================== PERFORMANCE OPTIMIZATIONS ==================== */
+
+/* Reduce backdrop filters for better performance on low-end devices */
+@media (max-width: 480px) {
+    :root {
+        --glass-primary: rgba(255, 255, 255, 0.95);
+        --glass-secondary: rgba(255, 255, 255, 0.85);
+        --glass-tertiary: rgba(255, 255, 255, 0.75);
+    }
+}
+
+/* Disable complex effects for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --glass-primary: rgba(255, 255, 255, 0.95);
+        --glass-secondary: rgba(255, 255, 255, 0.85);
+        --glass-tertiary: rgba(255, 255, 255, 0.75);
+        --pattern-dots: none;
+        --pattern-grain: none;
+    }
+}

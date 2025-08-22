@@ -1,0 +1,284 @@
+/* ==================== BOTTOM NAVIGATION COMPONENT ==================== */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: var(--content-padding);
+    right: var(--content-padding);
+    background: var(--white);
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    border-bottom: none;
+    padding: var(--space-sm) 0 calc(var(--space-sm) + env(safe-area-inset-bottom));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: var(--z-fixed);
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+    box-shadow: 0 -4px 20px rgba(139, 69, 19, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bottom-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+    opacity: 0.3;
+}
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    color: black;
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: var(--transition-all);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-md);
+    position: relative;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Icon styling */
+.bottom-nav .nav-item i {
+    font-size: var(--font-size-lg);
+    transition: var(--transition-all);
+}
+
+/* Text styling */
+.bottom-nav .nav-item span {
+    transition: var(--transition-all);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.3px;
+}
+
+/* Hover states */
+.bottom-nav .nav-item:hover {
+    color: var(--accent-orange);
+    background: rgba(210, 105, 30, 0.1);
+    transform: translateY(-2px);
+}
+
+.bottom-nav .nav-item:hover i {
+    transform: scale(1.1);
+}
+
+/* Active state */
+.bottom-nav .nav-item.active {
+    color: var(--accent-orange);
+    font-weight: var(--font-weight-semibold);
+    position: relative;
+}
+
+.bottom-nav .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: var(--accent-orange);
+    border-radius: var(--border-radius-sm);
+    animation: slideIn 0.3s ease-out;
+}
+
+.bottom-nav .nav-item.active i {
+    transform: scale(1.1);
+}
+
+.bottom-nav .nav-item.active span {
+    font-weight: var(--font-weight-bold);
+}
+
+/* Active item background animation */
+.bottom-nav .nav-item.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(210, 105, 30, 0.1) 0%, transparent 70%);
+    border-radius: var(--border-radius-md);
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.05);
+    }
+}
+
+/* Touch feedback */
+.bottom-nav .nav-item:active {
+    transform: translateY(1px) scale(0.98);
+    background: rgba(210, 105, 30, 0.2);
+}
+
+/* Badge/notification support */
+.bottom-nav .nav-item .badge {
+    position: absolute;
+    top: -2px;
+    right: 8px;
+    background: var(--error-red);
+    color: var(--white);
+    border-radius: var(--border-radius-full);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    transform: scale(0);
+    animation: bounceIn 0.3s ease-out forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Safe area handling for devices with notches */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .bottom-nav {
+        padding-bottom: calc(var(--space-sm) + env(safe-area-inset-bottom));
+    }
+}
+
+/* ==================== HIDE NAV-BOTTOM ON TABLET/DESKTOP (768px+) ==================== */
+@media (min-width: 768px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+/* Focus states */
+.bottom-nav .nav-item:focus {
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 2px;
+    background: rgba(210, 105, 30, 0.1);
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .bottom-nav {
+        border-top: 2px solid var(--primary-brown);
+        background: var(--white);
+    }
+    
+    .bottom-nav .nav-item {
+        border: 1px solid transparent;
+    }
+    
+    .bottom-nav .nav-item.active {
+        border-color: var(--primary-brown);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .bottom-nav .nav-item.active::before {
+        animation: none;
+    }
+    
+    .bottom-nav .nav-item.active::after {
+        animation: none;
+    }
+    
+    .bottom-nav .nav-item .badge {
+        animation: none;
+        transform: scale(1);
+    }
+    
+    .bottom-nav .nav-item i,
+    .bottom-nav .nav-item {
+        transition: none;
+    }
+}
+
+/* Dark theme support (future) */
+@media (prefers-color-scheme: dark) {
+    .bottom-nav {
+        background: rgba(26, 26, 26, 0.95);
+        border-top-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .bottom-nav::before {
+        background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+    }
+}
+
+/* Print styles */
+@media print {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .bottom-nav {
+        padding: var(--space-xs) 0 calc(var(--space-xs) + env(safe-area-inset-bottom));
+    }
+    
+    .bottom-nav .nav-item {
+        gap: 2px;
+        font-size: var(--font-size-xs);
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .bottom-nav .nav-item i {
+        font-size: var(--font-size-base);
+    }
+    
+    .bottom-nav .nav-item.active::before {
+        top: -4px;
+        height: 2px;
+        width: 20px;
+    }
+}
+
+/* Support for foldable devices */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .bottom-nav .nav-item {
+        min-width: 100px;
+    }
+}

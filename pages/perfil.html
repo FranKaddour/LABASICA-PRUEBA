@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - LA BASICA</title>
+    <meta name="description" content="Gestiona tu perfil y revisa tus compras y puntos en LA BASICA - Pasteleria Artesanal.">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=bespoke-sans@300,301,400,401,500,501,700,701,800,801,1,2&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files - Order is important for proper cascading -->
+    <link rel="stylesheet" href="../assets/css/global/variables.css">
+    <link rel="stylesheet" href="../assets/css/global/reset.css">
+    <link rel="stylesheet" href="../assets/css/global/base.css">
+    <link rel="stylesheet" href="../assets/css/components/header.css">
+    
+    <!-- Non-critical CSS loaded asynchronously for performance -->
+    <link rel="preload" href="../assets/css/global/typography.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/global/utilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Component CSS -->
+    <link rel="preload" href="../assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/components/page-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Page specific CSS -->
+    <link rel="preload" href="../assets/css/pages/perfil.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/global/typography.css">
+        <link rel="stylesheet" href="../assets/css/global/utilities.css">
+        <link rel="stylesheet" href="../assets/css/components/footer.css">
+        <link rel="stylesheet" href="../assets/css/components/nav-bottom.css">
+        <link rel="stylesheet" href="../assets/css/components/page-hero.css">
+        <link rel="stylesheet" href="../assets/css/pages/perfil.css">
+    </noscript>
+</head>
+<body>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--perfil">
+            <div class="page-hero__container">
+                <div class="page-hero__content">
+                    <div class="page-hero__header">
+                        <h1 class="page-hero__title">Mi Perfil</h1>
+                        <p class="page-hero__description">Gestiona tu información personal y revisa tu actividad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Dashboard -->
+        <section class="profile-dashboard">
+            <div class="content-section">
+                <div class="container">
+                    
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <div class="profile-avatar" id="profileAvatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Foto de perfil" class="avatar-image" id="avatarImage">
+                                <button class="avatar-edit-btn" id="avatarEditBtn" aria-label="Editar foto de perfil">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="profile-details">
+                                <h2 class="profile-name" id="profileName">Juan Pérez</h2>
+                                <p class="profile-email" id="profileEmail">juan.perez@email.com</p>
+                                <div class="profile-badges">
+                                    <span class="badge badge-member">Miembro desde 2024</span>
+                                    <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn-primary" id="editProfileBtn">
+                                <i class="fas fa-edit"></i>
+                                Editar Perfil
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Cards -->
+                    <div class="dashboard-cards">
+                        
+                        <!-- Points Card -->
+                        <div class="dashboard-card points-card">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="card-title">
+                                    <h3>Mis Puntos</h3>
+                                    <p>Acumula puntos con cada compra</p>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="points-display">
+                                    <div class="points-number" id="currentPoints">1,250</div>
+                                    <div class="points-label">puntos disponibles</div>
+                                </div>
+                                <div class="points-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <p class="progress-text">250 puntos más para el próximo nivel</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="points-info">
+                                    <div class="info-item">
+                                        <span class="info-value">+120</span>
+                                        <span class="info-label">Este mes</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-value">-50</span>
+                                        <span class="info-label">Canjeados</span>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary btn-disabled" disabled>
+                                    <i class="fas fa-gift"></i>
+                                    Canjear (Próximamente)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Orders Card -->
+                        <div class="dashboard-card orders-card">
+                            <div class="card-header">
+                                <div class="card-icon">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="card-title">
+                                    <h3>Mis Compras</h3>
+                                    <p>Historial de pedidos</p>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="orders-summary">
+                                    <div class="summary-item">
+                                        <div class="summary-number">24</div>
+                                        <div class="summary-label">Total pedidos</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-number">$18,750</div>
+                                        <div class="summary-label">Total gastado</div>
+                                    </div>
+                                    <div class="summary-item">
+                                        <div class="summary-number">3</div>
+                                        <div class="summary-label">Este mes</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Recent Orders -->
+                                <div class="recent-orders">
+                                    <h4 class="section-subtitle">Pedidos recientes</h4>
+                                    <div class="orders-list">
+                                        <div class="order-item">
+                                            <div class="order-image">
+                                                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="Pan Artesanal">
+                                            </div>
+                                            <div class="order-details">
+                                                <div class="order-name">Pan Artesanal x2</div>
+                                                <div class="order-date">Hace 2 días</div>
+                                            </div>
+                                            <div class="order-price">$1,200</div>
+                                        </div>
+                                        
+                                        <div class="order-item">
+                                            <div class="order-image">
+                                                <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="Tarta de Frutas">
+                                            </div>
+                                            <div class="order-details">
+                                                <div class="order-name">Tarta de Frutas</div>
+                                                <div class="order-date">Hace 5 días</div>
+                                            </div>
+                                            <div class="order-price">$2,500</div>
+                                        </div>
+                                        
+                                        <div class="order-item">
+                                            <div class="order-image">
+                                                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="Galletas">
+                                            </div>
+                                            <div class="order-details">
+                                                <div class="order-name">Galletas Mix x12</div>
+                                                <div class="order-date">Hace 1 semana</div>
+                                            </div>
+                                            <div class="order-price">$1,800</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn-outline" id="viewAllOrdersBtn">
+                                    <i class="fas fa-list"></i>
+                                    Ver todos los pedidos
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Edit Profile Modal -->
+        <div class="modal-overlay" id="editProfileModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Editar Perfil</h3>
+                    <button class="modal-close" id="closeEditModal" aria-label="Cerrar modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="edit-profile-form" id="editProfileForm">
+                        <div class="form-group">
+                            <label for="editName" class="form-label">Nombre completo</label>
+                            <input type="text" id="editName" class="form-input" value="Juan Pérez" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" id="editEmail" class="form-input" value="juan.perez@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="editPhone" class="form-label">Teléfono</label>
+                            <input type="tel" id="editPhone" class="form-input" value="+54 11 1234-5678">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="editAddress" class="form-label">Dirección de entrega</label>
+                            <textarea id="editAddress" class="form-input form-textarea" rows="3" placeholder="Dirección completa para entregas">Av. Corrientes 1234, CABA, Buenos Aires</textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" id="cancelEditBtn">Cancelar</button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-save"></i>
+                                Guardar cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Orders Modal -->
+        <div class="modal-overlay" id="allOrdersModal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <h3 class="modal-title">Todos mis pedidos</h3>
+                    <button class="modal-close" id="closeOrdersModal" aria-label="Cerrar modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="orders-detailed-list" id="detailedOrdersList">
+                        <div class="detailed-order-item">
+                            <div class="order-header">
+                                <div class="order-id">#LA001-2024</div>
+                                <div class="order-date">15 de Enero, 2024</div>
+                            </div>
+                            <div class="order-items-preview">
+                                <div class="item-preview">
+                                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80" alt="Pan">
+                                </div>
+                                <div class="items-summary">Pan Artesanal x2, Tarta de Frutas</div>
+                            </div>
+                            <div class="order-total">$3,700</div>
+                            <div class="order-points">+37 pts</div>
+                        </div>
+                        
+                        <div class="detailed-order-item">
+                            <div class="order-header">
+                                <div class="order-id">#LA002-2024</div>
+                                <div class="order-date">18 de Enero, 2024</div>
+                            </div>
+                            <div class="order-items-preview">
+                                <div class="item-preview">
+                                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&q=80" alt="Galletas">
+                                </div>
+                                <div class="items-summary">Galletas Mix x12</div>
+                            </div>
+                            <div class="order-total">$1,800</div>
+                            <div class="order-points">+18 pts</div>
+                        </div>
+                        
+                        <!-- More orders would be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Navigation Bottom Component Placeholder -->
+    <div id="nav-bottom-placeholder"></div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- JavaScript Files - Order is important -->
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/component-loader.js"></script>
+    <script src="../assets/js/product-manager.js"></script>
+    <script src="../assets/js/shopping-cart.js"></script>
+    <script src="../assets/js/cart-sync.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/nav-bottom.js"></script>
+    <script src="../assets/js/pages/perfil.js"></script>
+</body>
+</html>

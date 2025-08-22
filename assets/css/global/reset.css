@@ -1,0 +1,405 @@
+/* ==================== CSS RESET/NORMALIZE ==================== */
+
+/* Modern CSS Reset based on Josh Comeau's reset with additions for this project */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+    line-height: 1.6;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-body, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    color: var(--text-dark, #4A4A4A);
+    overflow-x: hidden;
+}
+
+/* Remove default styling for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+/* Remove default paragraph margins */
+p {
+    margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Remove default link styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    font-family: var(--font-body, inherit);
+    color: inherit;
+}
+
+/* Remove default button styling */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove default input styling */
+input,
+textarea,
+select {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Remove default fieldset styling */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove default legend styling */
+legend {
+    padding: 0;
+}
+
+/* Remove default table styling */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove default list styling */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default blockquote styling */
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default code styling */
+code,
+pre {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+}
+
+/* Remove default hr styling */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--gray-light, #F0F0F0);
+    margin: 1em 0;
+}
+
+/* Remove default mark styling */
+mark {
+    background-color: var(--yellow-star, #FFD54F);
+    color: var(--text-dark, #4A4A4A);
+}
+
+/* Remove default small styling */
+small {
+    font-size: 0.8em;
+}
+
+/* Remove default strong and b styling */
+strong,
+b {
+    font-weight: var(--font-weight-bold, 700);
+}
+
+/* Remove default em and i styling */
+em,
+i {
+    font-style: italic;
+}
+
+/* Remove default sub and sup styling */
+sub,
+sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Remove default address styling */
+address {
+    font-style: normal;
+}
+
+/* Remove default del styling */
+del {
+    text-decoration: line-through;
+}
+
+/* Remove default ins styling */
+ins {
+    text-decoration: underline;
+}
+
+/* Focus styles for accessibility */
+:focus {
+    outline: 2px solid var(--accent-orange, #D2691E);
+    outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users but keep for keyboard users */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Ensure focus is visible for keyboard users */
+:focus-visible {
+    outline: 2px solid var(--accent-orange, #D2691E);
+    outline-offset: 2px;
+}
+
+/* Remove default appearance for form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Remove default webkit search input styling */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* Remove default number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Remove default select arrow */
+select {
+    background-image: none;
+}
+
+/* Remove default checkbox and radio styling */
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ensure hidden elements are truly hidden */
+[hidden] {
+    display: none !important;
+}
+
+/* Remove default details/summary styling */
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+/* Remove default template styling */
+template {
+    display: none;
+}
+
+/* Ensure iframe is responsive */
+iframe {
+    border: 0;
+}
+
+/* Remove default webkit tap highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve text rendering */
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Smooth scrolling for reduced motion users */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Print styles reset */
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    
+    pre {
+        white-space: pre-wrap !important;
+    }
+    
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    
+    thead {
+        display: table-header-group;
+    }
+    
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    * {
+        outline-color: currentColor;
+    }
+}
+
+/* Forced colors mode (Windows High Contrast) */
+@media (forced-colors: active) {
+    * {
+        forced-color-adjust: auto;
+    }
+}

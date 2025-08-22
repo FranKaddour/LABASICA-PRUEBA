@@ -1,0 +1,110 @@
+<!-- Modern Artistic Newsletter with Waves -->
+<section class="modern-newsletter-section" id="newsletterSection">
+
+    <!-- Newsletter Content Container -->
+    <div class="container">
+        <div class="newsletter-content">
+            <!-- Newsletter Left Column -->
+            <div class="newsletter-left-column">
+                <!-- Newsletter Header with Animation -->
+                <div class="newsletter-header">
+                    <div class="newsletter-icon">
+                        <div class="icon-circle">
+                            <i class="fas fa-envelope-open" aria-hidden="true"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <h2 class="newsletter-title">
+                        <span class="title-line-1">Mantente</span>
+                        <span class="title-line-2">al día</span>
+                    </h2>
+                </div>
+
+                <!-- Modern Newsletter Form -->
+                <div class="newsletter-form-container">
+                    <form class="modern-newsletter-form" id="newsletterForm" novalidate>
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input 
+                                    type="email" 
+                                    class="modern-newsletter-input" 
+                                    id="newsletterEmail"
+                                    placeholder="tu@email.com"
+                                    required 
+                                    aria-describedby="emailError"
+                                    autocomplete="email"
+                                >
+                                <div class="input-icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="input-border"></div>
+                            </div>
+                            
+                            <button type="submit" class="modern-newsletter-btn">
+                                <span class="btn-content">
+                                    <span class="btn-text">Suscribirse</span>
+                                    <span class="btn-icon">
+                                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <span class="btn-loading d-none">
+                                    <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                                    <span>Enviando...</span>
+                                </span>
+                                <div class="btn-ripple"></div>
+                            </button>
+                        </div>
+
+                        <!-- Form Messages -->
+                        <div class="form-messages">
+                            <div id="emailError" class="form-message error-message d-none" role="alert">
+                                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                                <span class="message-text"></span>
+                            </div>
+                            <div id="successMessage" class="form-message success-message d-none" role="alert">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span class="message-text"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Newsletter Right Column -->
+            <div class="newsletter-right-column">
+
+                <!-- Newsletter Features -->
+                <div class="newsletter-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-gift" aria-hidden="true"></i>
+                        </div>
+                        <span class="feature-text">Ofertas exclusivas</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils" aria-hidden="true"></i>
+                        </div>
+                        <span class="feature-text">Recetas especiales</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell" aria-hidden="true"></i>
+                        </div>
+                        <span class="feature-text">Nuevos productos</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter Disclaimer -->
+                <div class="newsletter-footer">
+                    <p class="newsletter-disclaimer">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        No spam. Cancela cuando quieras. Tu privacidad es importante para nosotros.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

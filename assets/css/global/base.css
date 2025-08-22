@@ -1,0 +1,296 @@
+/* ==================== BASE STYLES ==================== */
+
+/* Core HTML and body setup */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: var(--line-height-relaxed);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Container system */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* Content sections with consistent spacing and subtle separations */
+.content-section {
+    padding: 2.5rem var(--content-padding);
+}
+
+.content-section:nth-child(even) {
+    background-color: var(--gray-light);    
+}
+
+.content-section:nth-child(odd) {
+    background-color: var(--gray-light);
+}
+
+.content-section .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+/* Main content wrapper */
+.main-content {
+    background: var(--gray-light);
+    min-height: 100vh;
+    padding-top: 62px;
+}
+
+
+/* Focus management */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    z-index: var(--z-modal);
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-all);
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.loaded .loading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth animations on page load */
+.main-content > section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--accent-orange);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background-color: var(--accent-orange);
+    color: var(--white);
+}
+
+/* Scrollbar styling (webkit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-brown);
+    border-radius: var(--border-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-brown);
+}
+
+/* Firefox scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-brown) var(--gray-light);
+}
+
+/* Eliminamos todos los patrones de fondo para diseño minimalista */
+
+/* Print optimizations */
+@media print {
+    .main-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .content-section {
+        padding: 0;
+        margin-top: 0;
+        break-inside: avoid;
+    }
+    
+    body::before {
+        display: none;
+    }
+    
+    .container {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .main-content > section {
+        animation: none;
+    }
+    
+    .loading {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body::before {
+        display: none;
+    }
+    
+    .container {
+        border: 1px solid currentColor;
+    }
+}
+
+/* Dark mode preparation */
+@media (prefers-color-scheme: dark) {
+    body::before {
+        background-image: 
+            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.02) 1px, transparent 0);
+    }
+}
+
+/* Touch device optimizations */
+.touch-device {
+    -webkit-overflow-scrolling: touch;
+}
+
+.touch-device * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.touch-device input,
+.touch-device textarea,
+.touch-device [contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+/* Performance optimizations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+.will-change-scroll {
+    will-change: scroll-position;
+}
+
+/* ==================== RESPONSIVE CONTAINERS ==================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+    .container {
+        max-width: var(--container-tablet);
+    }
+    
+    .content-section .container {
+        max-width: var(--container-tablet);
+    }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: var(--container-desktop);
+    }
+    
+    .content-section .container {
+        max-width: var(--container-desktop);
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: var(--container-xl);
+    }
+    
+    .content-section .container {
+        max-width: var(--container-xl);
+    }
+}
+
+/* Safe area handling for mobile devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .main-content {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Container queries preparation - Experimental feature */
+@supports (container-type: inline-size) {
+    .container {
+        container-type: inline-size;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+    .main-content {
+        padding-bottom: 0;
+    }
+}
