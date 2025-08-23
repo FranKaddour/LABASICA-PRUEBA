@@ -91,25 +91,47 @@
                 <div class="container">
                     <!-- Filter Section -->
                     <div class="filters-container">
-                        <div class="search-bar">
-                            <input type="text" id="searchInput" placeholder="Buscar productos..." class="search-input">
-                            <button class="search-btn" aria-label="Buscar">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                        
                         <div class="category-filters">
-                            <button class="filter-btn active" data-filter="all">Todos</button>
-                            <button class="filter-btn" data-filter="panes">Panes</button>
-                            <button class="filter-btn" data-filter="pasteles">Pasteles</button>
-                            <button class="filter-btn" data-filter="galletas">Galletas</button>
-                            <button class="filter-btn" data-filter="especiales">Especiales</button>
+                            <!-- Primera fila - solo TODOS en mobile pequeño -->
+                            <div class="filters-row main-row">
+                                <button class="filter-btn active" data-filter="all">Todos</button>
+                                <!-- Estos se ocultan en mobile pequeño -->
+                                <button class="filter-btn primary-filter" data-filter="facturas">FACTURAS</button>
+                                <button class="filter-btn primary-filter" data-filter="cookies">COOKIES</button>
+                                <button class="filter-btn primary-filter" data-filter="alfajores">ALFAJORES</button>
+                                <button class="filter-btn primary-filter" data-filter="tartas">TARTAS</button>
+                            </div>
+                            
+                            <!-- Botón expandir - separado para mobile -->
+                            <div class="expand-button-row">
+                                <button class="show-more-btn" id="showMoreBtn">
+                                    <span class="show-more-text">MAS CATEGORIAS</span>
+                                    <i class="fas fa-chevron-down show-more-icon"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Segunda fila - expandible hacia abajo -->
+                            <div class="filters-row secondary-row" id="hiddenFilters" style="display: none;">
+                                <!-- En mobile pequeño, estos van aquí -->
+                                <button class="filter-btn secondary-filter" data-filter="facturas">FACTURAS</button>
+                                <button class="filter-btn secondary-filter" data-filter="cookies">COOKIES</button>
+                                <button class="filter-btn secondary-filter" data-filter="alfajores">ALFAJORES</button>
+                                <button class="filter-btn secondary-filter" data-filter="tartas">TARTAS</button>
+                                <!-- Los filtros originales secundarios -->
+                                <button class="filter-btn" data-filter="scons">SCONS</button>
+                                <button class="filter-btn" data-filter="masitas">MASITAS</button>
+                                <button class="filter-btn" data-filter="muffins">MUFFINS</button>
+                                <button class="filter-btn" data-filter="budines">BUDINES</button>
+                                <button class="filter-btn" data-filter="chipa">CHIPA</button>
+                                <button class="filter-btn" data-filter="brownie">BROWNIE</button>
+                                <button class="filter-btn" data-filter="tortas">TORTAS</button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Products Grid -->
                     <div class="products-grid" id="productsGrid">
-                        <!-- Product cards will be loaded here -->
+                        <!-- Productos disponibles próximamente -->
                     </div>
                 </div>
             </div>
