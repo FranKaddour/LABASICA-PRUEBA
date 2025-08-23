@@ -16,7 +16,7 @@
 
 .gallery-header h2 {
     font-family: var(--font-titles);
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: var(--font-weight-black);
     color: var(--primary-brown);
     text-transform: uppercase;
@@ -303,7 +303,7 @@
 /* ==================== RESPONSIVE GALLERY ==================== */
 @media (max-width: 1024px) {
     .gallery-header h2 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .innovative-gallery {
@@ -338,7 +338,7 @@
     }
     
     .gallery-header h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     
     .innovative-gallery {
@@ -437,7 +437,7 @@
     font-family: var(--font-titles);
     font-size: 4rem;
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: var(--gray-light);
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     letter-spacing: 1px;

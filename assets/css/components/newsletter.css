@@ -611,7 +611,9 @@
     .title-line-1 {
         font-size: 4.5rem;
     }
-    
+    .newsletter-features {
+        margin-top: 3rem;
+    }
 }
 
 /* ==================== ACCESSIBILITY & PERFORMANCE ==================== */
