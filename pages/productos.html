@@ -89,53 +89,320 @@
         <section class="products-section" id="products-showcase">
             <div class="content-section">
                 <div class="container">
-                    <!-- Filter Section -->
-                    <div class="filters-container">
-                        <div class="category-filters">
-                            <!-- Primera fila - solo TODOS en mobile pequeño -->
-                            <div class="filters-row main-row">
-                                <button class="filter-btn active" data-filter="all">Todos</button>
-                                <!-- Estos se ocultan en mobile pequeño -->
-                                <button class="filter-btn primary-filter" data-filter="facturas">FACTURAS</button>
-                                <button class="filter-btn primary-filter" data-filter="cookies">COOKIES</button>
-                                <button class="filter-btn primary-filter" data-filter="alfajores">ALFAJORES</button>
-                                <button class="filter-btn primary-filter" data-filter="tartas">TARTAS</button>
+
+                    <!-- Banner Slider Section -->
+                    <div class="banner-slider-section">
+                        <div class="banner-slider">
+                            <div class="banner-slide active" data-slide="1">
+                                <div class="banner-content">
+                                    <div class="banner-image">
+                                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Productos Artesanales" loading="lazy">
+                                    </div>
+                                </div>
                             </div>
                             
-                            <!-- Botón expandir - separado para mobile -->
-                            <div class="expand-button-row">
-                                <button class="show-more-btn" id="showMoreBtn">
-                                    <span class="show-more-text">MAS CATEGORIAS</span>
-                                    <i class="fas fa-chevron-down show-more-icon"></i>
+                            <div class="banner-slide" data-slide="2">
+                                <div class="banner-content">
+                                    <div class="banner-image">
+                                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Pasteles Artesanales" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="banner-slide" data-slide="3">
+                                <div class="banner-content">
+                                    <div class="banner-image">
+                                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Variedades Dulces" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slider Navigation -->
+                        <div class="banner-nav">
+                            <button class="banner-nav-btn prev-btn" onclick="changeBannerSlide(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="banner-dots">
+                                <button class="banner-dot active" onclick="currentBannerSlide(1)"></button>
+                                <button class="banner-dot" onclick="currentBannerSlide(2)"></button>
+                                <button class="banner-dot" onclick="currentBannerSlide(3)"></button>
+                            </div>
+                            <button class="banner-nav-btn next-btn" onclick="changeBannerSlide(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="category-filter">
+                        <div class="filter-container">
+                            <div class="filter-buttons-visible">
+                                <button class="filter-btn todos-btn active" data-category="todos">Todos</button>
+                                <button class="more-btn" id="toggleMoreBtn">
+                                    <span>Más Productos</span>
+                                    <span class="more-btn-arrow">▼</span>
                                 </button>
                             </div>
                             
-                            <!-- Segunda fila - expandible hacia abajo -->
-                            <div class="filters-row secondary-row" id="hiddenFilters" style="display: none;">
-                                <!-- En mobile pequeño, estos van aquí -->
-                                <button class="filter-btn secondary-filter" data-filter="facturas">FACTURAS</button>
-                                <button class="filter-btn secondary-filter" data-filter="cookies">COOKIES</button>
-                                <button class="filter-btn secondary-filter" data-filter="alfajores">ALFAJORES</button>
-                                <button class="filter-btn secondary-filter" data-filter="tartas">TARTAS</button>
-                                <!-- Los filtros originales secundarios -->
-                                <button class="filter-btn" data-filter="scons">SCONS</button>
-                                <button class="filter-btn" data-filter="masitas">MASITAS</button>
-                                <button class="filter-btn" data-filter="muffins">MUFFINS</button>
-                                <button class="filter-btn" data-filter="budines">BUDINES</button>
-                                <button class="filter-btn" data-filter="chipa">CHIPA</button>
-                                <button class="filter-btn" data-filter="brownie">BROWNIE</button>
-                                <button class="filter-btn" data-filter="tortas">TORTAS</button>
+                            <div class="filter-buttons-hidden" id="hiddenButtons">
+                                <button class="filter-btn" data-category="facturas">Facturas</button>
+                                <button class="filter-btn" data-category="cookies">Cookies</button>
+                                <button class="filter-btn" data-category="alfajores">Alfajores</button>
+                                <button class="filter-btn" data-category="tartas">Tartas</button>
+                                <button class="filter-btn" data-category="scones">Scones</button>
+                                <button class="filter-btn" data-category="masitas">Masitas</button>
+                                <button class="filter-btn" data-category="muffins">Muffins</button>
+                                <button class="filter-btn" data-category="budines">Budines</button>
+                                <button class="filter-btn" data-category="chipa">Chipa</button>
+                                <button class="filter-btn" data-category="brownie">Brownie</button>
+                                <button class="filter-btn" data-category="tortas">Tortas</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Products Grid -->
-                    <div class="products-grid" id="productsGrid">
-                        <!-- Productos disponibles próximamente -->
+                    <div class="cards-container" id="productsGrid">
+                        <!-- Card 1 -->
+                        <div class="product-card card-dark" data-product="1" data-category="facturas">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Croissant<br>Artesanal</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Facturas<br>Premium</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567890</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="product-card card-dark" data-product="2" data-category="alfajores">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Alfajor<br>Santafesino</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Alfajores<br>Tradicional</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567891</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="product-card card-dark" data-product="3" data-category="muffins">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Muffin<br>Blueberry</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Muffins<br>Premium</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567892</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="product-card card-dark" data-product="4" data-category="cookies">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Cookie<br>Choco Chips</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Cookies<br>Artesanales</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567893</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="product-card card-dark" data-product="5" data-category="tortas">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Torta<br>Chocolate</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Tortas<br>Gourmet</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567894</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="product-card card-dark" data-product="6" data-category="brownie">
+                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                            <div class="product-content">
+                                <div class="product-info">
+                                    <div class="product-name">Brownie<br>Premium</div>
+                                </div>
+                                <div class="product-bottom">
+                                    <div class="product-category">Brownie<br>Artesanal</div>
+                                    <div class="barcode-section">
+                                        <div class="barcode"></div>
+                                        <div class="barcode-number">8 901234 567895</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Wave Top -->
+        <div class="wave-divider wave-top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,120 L1200,120 L1200,60 C900,90 600,30 300,60 C150,75 75,85 0,60 Z" fill="#D2B48C"></path>
+            </svg>
+        </div>
+
+        <!-- Combos Section -->
+        <section class="combos-section" id="combos-showcase">
+            <div class="content-section">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="combos-header">
+                        <h2 class="combos-title">Combos Especiales</h2>
+                       
+                    </div>
+
+                    <!-- Combos Grid -->
+                    <div class="combos-container">
+                        <!-- Combo 1 -->
+                        <div class="combo-card card-dark" data-combo="1">
+                            <div class="combo-badge">AHORRA 15%</div>
+                            <div class="combo-header">
+                                <h3 class="combo-name">Combo Dulce Antojo</h3>
+                                <div class="combo-description">Perfecto para satisfacer tu lado dulce</div>
+                            </div>
+                            
+                            <div class="combo-products">
+                                <div class="combo-box-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                                <div class="combo-items-list">
+                                    <div class="combo-item-text">2 Alfajores</div>
+                                    <div class="combo-item-text">1 Brownie</div>
+                                </div>
+                            </div>
+                            
+                            <div class="combo-pricing">
+                                <div class="combo-original-price">$11.90</div>
+                                <div class="combo-final-price">$9.90</div>
+                            </div>
+                            
+                            <div class="combo-action">
+                                <button class="combo-btn">Me Interesa</button>
+                            </div>
+                        </div>
+
+                        <!-- Combo 2 -->
+                        <div class="combo-card card-dark" data-combo="2">
+                            <div class="combo-badge">AHORRA 20%</div>
+                            <div class="combo-header">
+                                <h3 class="combo-name">Pack Merienda</h3>
+                                <div class="combo-description">Ideal para compartir en la merienda</div>
+                            </div>
+                            
+                            <div class="combo-products">
+                                <div class="combo-box-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                                <div class="combo-items-list">
+                                    <div class="combo-item-text">3 Cookies</div>
+                                    <div class="combo-item-text">1 Muffin</div>
+                                </div>
+                            </div>
+                            
+                            <div class="combo-pricing">
+                                <div class="combo-original-price">$26.50</div>
+                                <div class="combo-final-price">$21.20</div>
+                            </div>
+                            
+                            <div class="combo-action">
+                                <button class="combo-btn">Me Interesa</button>
+                            </div>
+                        </div>
+
+                        <!-- Combo 3 -->
+                        <div class="combo-card card-dark" data-combo="3">
+                            <div class="combo-badge">AHORRA 12%</div>
+                            <div class="combo-header">
+                                <h3 class="combo-name">Especial Compartir</h3>
+                                <div class="combo-description">Para disfrutar en familia</div>
+                            </div>
+                            
+                            <div class="combo-products">
+                                <div class="combo-box-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                                <div class="combo-items-list">
+                                    <div class="combo-item-text">1 Torta Chica</div>
+                                    <div class="combo-item-text">2 Alfajores</div>
+                                </div>
+                            </div>
+                            
+                            <div class="combo-pricing">
+                                <div class="combo-original-price">$10.60</div>
+                                <div class="combo-final-price">$9.30</div>
+                            </div>
+                            
+                            <div class="combo-action">
+                                <button class="combo-btn">Me Interesa</button>
+                            </div>
+                        </div>
+
+                        <!-- Combo 4 -->
+                        <div class="combo-card card-dark" data-combo="4">
+                            <div class="combo-badge">AHORRA 18%</div>
+                            <div class="combo-header">
+                                <h3 class="combo-name">Mix Artesanal</h3>
+                                <div class="combo-description">Variedad de nuestras especialidades</div>
+                            </div>
+                            
+                            <div class="combo-products">
+                                <div class="combo-box-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                                <div class="combo-items-list">
+                                    <div class="combo-item-text">1 Croissant</div>
+                                    <div class="combo-item-text">1 Cookie</div>
+                                    <div class="combo-item-text">1 Masita</div>
+                                </div>
+                            </div>
+                            
+                            <div class="combo-pricing">
+                                <div class="combo-original-price">$13.40</div>
+                                <div class="combo-final-price">$11.00</div>
+                            </div>
+                            
+                            <div class="combo-action">
+                                <button class="combo-btn">Me Interesa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wave Bottom -->
+        <div class="wave-divider wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,60 C150,35 300,10 600,30 C900,50 1050,90 1200,60 L1200,0 L0,0 Z" fill="#D2B48C"></path>
+            </svg>
+        </div>
 
         <!-- Newsletter Component Placeholder -->
         <div id="newsletter-placeholder"></div>
@@ -148,14 +415,46 @@
     <div id="nav-bottom-placeholder"></div>
 
     <!-- Product Modal -->
-    <div class="product-modal" id="productModal">
-        <div class="modal-backdrop" id="modalBackdrop"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-body" id="modalBody">
-                <!-- Modal content will be loaded here -->
+    <div id="productModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Cerrar modal">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="modal-body">
+                    <div class="modal-image-container" id="modalImageContainer">
+                        <img class="modal-product-image" id="modalImage" src="" alt="Producto">
+                    </div>
+                    
+                    <div class="modal-info-container" id="modalInfoContainer">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="modalTitle"></h2>
+                        </div>
+                        
+                        <div class="modal-content-wrapper">
+                            <div class="modal-sections-row">
+                                <div class="modal-section modal-section-left">
+                                    <h3 class="modal-section-title">Descripción</h3>
+                                    <p class="modal-description" id="modalDescription"></p>
+                                </div>
+                                
+                                <div class="modal-section modal-section-right">
+                                    <h3 class="modal-section-title">Ingredientes</h3>
+                                    <ul class="modal-ingredients" id="modalIngredients"></ul>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-price-section">
+                                <span class="modal-price-label">Precio</span>
+                                <span class="modal-price" id="modalPrice"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

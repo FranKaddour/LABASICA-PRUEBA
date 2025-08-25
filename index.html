@@ -60,6 +60,25 @@
     </noscript>
 </head>
 <body>
+    <!-- Loader Section -->
+    <div class="loader-container" id="loaderContainer">
+        <div class="color-sweep" id="colorSweep"></div>
+        <div class="text-content" id="textContent">
+            <div class="brand-text">
+                <div class="brand-line">LA</div>
+                <div class="brand-line">BÁSICA</div>
+                <div class="brand-line small">
+                    <div class="word-container">
+                        <div class="word active" id="word1">PASTELERÍA</div>
+                        <div class="word" id="word2">TENTACIÓN</div>
+                        <div class="word" id="word3">DULZURA</div>
+                        <div class="word" id="word4">PASTELERÍA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Component Placeholder -->
     <div id="header-placeholder"></div>
     
@@ -199,6 +218,9 @@
     <div id="nav-bottom-placeholder"></div>
 
     <!-- JavaScript Files - Order is important for proper initialization -->
+    <!-- Loader JavaScript - Must load first -->
+    <script src="assets/js/loader.js"></script>
+    
     <!-- Critical JavaScript loaded synchronously -->
     <script src="assets/js/global.js" defer></script>
     <script src="assets/js/component-loader.js" defer></script>

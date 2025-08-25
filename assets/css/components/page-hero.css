@@ -78,7 +78,7 @@
     font-family: var(--font-titles);
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: black;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: var(--line-height-tight);
@@ -95,7 +95,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-orange), var(--light-brown));
+    background: var(--accent-orange);
     border-radius: var(--border-radius-full);
     animation: heroUnderlineExpand 0.6s ease-out 0.4s both;
 }
@@ -136,7 +136,9 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    min-width: 200px;
+    min-width: 250px;
+    width: 250px;
+    height: 60px;
     justify-content: center;
 }
 
@@ -146,22 +148,23 @@
 }
 
 .page-hero__cta--primary {
-    background: linear-gradient(135deg, var(--accent-orange), var(--light-brown));
+    background: var(--accent-orange);
     color: var(--white);
-    box-shadow: 0 8px 32px rgba(170, 116, 68, 0.3);
+    border: 2px solid var(--accent-orange);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 
 .page-hero__cta--secondary {
     background: rgba(255, 255, 255, 0.9);
-    color: var(--primary-brown);
-    border: 2px solid var(--primary-brown);
+    color: var(--accent-orange);
+    border: 2px solid var(--accent-orange);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .page-hero__cta--secondary:hover {
-     color: var(--primary-brown);
+     color: var(--accent-orange);
 }
 
 .page-hero__cta-icon {
@@ -187,7 +190,7 @@
 }
 
 .page-hero--nosotros .page-hero__title {
-    color: var(--primary-brown);
+    color: black;
 }
 
 /* Productos - Catálogo */
@@ -206,7 +209,7 @@
 }
 
 .page-hero--productos .page-hero__title {
-    color: var(--primary-brown);
+    color: black;
 }
 
 /* Contacto - Comunicación */
@@ -225,7 +228,7 @@
 }
 
 .page-hero--contacto .page-hero__title {
-    color: var(--primary-brown);
+    color: black;
 }
 
 /* Perfil - Gestión de usuario */
@@ -244,7 +247,7 @@
 }
 
 .page-hero--perfil .page-hero__title {
-    color: var(--primary-brown);
+    color: black;
 }
 
 /* ==================== ANIMATIONS ==================== */

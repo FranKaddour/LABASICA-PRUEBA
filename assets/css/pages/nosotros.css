@@ -18,7 +18,7 @@
     font-family: var(--font-titles);
     font-size: 4.5rem;
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: black;
     text-transform: uppercase;
     margin-bottom: var(--space-md);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -700,9 +700,9 @@
 
 .faq-header h2 {
     font-family: var(--font-titles);
-    font-size: var(--font-size-4xl);
+    font-size: 3rem;
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: black;
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -995,7 +995,7 @@
     }
     
     .faq-header h2 {
-        font-size: var(--font-size-5xl);
+        font-size: 3rem;
     }
     
     .faq-header p {

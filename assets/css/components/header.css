@@ -1013,8 +1013,8 @@
 @media (max-width: 767px) {
     .modern-header {
         top: 0;
-        left: var(--content-padding);
-        right: var(--content-padding);
+        left: 0;
+        right: 0;
         border: 1px solid rgba(139, 69, 19, 0.08);
         border-top: none;
         border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
