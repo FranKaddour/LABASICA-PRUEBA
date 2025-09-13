@@ -29,7 +29,7 @@
     font-family: var(--font-titles);
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: #aa7444;
     margin-bottom: var(--space-4xl);
     text-transform: uppercase;
     text-shadow: var(--text-shadow-sm);
@@ -287,7 +287,7 @@
     font-family: var(--font-titles);
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: #aa7444;
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
 }
@@ -364,7 +364,7 @@
     font-family: var(--font-titles);
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-black);
-    color: var(--primary-brown);
+    color: #aa7444;
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
 }

@@ -11,14 +11,13 @@
 
 .gallery-header {
     text-align: center;
-    margin-bottom: var(--space-6xl);
 }
 
 .gallery-header h2 {
     font-family: var(--font-titles);
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     font-weight: var(--font-weight-black);
-    color: black;
+    color: #aa7444;
     text-transform: uppercase;
     margin-bottom: var(--space-md);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -57,8 +56,8 @@
 
 .gallery-item {
     flex: 0 0 auto;
-    width: 300px;
-    height: 350px;
+    width: 400px;
+    height: auto;
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -72,7 +71,7 @@
 
 .image-container {
     width: 100%;
-    height: 280px;
+    height: auto;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     position: relative;
@@ -82,14 +81,17 @@
 
 .image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     transition: transform 0.3s ease;
+    display: block;
+    max-height: 600px;
 }
 
 .image-info {
     text-align: center;
     margin-top: var(--space-md);
+    display: none;
 }
 
 .image-info h3 {
@@ -100,11 +102,11 @@
 }
 
 @keyframes infiniteScroll {
-    0% { 
-        transform: translateX(0); 
+    0% {
+        transform: translateX(0);
     }
-    100% { 
-        transform: translateX(calc(-300px * 8 - var(--space-2xl) * 8)); 
+    100% {
+        transform: translateX(calc(-400px * 8 - var(--space-2xl) * 8));
     }
 }
 
@@ -303,7 +305,7 @@
 /* ==================== RESPONSIVE GALLERY ==================== */
 @media (max-width: 1024px) {
     .gallery-header h2 {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
     
     .innovative-gallery {
@@ -316,8 +318,8 @@
     }
     
     .gallery-item {
-        width: 240px;
-        height: 280px;
+        width: 320px;
+        height: auto;
         z-index: 11;
     }
     
@@ -336,9 +338,9 @@
     .gallery-section {
         padding: var(--space-4xl) 0 var(--space-2xl);
     }
-    
+
     .gallery-header h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
     
     .innovative-gallery {
@@ -365,8 +367,8 @@
     }
     
     .gallery-item {
-        width: 250px;
-        height: 300px;
+        width: 280px;
+        height: auto;
         flex-shrink: 0;
         z-index: 11;
     }
@@ -378,8 +380,12 @@
 
     
     .image-container {
-        min-height: 250px;
+        height: auto;
         border-radius: var(--border-radius-lg);
+    }
+
+    .image-container img {
+        max-height: 400px;
     }
     
     .image-info {
@@ -420,11 +426,12 @@
     padding: 0;
     background: #F0F0F0;
     position: relative;
+    scroll-margin-top: 100px;
 }
 
 .team-section .content-section {
     background: #D2B48C;
-    padding: var(--space-6xl) 0;
+    padding: 6rem 0rem 9rem 0rem;
     position: relative;
 }
 
@@ -435,7 +442,7 @@
 
 .team-header h2 {
     font-family: var(--font-titles);
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: var(--font-weight-black);
     color: var(--gray-light);
     margin-bottom: var(--space-lg);
@@ -590,19 +597,17 @@
     .page-hero h1 {
         font-size: var(--font-size-5xl);
     }
-    
+
     .page-hero p {
         font-size: var(--font-size-xl);
     }
-    
-    
+
     .team-grid {
         padding: 0 2rem;
-
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-    
+
     .member-info h3 {
         font-size: 1.5rem;
     }
@@ -611,6 +616,10 @@
     }
     .member-description {
         font-size: 0.8rem;
+    }
+
+    .team-header h2 {
+        font-size: 2.5rem;
     }
 
     .team-top-wave,
@@ -632,7 +641,7 @@
     
     
     .team-header h2 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     
     .team-grid {
@@ -700,9 +709,9 @@
 
 .faq-header h2 {
     font-family: var(--font-titles);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: var(--font-weight-black);
-    color: black;
+    color: #aa7444;
     margin-bottom: var(--space-lg);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -738,7 +747,7 @@
 }
 
 .faq-category-header {
-    background: var(--primary-bg);
+    background: #aa7444;
     padding: var(--space-2xl) var(--space-xl);
     display: flex;
     align-items: center;
@@ -993,7 +1002,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-4xl);
     }
-    
+
     .faq-header h2 {
         font-size: 3rem;
     }

@@ -78,7 +78,7 @@
     font-family: var(--font-titles);
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: var(--font-weight-black);
-    color: black;
+    color: #aa7444;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: var(--line-height-tight);
@@ -190,7 +190,7 @@
 }
 
 .page-hero--nosotros .page-hero__title {
-    color: black;
+    color: #aa7444;
 }
 
 /* Productos - Catálogo */
@@ -209,7 +209,7 @@
 }
 
 .page-hero--productos .page-hero__title {
-    color: black;
+    color: #aa7444;
 }
 
 /* Contacto - Comunicación */
@@ -228,7 +228,7 @@
 }
 
 .page-hero--contacto .page-hero__title {
-    color: black;
+    color: #aa7444;
 }
 
 /* Perfil - Gestión de usuario */
@@ -247,7 +247,7 @@
 }
 
 .page-hero--perfil .page-hero__title {
-    color: black;
+    color: #aa7444;
 }
 
 /* ==================== ANIMATIONS ==================== */
