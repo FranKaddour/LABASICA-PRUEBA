@@ -482,8 +482,6 @@
 
 /* Tablet (768px+) */
 @media (min-width: 768px) {
-    .modern-newsletter-section {
-    }
     
     .newsletter-content {
         padding: var(--space-3xl);

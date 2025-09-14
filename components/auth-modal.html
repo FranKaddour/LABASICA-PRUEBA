@@ -1,0 +1,255 @@
+<!-- Auth Modal Component -->
+<div class="modal-overlay auth-modal-overlay" id="authModal">
+    <div class="modal-content auth-modal-content">
+        <div class="modal-header auth-modal-header">
+            <h3 class="modal-title">Accede a tu cuenta</h3>
+            <p class="modal-subtitle">Inicia sesión para acceder a tu perfil y gestionar tus pedidos</p>
+            <button class="modal-close auth-modal-close" id="closeAuthModal" aria-label="Cerrar modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="modal-body auth-modal-body">
+            <div class="auth-content">
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab" data-tab="login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Iniciar Sesión</span>
+                    </button>
+                    <button class="auth-tab" id="registerTab" data-tab="register">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Registrarse</span>
+                    </button>
+                </div>
+
+                <!-- Login Tab Content -->
+                <div class="auth-tab-content active" id="loginContent">
+                    <!-- Google Sign-In Button -->
+                    <div class="auth-google-section">
+                        <button class="auth-google-btn" id="googleSignInBtn">
+                            <div class="auth-google-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.99 10.1871C19.99 9.36767 19.9246 8.76973 19.7839 8.14966H10.1943V11.848H15.8197C15.7494 12.4827 15.3887 13.4007 14.6295 14.0174L14.6135 14.1332L17.2207 16.1663L17.3961 16.1845C18.9005 14.8078 19.99 12.6835 19.99 10.1871Z" fill="#4285F4"/>
+                                    <path d="M10.1943 20.0001C12.9511 20.0001 15.2644 19.1111 17.3961 16.1845L14.6295 14.0174C13.7926 14.6675 12.6692 15.0875 10.1943 15.0875C7.50909 15.0875 5.22161 13.7102 4.42857 11.6557L4.31721 11.6631L1.60833 13.7762L1.57227 13.8817C3.69328 18.0757 6.66925 20.0001 10.1943 20.0001Z" fill="#34A853"/>
+                                    <path d="M4.42857 11.6557C4.29804 11.0054 4.22321 10.3299 4.22321 9.63616C4.22321 8.94241 4.29804 8.26684 4.41893 7.61652L4.41527 7.49248L1.67995 5.34815L1.57227 5.39079C0.860714 6.80705 0.457031 8.37978 0.457031 9.63616C0.457031 10.8925 0.860714 12.4653 1.57227 13.8817L4.42857 11.6557Z" fill="#FBBC04"/>
+                                    <path d="M10.1943 4.18485C12.2625 4.18485 13.6279 5.00128 14.4254 5.72114L16.9084 3.36699C15.2555 1.84699 12.9511 0.636719 10.1943 0.636719C6.66925 0.636719 3.69328 2.56114 1.57227 6.75485L4.41893 8.61652C5.22161 6.56199 7.50909 4.18485 10.1943 4.18485Z" fill="#EB4335"/>
+                                </svg>
+                            </div>
+                            <span class="auth-google-text">Continuar con Google</span>
+                        </button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="auth-divider">
+                        <span class="auth-divider-text">o</span>
+                    </div>
+
+                    <!-- Email Login Form -->
+                    <form class="auth-form" id="loginForm">
+                        <div class="auth-form-group">
+                            <label for="loginEmail" class="auth-form-label">Correo Electrónico</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-envelope auth-input-icon"></i>
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    class="auth-form-input"
+                                    placeholder="tu@email.com"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="auth-form-group">
+                            <label for="loginPassword" class="auth-form-label">Contraseña</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-lock auth-input-icon"></i>
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    class="auth-form-input"
+                                    placeholder="Tu contraseña"
+                                    required
+                                >
+                                <button type="button" class="auth-password-toggle" id="toggleLoginPassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form-options">
+                            <label class="auth-checkbox-wrapper">
+                                <input type="checkbox" id="rememberMe" name="remember">
+                                <span class="auth-checkbox"></span>
+                                <span class="auth-checkbox-label">Recordarme</span>
+                            </label>
+                            <a href="#" class="auth-link forgot-password">¿Olvidaste tu contraseña?</a>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn" id="loginSubmitBtn">
+                            <span class="auth-btn-text">Iniciar Sesión</span>
+                            <i class="fas fa-arrow-right auth-btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Register Tab Content -->
+                <div class="auth-tab-content" id="registerContent">
+                    <!-- Google Sign-In Button -->
+                    <div class="auth-google-section">
+                        <button class="auth-google-btn" id="googleSignUpBtn">
+                            <div class="auth-google-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19.99 10.1871C19.99 9.36767 19.9246 8.76973 19.7839 8.14966H10.1943V11.848H15.8197C15.7494 12.4827 15.3887 13.4007 14.6295 14.0174L14.6135 14.1332L17.2207 16.1663L17.3961 16.1845C18.9005 14.8078 19.99 12.6835 19.99 10.1871Z" fill="#4285F4"/>
+                                    <path d="M10.1943 20.0001C12.9511 20.0001 15.2644 19.1111 17.3961 16.1845L14.6295 14.0174C13.7926 14.6675 12.6692 15.0875 10.1943 15.0875C7.50909 15.0875 5.22161 13.7102 4.42857 11.6557L4.31721 11.6631L1.60833 13.7762L1.57227 13.8817C3.69328 18.0757 6.66925 20.0001 10.1943 20.0001Z" fill="#34A853"/>
+                                    <path d="M4.42857 11.6557C4.29804 11.0054 4.22321 10.3299 4.22321 9.63616C4.22321 8.94241 4.29804 8.26684 4.41893 7.61652L4.41527 7.49248L1.67995 5.34815L1.57227 5.39079C0.860714 6.80705 0.457031 8.37978 0.457031 9.63616C0.457031 10.8925 0.860714 12.4653 1.57227 13.8817L4.42857 11.6557Z" fill="#FBBC04"/>
+                                    <path d="M10.1943 4.18485C12.2625 4.18485 13.6279 5.00128 14.4254 5.72114L16.9084 3.36699C15.2555 1.84699 12.9511 0.636719 10.1943 0.636719C6.66925 0.636719 3.69328 2.56114 1.57227 6.75485L4.41893 8.61652C5.22161 6.56199 7.50909 4.18485 10.1943 4.18485Z" fill="#EB4335"/>
+                                </svg>
+                            </div>
+                            <span class="auth-google-text">Registrarse con Google</span>
+                        </button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="auth-divider">
+                        <span class="auth-divider-text">o</span>
+                    </div>
+
+                    <!-- Email Register Form -->
+                    <form class="auth-form" id="registerForm">
+                        <div class="auth-form-group">
+                            <label for="registerName" class="auth-form-label">Nombre Completo</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-user auth-input-icon"></i>
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    name="name"
+                                    class="auth-form-input"
+                                    placeholder="Tu nombre completo"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="auth-form-group">
+                            <label for="registerEmail" class="auth-form-label">Correo Electrónico</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-envelope auth-input-icon"></i>
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    name="email"
+                                    class="auth-form-input"
+                                    placeholder="tu@email.com"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="auth-form-group">
+                            <label for="registerPassword" class="auth-form-label">Contraseña</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-lock auth-input-icon"></i>
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    name="password"
+                                    class="auth-form-input"
+                                    placeholder="Mínimo 8 caracteres"
+                                    minlength="8"
+                                    required
+                                >
+                                <button type="button" class="auth-password-toggle" id="toggleRegisterPassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form-group">
+                            <label for="confirmPassword" class="auth-form-label">Confirmar Contraseña</label>
+                            <div class="auth-input-wrapper">
+                                <i class="fas fa-lock auth-input-icon"></i>
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    class="auth-form-input"
+                                    placeholder="Confirma tu contraseña"
+                                    minlength="8"
+                                    required
+                                >
+                                <button type="button" class="auth-password-toggle" id="toggleConfirmPassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="auth-form-options">
+                            <label class="auth-checkbox-wrapper">
+                                <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                                <span class="auth-checkbox"></span>
+                                <span class="auth-checkbox-label">
+                                    Acepto los <a href="#" class="auth-link">Términos de Servicio</a> y
+                                    <a href="#" class="auth-link">Política de Privacidad</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn" id="registerSubmitBtn">
+                            <span class="auth-btn-text">Crear Cuenta</span>
+                            <i class="fas fa-arrow-right auth-btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="auth-benefits">
+                    <h4 class="auth-benefits-title">Al crear tu cuenta podrás:</h4>
+                    <ul class="auth-benefits-list">
+                        <li class="auth-benefit-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Ver tu historial de compras</span>
+                        </li>
+                        <li class="auth-benefit-item">
+                            <i class="fas fa-star"></i>
+                            <span>Acumular puntos en cada pedido</span>
+                        </li>
+                        <li class="auth-benefit-item">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Gestionar tu información personal</span>
+                        </li>
+                        <li class="auth-benefit-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Guardar tus productos favoritos</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Loading State -->
+                <div class="auth-loading" id="authLoading" style="display: none;">
+                    <div class="loading-spinner"></div>
+                    <p>Iniciando sesión...</p>
+                </div>
+
+                <!-- Error State -->
+                <div class="auth-error" id="authError" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Hubo un problema al iniciar sesión. Por favor, intenta nuevamente.</p>
+                    <button class="btn-secondary" onclick="AuthModal.hideError()">Reintentar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer auth-modal-footer">
+            <p class="auth-terms">
+                Al continuar aceptas nuestros
+                <a href="#" class="auth-link">Términos de Servicio</a> y
+                <a href="#" class="auth-link">Política de Privacidad</a>
+            </p>
+        </div>
+    </div>
+</div>

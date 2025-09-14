@@ -1,0 +1,32 @@
+{
+  "authorizedEmployees": [
+    {
+      "id": 1,
+      "name": "Florencia",
+      "email": "florencianuñez@gmail.com",
+      "role": "Administradora",
+      "permissions": ["products", "categories", "orders", "reports"]
+    },
+    {
+      "id": 2,
+      "name": "Iara",
+      "email": "iaranuñez@gmail.com",
+      "role": "Administradora",
+      "permissions": ["products", "categories", "orders", "reports"]
+    },
+    {
+      "id": 3,
+      "name": "María",
+      "email": "mariakaddour@gmail.com",
+      "role": "Administradora",
+      "permissions": ["products", "categories", "orders", "reports"]
+    },
+    {
+      "id": 4,
+      "name": "Franco",
+      "email": "francokaddour@gmail.com",
+      "role": "Desarrollador",
+      "permissions": ["products", "categories", "orders", "reports", "users"]
+    }
+  ]
+}

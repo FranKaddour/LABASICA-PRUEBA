@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Panes Artesanales",
+      "slug": "panes-artesanales",
+      "description": "Panes elaborados diariamente con técnicas tradicionales y los mejores ingredientes",
+      "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop&auto=format",
+      "color": "#8B4513",
+      "featured": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Pasteles y Tartas",
+      "slug": "pasteles-tartas",
+      "description": "Deliciosos pasteles y tartas para toda ocasión, elaborados con recetas tradicionales",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop&auto=format",
+      "color": "#D2691E",
+      "featured": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Galletas y Cookies",
+      "slug": "galletas-cookies",
+      "description": "Galletas crujientes y cookies suaves con variedad de sabores únicos",
+      "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop&auto=format",
+      "color": "#CD853F",
+      "featured": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Dulces Especiales",
+      "slug": "dulces-especiales",
+      "description": "Especialidades de la casa y dulces únicos que nos caracterizan",
+      "image": "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&h=300&fit=crop&auto=format",
+      "color": "#DEB887",
+      "featured": false,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-01T00:00:00Z",
+    "totalCategories": 4,
+    "nextId": 5
+  }
+}
