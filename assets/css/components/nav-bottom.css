@@ -234,17 +234,17 @@
     }
 }
 
-/* Dark theme support (future) */
-@media (prefers-color-scheme: dark) {
+/* Dark theme support - Disabled to prevent Vercel issues */
+/* @media (prefers-color-scheme: dark) {
     .bottom-nav {
         background: rgba(26, 26, 26, 0.95);
         border-top-color: rgba(255, 255, 255, 0.2);
     }
-    
+
     .bottom-nav::before {
         background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
     }
-}
+} */
 
 /* Print styles */
 @media print {
