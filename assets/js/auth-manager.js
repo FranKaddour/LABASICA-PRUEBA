@@ -399,15 +399,15 @@ class AuthManager {
         // Lista de usuarios de prueba (en un entorno real vendrían de tu base de datos)
         const testUsers = [
             {
-                email: 'usuario@ejemplo.com',
-                password: 'password123', // En producción, esto estaría hasheado
-                name: 'Usuario Ejemplo',
-                givenName: 'Usuario',
-                familyName: 'Ejemplo',
+                email: 'usuario@gmail.com',
+                password: 'flor1234', // En producción, esto estaría hasheado
+                name: 'Florencia',
+                givenName: 'ADMIN',
+                familyName: 'Ejemplo-',
                 picture: null
             },
             {
-                email: 'cliente@labasica.com',
+                email: 'cliente@gmail.com.com',
                 password: 'cliente123',
                 name: 'Cliente LA BASICA',
                 givenName: 'Cliente',
@@ -454,10 +454,10 @@ class AuthManager {
 
         // Verificar si el email ya existe (simulado)
         const existingEmails = [
-            'admin@labasica.com',
-            'test@test.com',
+            'nflorenciailen@gmail.com',
+            'iarasol_55@hotmail.com',
             'francokaddour@gmail.com',
-            'usuario@ejemplo.com',
+            'Madfa22@hotmail.com',
             'cliente@labasica.com'
         ];
 

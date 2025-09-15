@@ -23,8 +23,13 @@
                     </button>
                 </div>
 
-                <!-- Login Tab Content -->
-                <div class="auth-tab-content active" id="loginContent">
+                <!-- Desktop Two Column Layout -->
+                <div class="auth-desktop-layout">
+                    <!-- Left Column: Forms -->
+                    <div class="auth-left-column">
+
+                        <!-- Login Tab Content -->
+                        <div class="auth-tab-content active" id="loginContent">
                     <!-- Google Sign-In Button -->
                     <div class="auth-google-section">
                         <button class="auth-google-btn" id="googleSignInBtn">
@@ -94,10 +99,10 @@
                             <i class="fas fa-arrow-right auth-btn-icon"></i>
                         </button>
                     </form>
-                </div>
+                        </div>
 
-                <!-- Register Tab Content -->
-                <div class="auth-tab-content" id="registerContent">
+                        <!-- Register Tab Content -->
+                        <div class="auth-tab-content" id="registerContent">
                     <!-- Google Sign-In Button -->
                     <div class="auth-google-section">
                         <button class="auth-google-btn" id="googleSignUpBtn">
@@ -204,10 +209,13 @@
                             <i class="fas fa-arrow-right auth-btn-icon"></i>
                         </button>
                     </form>
-                </div>
+                        </div>
+                    </div>
 
-                <!-- Benefits Section -->
-                <div class="auth-benefits">
+                    <!-- Right Column: Benefits and Terms -->
+                    <div class="auth-right-column">
+                        <!-- Benefits Section -->
+                        <div class="auth-benefits">
                     <h4 class="auth-benefits-title">Al crear tu cuenta podrás:</h4>
                     <ul class="auth-benefits-list">
                         <li class="auth-benefit-item">
@@ -227,6 +235,17 @@
                             <span>Guardar tus productos favoritos</span>
                         </li>
                     </ul>
+                        </div>
+
+                        <!-- Terms in Right Column for Desktop -->
+                        <div class="auth-terms-desktop">
+                            <p class="auth-terms">
+                                Al continuar aceptas nuestros
+                                <a href="#" class="auth-link">Términos de Servicio</a> y
+                                <a href="#" class="auth-link">Política de Privacidad</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Loading State -->
@@ -244,7 +263,8 @@
             </div>
         </div>
 
-        <div class="modal-footer auth-modal-footer">
+        <!-- Footer only visible on mobile/tablet -->
+        <div class="modal-footer auth-modal-footer auth-footer-mobile">
             <p class="auth-terms">
                 Al continuar aceptas nuestros
                 <a href="#" class="auth-link">Términos de Servicio</a> y
