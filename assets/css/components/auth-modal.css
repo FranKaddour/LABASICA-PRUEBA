@@ -103,6 +103,23 @@
 .auth-modal-body {
     padding: 0 var(--space-3xl) var(--space-xl);
     min-height: 400px;
+    max-height: calc(90vh - 150px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.auth-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auth-modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.auth-modal-body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
 }
 
 .auth-content {
@@ -345,8 +362,8 @@
     .auth-modal-content {
         margin: var(--space-lg);
         max-width: calc(100vw - var(--space-3xl));
-        max-height: 90vh;
-        transform: translateY(-2rem);
+        max-height: 85vh;
+        transform: translateY(-1rem);
     }
 
     .auth-modal-header {
@@ -366,6 +383,8 @@
     .auth-modal-body {
         padding: 0 var(--space-xl) var(--space-lg);
         min-height: auto;
+        max-height: calc(85vh - 80px);
+        overflow-y: auto;
     }
 
     .auth-modal-footer {
@@ -989,9 +1008,9 @@
     .auth-modal-content {
         margin: var(--space-md);
         max-width: calc(100vw - var(--space-2xl));
-        max-height: 90vh;
+        max-height: 80vh;
         border-radius: var(--border-radius-lg);
-        transform: translateY(-2rem);
+        transform: translateY(-0.5rem);
     }
 
     .auth-modal-header {
@@ -1010,6 +1029,8 @@
 
     .auth-modal-body {
         padding: 0 var(--space-lg) var(--space-md);
+        max-height: calc(80vh - 60px);
+        overflow-y: auto;
     }
 
     .auth-modal-footer {
