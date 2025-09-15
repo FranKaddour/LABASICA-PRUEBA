@@ -277,7 +277,7 @@
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
     .page-hero__container {
-        margin-top: -120px;
+        margin-top: -130px;
     }
 }
 
