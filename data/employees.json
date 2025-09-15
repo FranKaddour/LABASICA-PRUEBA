@@ -27,6 +27,13 @@
       "email": "francokaddour@gmail.com",
       "role": "Desarrollador",
       "permissions": ["products", "categories", "orders", "reports", "users"]
+    },
+    {
+      "id": 5,
+      "name": "Flor",
+      "email": "nflorenciailen@gmail.com",
+      "role": "Administradora",
+      "permissions": ["products", "categories", "orders", "reports"]
     }
   ]
 }
