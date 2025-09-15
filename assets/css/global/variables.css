@@ -59,14 +59,28 @@
     --green-end: #A8E6CF;
     --green-dark: #2C5530;
     --green-medium: #5A7A5C;
-    
+
     /* Accent Colors */
     --yellow-star: #FFD54F;
-    
+
     /* Hardcoded colors to consolidate */
     --dried-sweets-bg: #D2B48C;
     --cookie-accent: #CD853F;
     --error-red: #FF4444;
+
+    /* Dashboard specific colors */
+    --success-color: #10B981;
+    --error-color: #EF4444;
+    --danger-color: #EF4444;
+    --warning-color: #F59E0B;
+    --info-color: #3B82F6;
+
+    /* Text colors */
+    --text-muted: #6B7280;
+
+    /* Border colors */
+    --border-light: #E5E7EB;
+    --bg-light: #F9FAFB;
     
     /* ==================== TYPOGRAPHY ==================== */
     
