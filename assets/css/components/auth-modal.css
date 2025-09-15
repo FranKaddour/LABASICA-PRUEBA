@@ -643,6 +643,15 @@
     .auth-form-group {
         margin-bottom: var(--space-sm);
     }
+
+    /* Extra compact for register form with more fields */
+    #registerContent .auth-form {
+        gap: var(--space-sm);
+    }
+
+    #registerContent .auth-form-group {
+        margin-bottom: var(--space-xs);
+    }
 }
 
 /* ==================== ACCESSIBILITY ==================== */
