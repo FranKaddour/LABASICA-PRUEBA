@@ -159,7 +159,18 @@ class AuthManager {
      */
     async checkEmployeeRedirect(user) {
         try {
-            const response = await fetch('/data/employees.json');
+            // Determinar la ruta correcta según la ubicación actual
+            let employeesPath = '/data/employees.json';
+            const currentPath = window.location.pathname;
+
+            // Si estamos en subcarpeta, ajustar la ruta
+            if (currentPath.includes('/pages/') || currentPath.includes('/dashboard/')) {
+                employeesPath = '../data/employees.json';
+            }
+
+            console.log('Checking employee data at:', employeesPath);
+
+            const response = await fetch(employeesPath);
             if (!response.ok) {
                 console.log('Employee data not available, treating as regular user');
                 return;

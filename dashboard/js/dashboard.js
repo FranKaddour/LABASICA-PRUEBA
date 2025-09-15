@@ -135,7 +135,7 @@ class Dashboard {
      */
     async verifyEmployeeAccess() {
         try {
-            const response = await fetch('/data/employees.json');
+            const response = await fetch('../data/employees.json');
             if (!response.ok) {
                 throw new Error('Employee data not available');
             }
@@ -405,11 +405,11 @@ class Dashboard {
     async loadDashboardStats() {
         try {
             // Cargar productos
-            const productsResponse = await fetch('/data/products.json');
+            const productsResponse = await fetch('../data/products.json');
             const productsData = productsResponse.ok ? await productsResponse.json() : { products: [], metadata: {} };
 
             // Cargar categorías
-            const categoriesResponse = await fetch('/data/categories.json');
+            const categoriesResponse = await fetch('../data/categories.json');
             const categoriesData = categoriesResponse.ok ? await categoriesResponse.json() : { categories: [], metadata: {} };
 
             // Actualizar contadores
