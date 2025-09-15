@@ -116,6 +116,7 @@
 .auth-google-section {
     display: flex;
     justify-content: center;
+    margin-bottom: var(--space-sm);
 }
 
 .auth-google-btn {
@@ -163,7 +164,7 @@
 .auth-divider {
     position: relative;
     text-align: center;
-    margin: var(--space-lg) 0;
+    margin: var(--space-md) 0;
 }
 
 .auth-divider::before {
@@ -523,29 +524,29 @@
 /* Desktop Single Column Layout */
 @media (min-width: 1025px) {
     .auth-modal-content {
-        max-width: 500px;
-        max-height: 85vh;
-        width: 90vw;
+        max-width: 480px;
+        max-height: 90vh;
+        width: 85vw;
     }
 
     .auth-modal-header {
-        padding: var(--space-3xl) var(--space-4xl) var(--space-xl);
+        padding: var(--space-2xl) var(--space-3xl) var(--space-md);
         text-align: center;
     }
 
     .auth-modal-header .modal-title {
-        font-size: var(--font-size-3xl);
-        margin-bottom: var(--space-md);
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--space-sm);
     }
 
     .modal-subtitle {
-        font-size: var(--font-size-base);
-        line-height: var(--line-height-relaxed);
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-normal);
         margin: 0;
     }
 
     .auth-modal-body {
-        padding: 0 var(--space-4xl) var(--space-2xl);
+        padding: 0 var(--space-3xl) var(--space-lg);
     }
 
     /* Hide mobile footer on desktop */
@@ -566,52 +567,52 @@
     .auth-right-column {
         width: 100%;
         max-width: none;
-        margin-top: var(--space-2xl);
-        padding: var(--space-lg);
+        margin-top: var(--space-lg);
+        padding: var(--space-md);
         background: rgba(210, 180, 140, 0.05);
-        border-radius: var(--border-radius-lg);
+        border-radius: var(--border-radius-md);
         border: 1px solid rgba(210, 180, 140, 0.1);
         text-align: center;
     }
 
     .auth-content {
-        gap: var(--space-2xl);
-    }
-
-    .auth-form {
         gap: var(--space-lg);
     }
 
+    .auth-form {
+        gap: var(--space-md);
+    }
+
     .auth-form-input {
-        padding: var(--space-lg) var(--space-xl);
-        padding-left: 3.5rem;
-        min-height: 56px;
-        font-size: var(--font-size-base);
+        padding: var(--space-md) var(--space-lg);
+        padding-left: 3rem;
+        min-height: 48px;
+        font-size: var(--font-size-sm);
     }
 
     .auth-input-icon {
-        left: var(--space-lg);
-        font-size: var(--font-size-base);
+        left: var(--space-md);
+        font-size: var(--font-size-sm);
     }
 
     .auth-google-btn {
-        padding: var(--space-lg) var(--space-xl);
-        font-size: var(--font-size-base);
-        min-height: 56px;
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-sm);
+        min-height: 48px;
     }
 
     .auth-submit-btn {
-        padding: var(--space-lg) var(--space-xl);
-        font-size: var(--font-size-base);
-        min-height: 56px;
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-sm);
+        min-height: 48px;
     }
 
     .auth-tabs {
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-md);
     }
 
     .auth-tab {
-        padding: var(--space-md) var(--space-lg);
+        padding: var(--space-sm) var(--space-md);
         font-size: var(--font-size-sm);
     }
 
@@ -621,11 +622,26 @@
     }
 
     .auth-terms-desktop .auth-terms {
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-xs);
         color: var(--text-dark);
         opacity: 0.8;
-        line-height: var(--line-height-relaxed);
+        line-height: var(--line-height-normal);
         margin: 0;
+    }
+
+    /* Compact form options */
+    .auth-form-options {
+        margin: var(--space-sm) 0;
+    }
+
+    /* Compact divider */
+    .auth-divider {
+        margin: var(--space-md) 0;
+    }
+
+    /* Reduce form group spacing */
+    .auth-form-group {
+        margin-bottom: var(--space-sm);
     }
 }
 
@@ -736,6 +752,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
 }
 
 .auth-form-label {
