@@ -346,6 +346,7 @@
         margin: var(--space-lg);
         max-width: calc(100vw - var(--space-3xl));
         max-height: 90vh;
+        transform: translateY(-2rem);
     }
 
     .auth-modal-header {
@@ -990,6 +991,7 @@
         max-width: calc(100vw - var(--space-2xl));
         max-height: 90vh;
         border-radius: var(--border-radius-lg);
+        transform: translateY(-2rem);
     }
 
     .auth-modal-header {

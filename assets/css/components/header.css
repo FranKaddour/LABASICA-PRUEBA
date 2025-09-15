@@ -1821,4 +1821,23 @@
         right: -2rem;
         min-width: 240px;
     }
+
+    /* Reduce mobile header icons and logo sizes */
+    .mobile-logo-image {
+        height: 28px;
+    }
+
+    .mobile-logo-text {
+        font-size: 1.1rem;
+    }
+
+    .mobile-nav-icon {
+        font-size: 1.1rem;
+        width: 20px;
+    }
+
+    .mobile-nav-close {
+        width: 36px;
+        height: 36px;
+    }
 }
