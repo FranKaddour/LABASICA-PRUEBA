@@ -216,15 +216,26 @@ let currentFilter = 'todos';
 class ProductosPage {
     constructor() {
         this.modal = null;
+        this.productRenderer = null;
         this.init();
     }
 
-    init() {
+    async init() {
         this.initializeFilterSystem();
         this.initializeModal();
-        this.initializeCards();
         this.initializeCombos();
-        console.log('Productos page initialized with filters, modal and combos');
+
+        // Inicializar renderizador dinámico
+        if (window.ProductRenderer) {
+            this.productRenderer = new ProductRenderer();
+            // Esperar a que se inicialice
+            await new Promise(resolve => setTimeout(resolve, 500));
+        } else {
+            // Fallback a cards estáticas si no está disponible el renderer
+            this.initializeCards();
+        }
+
+        console.log('Productos page initialized with dynamic rendering');
     }
 
     initializeFilterSystem() {
@@ -253,22 +264,32 @@ class ProductosPage {
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.classList.remove('active');
         });
-        
+
         button.classList.add('active');
         currentFilter = category;
-        this.filterProducts(category);
+
+        // Usar el renderer dinámico si está disponible
+        if (this.productRenderer) {
+            this.productRenderer.currentFilter = category;
+            this.productRenderer.renderProducts();
+        } else {
+            // Fallback al método original
+            this.filterProducts(category);
+        }
     }
 
     filterProducts(category) {
         const cards = document.querySelectorAll('.product-card');
-        
+
         cards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
-            
+
             if (category === 'todos' || cardCategory === category) {
                 card.classList.remove('hidden');
+                card.style.display = '';
             } else {
                 card.classList.add('hidden');
+                card.style.display = 'none';
             }
         });
     }
@@ -323,6 +344,13 @@ class ProductosPage {
     }
 
     openModal(productId) {
+        // Usar el renderer dinámico si está disponible
+        if (this.productRenderer) {
+            this.productRenderer.openProductModal(productId);
+            return;
+        }
+
+        // Fallback al método original
         const product = productsData[productId];
         if (!product || !this.modal) return;
 
@@ -333,22 +361,20 @@ class ProductosPage {
         document.getElementById('modalDescription').textContent = product.description;
         document.getElementById('modalPrice').textContent = product.price;
 
-        const ingredientsList = document.getElementById('modalIngredients');
-        ingredientsList.innerHTML = '';
-        product.ingredients.forEach(ingredient => {
-            const li = document.createElement('li');
-            li.textContent = ingredient;
-            ingredientsList.appendChild(li);
-        });
+        // Ocultar sección de ingredientes como se solicitó
+        const ingredientsSection = document.querySelector('.modal-section-right');
+        if (ingredientsSection) {
+            ingredientsSection.style.display = 'none';
+        }
 
         const modalContent = this.modal.querySelector('.modal-content');
         const modalImageContainer = document.getElementById('modalImageContainer');
         const modalInfoContainer = document.getElementById('modalInfoContainer');
-        
+
         if (modalContent && modalImageContainer && modalInfoContainer) {
-            modalContent.style.background = product.bgColor;
-            modalImageContainer.style.background = product.bgColor;
-            modalInfoContainer.style.background = product.bgColor;
+            modalContent.style.background = product.bgColor || 'linear-gradient(135deg, #A67C47 0%, #8F6B3D 100%)';
+            modalImageContainer.style.background = product.bgColor || 'linear-gradient(135deg, #A67C47 0%, #8F6B3D 100%)';
+            modalInfoContainer.style.background = product.bgColor || 'linear-gradient(135deg, #A67C47 0%, #8F6B3D 100%)';
         }
 
         this.modal.classList.add('active');

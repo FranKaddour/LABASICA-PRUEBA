@@ -1,0 +1,43 @@
+{
+  "appConfig": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-01T00:00:00Z",
+    "features": {
+      "dynamicProducts": true,
+      "categoryFilters": true,
+      "productModal": true,
+      "adminDashboard": true
+    },
+    "ui": {
+      "defaultProductImage": "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?w=400&h=300&fit=crop&auto=format",
+      "defaultCategoryImage": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop&auto=format",
+      "cardStyles": {
+        "showIngredients": false,
+        "showRating": true,
+        "showPrice": true,
+        "showDescription": true
+      }
+    },
+    "business": {
+      "name": "LA BASICA",
+      "description": "Pastelería artesanal en Morón, Buenos Aires",
+      "contact": {
+        "whatsapp": "1234567890",
+        "email": "info@labasica.com"
+      }
+    }
+  },
+  "categoryMapping": {
+    "facturas": "Facturas",
+    "cookies": "Galletas y Cookies",
+    "alfajores": "Dulces Especiales",
+    "tartas": "Pasteles y Tartas",
+    "scones": "Panes Artesanales",
+    "masitas": "Dulces Especiales",
+    "muffins": "Pasteles y Tartas",
+    "budines": "Pasteles y Tartas",
+    "chipa": "Panes Artesanales",
+    "brownie": "Dulces Especiales",
+    "tortas": "Pasteles y Tartas"
+  }
+}

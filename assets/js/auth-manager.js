@@ -399,11 +399,11 @@ class AuthManager {
         // Lista de usuarios de prueba (en un entorno real vendrían de tu base de datos)
         const testUsers = [
             {
-                email: 'usuario@gmail.com',
+                email: 'nflorenciailen@gmail.com',
                 password: 'flor1234', // En producción, esto estaría hasheado
                 name: 'Florencia',
-                givenName: 'ADMIN',
-                familyName: 'Ejemplo-',
+                givenName: 'Flor',
+                familyName: 'Admin',
                 picture: null
             },
             {

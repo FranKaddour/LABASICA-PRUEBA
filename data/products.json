@@ -2,148 +2,49 @@
   "products": [
     {
       "id": 1,
-      "name": "Pan Integral Artesanal",
-      "slug": "pan-integral-artesanal",
-      "description": "Pan integral elaborado con harina de trigo integral, semillas de girasol y sésamo. Perfecto para acompañar cualquier comida.",
-      "shortDescription": "Pan integral con semillas, textura suave y sabor único",
+      "name": "Croissant Artesanal",
+      "slug": "croissant-artesanal",
+      "description": "Delicioso croissant francés elaborado con mantequilla premium y técnicas tradicionales de laminado. Cada capa está perfectamente horneada para lograr una textura crujiente por fuera y suave por dentro.",
+      "shortDescription": "Croissant francés con mantequilla premium",
       "categoryId": 1,
-      "price": 850,
-      "originalPrice": 850,
+      "categorySlug": "facturas",
+      "price": 450,
+      "originalPrice": 450,
       "discount": 0,
       "images": [
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&h=400&fit=crop&auto=format"
-      ],
-      "ingredients": [
-        "Harina integral orgánica",
-        "Semillas de girasol",
-        "Semillas de sésamo",
-        "Levadura natural",
-        "Sal marina",
-        "Aceite de oliva"
+        "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
       ],
       "nutritionalInfo": {
-        "calories": 245,
-        "protein": 8.2,
-        "carbs": 45.1,
-        "fat": 4.8,
-        "fiber": 6.3
+        "calories": 275,
+        "protein": 5.2,
+        "carbs": 32.1,
+        "fat": 14.8,
+        "fiber": 2.1
       },
-      "allergens": ["gluten"],
-      "weight": "500g",
+      "allergens": ["gluten", "lactosa"],
+      "weight": "80g",
       "featured": true,
-      "available": true,
-      "stock": 15,
-      "tags": ["artesanal", "integral", "saludable", "semillas"],
-      "rating": 4.8,
-      "reviews": 24,
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z"
-    },
-    {
-      "id": 2,
-      "name": "Tarta de Chocolate Premium",
-      "slug": "tarta-chocolate-premium",
-      "description": "Exquisita tarta de chocolate belga con capas de mousse y ganache. Una experiencia única para los amantes del chocolate.",
-      "shortDescription": "Tarta de chocolate belga con mousse y ganache",
-      "categoryId": 2,
-      "price": 2800,
-      "originalPrice": 3200,
-      "discount": 12.5,
-      "images": [
-        "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&h=400&fit=crop&auto=format"
-      ],
-      "ingredients": [
-        "Chocolate belga 70%",
-        "Huevos frescos",
-        "Manteca premium",
-        "Azúcar refinada",
-        "Harina 0000",
-        "Crema de leche",
-        "Vainilla natural"
-      ],
-      "nutritionalInfo": {
-        "calories": 485,
-        "protein": 6.8,
-        "carbs": 52.3,
-        "fat": 28.7,
-        "fiber": 4.2
-      },
-      "allergens": ["gluten", "huevo", "lactosa"],
-      "weight": "1.2kg",
-      "featured": true,
-      "available": true,
-      "stock": 8,
-      "tags": ["premium", "chocolate", "gourmet", "celebracion"],
-      "rating": 4.9,
-      "reviews": 31,
-      "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z"
-    },
-    {
-      "id": 3,
-      "name": "Cookies de Chips de Chocolate",
-      "slug": "cookies-chips-chocolate",
-      "description": "Galletas suaves con chips de chocolate semi-amargo. La combinación perfecta de textura y sabor que todos adoramos.",
-      "shortDescription": "Galletas suaves con chips de chocolate semi-amargo",
-      "categoryId": 3,
-      "price": 650,
-      "originalPrice": 650,
-      "discount": 0,
-      "images": [
-        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=500&h=400&fit=crop&auto=format"
-      ],
-      "ingredients": [
-        "Harina 0000",
-        "Chips de chocolate",
-        "Manteca",
-        "Azúcar rubia",
-        "Huevo",
-        "Polvo de hornear",
-        "Esencia de vainilla"
-      ],
-      "nutritionalInfo": {
-        "calories": 156,
-        "protein": 2.1,
-        "carbs": 20.4,
-        "fat": 7.8,
-        "fiber": 0.9
-      },
-      "allergens": ["gluten", "huevo", "lactosa"],
-      "weight": "300g (6 unidades)",
-      "featured": false,
       "available": true,
       "stock": 25,
-      "tags": ["clasicas", "chocolate", "suaves", "favoritas"],
+      "tags": ["artesanal", "francés", "premium", "mantequilla"],
       "rating": 4.7,
       "reviews": 18,
       "createdAt": "2024-01-01T00:00:00Z",
       "updatedAt": "2024-01-01T00:00:00Z"
     },
     {
-      "id": 4,
-      "name": "Alfajores de Dulce de Leche",
-      "slug": "alfajores-dulce-leche",
-      "description": "Tradicionales alfajores argentinos rellenos con dulce de leche artesanal y cubiertos con coco rallado o chocolate.",
-      "shortDescription": "Alfajores tradicionales con dulce de leche artesanal",
+      "id": 2,
+      "name": "Alfajor Santafesino",
+      "slug": "alfajor-santafesino",
+      "description": "Auténtico alfajor santafesino con dulce de leche artesanal y coco rallado. Elaborado con receta tradicional familiar transmitida por generaciones.",
+      "shortDescription": "Alfajor tradicional con dulce de leche artesanal",
       "categoryId": 4,
-      "price": 450,
-      "originalPrice": 450,
+      "categorySlug": "alfajores",
+      "price": 320,
+      "originalPrice": 320,
       "discount": 0,
       "images": [
-        "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=500&h=400&fit=crop&auto=format",
-        "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=400&fit=crop&auto=format"
-      ],
-      "ingredients": [
-        "Harina 0000",
-        "Dulce de leche artesanal",
-        "Manteca",
-        "Fécula de maíz",
-        "Azúcar impalpable",
-        "Huevo",
-        "Coco rallado"
+        "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
       ],
       "nutritionalInfo": {
         "calories": 285,
@@ -153,7 +54,7 @@
         "fiber": 1.8
       },
       "allergens": ["gluten", "huevo", "lactosa"],
-      "weight": "80g (unidad)",
+      "weight": "80g",
       "featured": true,
       "available": true,
       "stock": 30,
@@ -162,14 +63,142 @@
       "reviews": 42,
       "createdAt": "2024-01-01T00:00:00Z",
       "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Muffin Blueberry",
+      "slug": "muffin-blueberry",
+      "description": "Esponjoso muffin cargado con arándanos frescos de temporada. Cubierto con un delicado crumble de mantequilla y azúcar morena que añade el toque perfecto de dulzura.",
+      "shortDescription": "Muffin esponjoso con arándanos frescos",
+      "categoryId": 2,
+      "categorySlug": "muffins",
+      "price": 580,
+      "originalPrice": 580,
+      "discount": 0,
+      "images": [
+        "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      ],
+      "nutritionalInfo": {
+        "calories": 245,
+        "protein": 4.1,
+        "carbs": 35.4,
+        "fat": 9.8,
+        "fiber": 2.2
+      },
+      "allergens": ["gluten", "huevo", "lactosa"],
+      "weight": "120g",
+      "featured": false,
+      "available": true,
+      "stock": 18,
+      "tags": ["frutal", "esponjoso", "arándanos", "premium"],
+      "rating": 4.6,
+      "reviews": 15,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Cookie Choco Chips",
+      "slug": "cookie-choco-chips",
+      "description": "Cookie clásica americana con chips de chocolate belga premium. Masa crujiente por fuera y tierna por dentro, con abundantes chips de chocolate en cada bocado.",
+      "shortDescription": "Cookie americana con chips de chocolate belga",
+      "categoryId": 3,
+      "categorySlug": "cookies",
+      "price": 690,
+      "originalPrice": 690,
+      "discount": 0,
+      "images": [
+        "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      ],
+      "nutritionalInfo": {
+        "calories": 156,
+        "protein": 2.1,
+        "carbs": 20.4,
+        "fat": 7.8,
+        "fiber": 0.9
+      },
+      "allergens": ["gluten", "huevo", "lactosa"],
+      "weight": "60g",
+      "featured": false,
+      "available": true,
+      "stock": 22,
+      "tags": ["clasica", "chocolate", "americana", "crujiente"],
+      "rating": 4.7,
+      "reviews": 28,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Torta Chocolate",
+      "slug": "torta-chocolate",
+      "description": "Exquisita torta de chocolate húmeda con ganache de chocolate semi-amargo. Decorada con virutas de chocolate belga y un toque de flor de sal.",
+      "shortDescription": "Torta húmeda con ganache de chocolate",
+      "categoryId": 2,
+      "categorySlug": "tortas",
+      "price": 420,
+      "originalPrice": 420,
+      "discount": 0,
+      "images": [
+        "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      ],
+      "nutritionalInfo": {
+        "calories": 485,
+        "protein": 6.8,
+        "carbs": 52.3,
+        "fat": 28.7,
+        "fiber": 4.2
+      },
+      "allergens": ["gluten", "huevo", "lactosa"],
+      "weight": "150g",
+      "featured": true,
+      "available": true,
+      "stock": 12,
+      "tags": ["chocolate", "húmeda", "gourmet", "ganache"],
+      "rating": 4.9,
+      "reviews": 35,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Brownie Premium",
+      "slug": "brownie-premium",
+      "description": "Brownie decadente con textura fudgy perfecta. Elaborado con chocolate orgánico de origen único y nueces pecanas tostadas para un sabor intenso y sofisticado.",
+      "shortDescription": "Brownie decadente con nueces pecanas",
+      "categoryId": 4,
+      "categorySlug": "brownie",
+      "price": 550,
+      "originalPrice": 550,
+      "discount": 0,
+      "images": [
+        "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      ],
+      "nutritionalInfo": {
+        "calories": 320,
+        "protein": 5.2,
+        "carbs": 28.4,
+        "fat": 21.8,
+        "fiber": 3.1
+      },
+      "allergens": ["gluten", "huevo", "frutos-secos"],
+      "weight": "100g",
+      "featured": true,
+      "available": true,
+      "stock": 15,
+      "tags": ["premium", "fudgy", "chocolate", "nueces"],
+      "rating": 4.8,
+      "reviews": 22,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
     }
   ],
   "metadata": {
-    "lastUpdated": "2024-01-01T00:00:00Z",
-    "totalProducts": 4,
-    "nextId": 5,
+    "lastUpdated": "2024-01-15T12:00:00Z",
+    "totalProducts": 6,
+    "nextId": 7,
     "totalCategories": 4,
-    "averageRating": 4.8,
-    "totalReviews": 115
+    "averageRating": 4.75,
+    "totalReviews": 160
   }
 }

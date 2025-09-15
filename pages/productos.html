@@ -35,7 +35,8 @@
     <link rel="preload" href="../assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/components/page-hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/components/auth-modal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
+    <link rel="preload" href="../assets/css/components/product-cards.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
     <!-- Page specific CSS -->
     <link rel="preload" href="../assets/css/pages/productos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
@@ -426,23 +427,31 @@
     <!-- Critical JavaScript loaded synchronously -->
     <script src="../assets/js/global.js" defer></script>
     <script src="../assets/js/component-loader.js" defer></script>
-    
+
     <!-- Authentication System -->
     <script src="../assets/js/auth-manager.js" defer></script>
     <script src="../assets/js/auth-guard.js" defer></script>
     <script src="../assets/js/header-auth.js" defer></script>
 
+    <!-- Data Management System -->
+    <script src="../assets/js/api/storage-utils.js" defer></script>
+    <script src="../assets/js/api/data-manager.js" defer></script>
+    <script src="../assets/js/api/sync-manager.js" defer></script>
+
     <!-- Shopping Cart System -->
     <script src="../assets/js/product-manager.js" defer></script>
     <script src="../assets/js/shopping-cart.js" defer></script>
     <script src="../assets/js/cart-sync.js" defer></script>
-    
+
     <!-- Component JavaScript -->
     <script src="../assets/js/header.js" defer></script>
     <script src="../assets/js/footer.js" defer></script>
     <script src="../assets/js/nav-bottom.js" defer></script>
     <script src="../assets/js/newsletter.js" defer></script>
-    
+
+    <!-- Product Rendering System -->
+    <script src="../assets/js/pages/product-renderer.js" defer></script>
+
     <!-- Page specific JavaScript -->
     <script src="../assets/js/pages/productos.js" defer></script>
 </body>
