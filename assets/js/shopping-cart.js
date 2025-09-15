@@ -110,7 +110,17 @@ class ShoppingCartSystem {
         }
         
         if (this.elements.cartOverlay) {
-            this.elements.cartOverlay.addEventListener('click', () => this.closeCart());
+            this.elements.cartOverlay.addEventListener('click', (e) => {
+                if (e.target === this.elements.cartOverlay) {
+                    this.closeCart();
+                }
+            });
+        }
+
+        if (this.elements.shoppingCart) {
+            this.elements.shoppingCart.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
         }
 
         // Cart action events

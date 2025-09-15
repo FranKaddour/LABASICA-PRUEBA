@@ -988,7 +988,7 @@
     .auth-modal-content {
         margin: var(--space-md);
         max-width: calc(100vw - var(--space-2xl));
-        max-height: 95vh;
+        max-height: 90vh;
         border-radius: var(--border-radius-lg);
     }
 
