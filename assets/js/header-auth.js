@@ -824,14 +824,7 @@ class HeaderAuth {
      * Redirige al dashboard (empleados)
      */
     redirectToDashboard() {
-        const currentPath = window.location.pathname;
-        let dashboardPath = '../dashboard/index.html';
-
-        if (currentPath.includes('index.html') || currentPath.endsWith('/')) {
-            dashboardPath = 'dashboard/index.html';
-        }
-
-        window.location.href = dashboardPath;
+        window.location.href = '/dashboard/index.html';
     }
 
     /**

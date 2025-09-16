@@ -245,7 +245,7 @@
     cursor: pointer;
 }
 
-.modal-content {
+.image-modal .modal-content {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
@@ -403,7 +403,7 @@
         display: none;
     }
     
-    .modal-content {
+    .image-modal .modal-content {
         max-width: 95vw;
         max-height: 95vh;
         margin: var(--space-md);
@@ -431,13 +431,13 @@
 
 .team-section .content-section {
     background: #D2B48C;
-    padding: 6rem 0rem 9rem 0rem;
+    padding: 2rem 0rem 2rem 0rem;
     position: relative;
 }
 
 .team-header {
     text-align: center;
-    margin-bottom: var(--space-5xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .team-header h2 {
@@ -577,6 +577,8 @@
     height: 80px;
     z-index: var(--z-base);
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .team-bottom-wave {

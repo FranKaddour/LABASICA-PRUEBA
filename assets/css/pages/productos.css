@@ -487,7 +487,7 @@
     overflow-y: auto;
 }
 
-.modal-content {
+.modal-wrapper .modal-content {
     position: relative;
     border-radius: 20px;
     width: 100%;
@@ -777,7 +777,7 @@
     .modal-wrapper {
         align-items: center;
     }
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-width: 372px;
     }
     
@@ -832,7 +832,7 @@
         padding: 2rem;
     }
     
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-width: 500px;
     }
     
@@ -935,7 +935,7 @@
         font-size: 0.9375rem;
     }
     
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-width: 900px;
         max-height: 80vh;
     }
@@ -1022,7 +1022,7 @@
         font-size: 1rem;
     }
     
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-width: 1000px;
     }
     
@@ -1073,7 +1073,7 @@
         font-size: 1.0625rem;
     }
     
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-width: 1100px;
     }
     
@@ -1114,7 +1114,7 @@
         font-size: 0.8125rem;
     }
     
-    .modal-content {
+    .modal-wrapper .modal-content {
         max-height: 95vh;
     }
     
