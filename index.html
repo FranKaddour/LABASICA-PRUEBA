@@ -47,6 +47,7 @@
     <link rel="preload" href="assets/css/components/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/css/components/nav-bottom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/css/components/newsletter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/components/products.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- Page specific CSS -->
     <link rel="preload" href="assets/css/pages/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -59,6 +60,7 @@
         <link rel="stylesheet" href="assets/css/components/footer.css">
         <link rel="stylesheet" href="assets/css/components/nav-bottom.css">
         <link rel="stylesheet" href="assets/css/components/newsletter.css">
+        <link rel="stylesheet" href="assets/css/components/products.css">
         <link rel="stylesheet" href="assets/css/pages/home.css">
     </noscript>
 </head>
@@ -88,13 +90,24 @@
     <!-- Main Content -->
     <main class="main-content">
         
-        <!-- Hero Image Section -->
+        <!-- Hero Section -->
         <section class="hero-section">
-            <div class="content-section">
-                <div class="container">
-                    <div class="hero-image-container">
-                        <img src="images/fondo0.jpg" alt="LA BASICA Local" class="hero-image">
+            <div id="ingredientsCanvas"></div>
+            <div id="frontIngredientsCanvas"></div>
+
+            <div class="hero-container">
+                <div class="letter-l">L</div>
+                <div class="letter-b">B</div>
+
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <img src="images/fondo0.jpg" alt="LA BASICA Local" class="hero-video-image">
                     </div>
+                </div>
+
+                <div class="text-container">
+                    <p>COCINANDO CON AMOR</p>
+                    <p class="gold-text">LA BASICA</p>
                 </div>
             </div>
         </section>
@@ -106,6 +119,18 @@
             
             <!-- Types of Products Catalog -->
             <section id="catalog" class="dried-sweets content-section">
+                <!-- Texto en movimiento arriba -->
+                <div class="catalog-text-top">
+                    <div class="catalog-marquee left-to-right">
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                    </div>
+                </div>
+
                 <div class="container">
                     <div class="catalog-grid">
                         <div class="hero-sweet">
@@ -125,6 +150,18 @@
                                 <img src="images/GRID5.png" alt="Categoría 5" class="category-image">
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Texto en movimiento abajo -->
+                <div class="catalog-text-bottom">
+                    <div class="catalog-marquee right-to-left">
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
+                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
                     </div>
                 </div>
             </section>
@@ -155,7 +192,95 @@
             </div>
         </section>
 
+        <!-- Products Section - More Sold -->
+        <section class="products-section content-section">
+            <div class="products-container">
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img class="main-image" src="images/3.png" alt="Tarta de Chocolate">
+                            <img class="hover-image" src="images/1.png" alt="Tarta de Chocolate - Vista adicional">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tarta de Chocolate</h3>
+                            <div class="product-price">$14.99</div>
+                        </div>
+                    </div>
 
+                    <!-- Producto 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img class="main-image" src="images/2.png" alt="Cupcakes de Vainilla">
+                            <img class="hover-image" src="images/3.png" alt="Cupcakes de Vainilla - Vista adicional">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cupcakes de Vainilla</h3>
+                            <div class="product-price">$12.99</div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img class="main-image" src="images/1.png" alt="Galletas Decoradas">
+                            <img class="hover-image" src="images/3.png" alt="Galletas Decoradas - Vista adicional">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Galletas Decoradas</h3>
+                            <div class="product-price">$16.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efecto "Más Vendidos" -->
+                <div class="collection-display-back">
+                    <div class="marquee row1">
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                    </div>
+
+                    <div class="marquee row2">
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                    </div>
+
+                    <div class="marquee row3">
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                    </div>
+
+                    <div class="marquee row4">
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                        <span class="text-item outline">MÁS VENDIDOS</span>
+                        <span class="text-item filled">MÁS VENDIDOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Newsletter Component Placeholder -->
         <div id="newsletter-placeholder"></div>

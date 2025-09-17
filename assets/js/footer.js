@@ -46,7 +46,6 @@ class FooterComponent {
     findElements() {
         this.socialLinks = this.footer.querySelectorAll('.footer-social a');
         this.footerLinks = this.footer.querySelectorAll('.footer-section a');
-        this.contactItems = this.footer.querySelectorAll('.contact-item');
         this.copyrightYear = this.footer.querySelector('#currentYear');
     }
 
@@ -68,10 +67,6 @@ class FooterComponent {
             });
         });
 
-        // Contact items (make clickable)
-        this.contactItems.forEach(item => {
-            this.makeContactItemClickable(item);
-        });
 
         // Back to top functionality (if exists)
         const backToTop = this.footer.querySelector('.back-to-top');
@@ -122,50 +117,6 @@ class FooterComponent {
         });
     }
 
-    /**
-     * Make contact items clickable
-     */
-    makeContactItemClickable(item) {
-        const text = item.textContent.trim();
-        const icon = item.querySelector('i');
-        
-        if (!icon) return;
-        
-        // Phone numbers
-        if (icon.classList.contains('fa-phone')) {
-            const phone = text.replace(/[^\d+]/g, '');
-            if (phone) {
-                item.style.cursor = 'pointer';
-                item.addEventListener('click', () => {
-                    window.open(`tel:${phone}`, '_self');
-                    this.trackEvent('contact_click', { type: 'phone', value: phone });
-                });
-            }
-        }
-        
-        // Email addresses
-        else if (icon.classList.contains('fa-envelope')) {
-            const email = text.match(/\S+@\S+\.\S+/);
-            if (email) {
-                item.style.cursor = 'pointer';
-                item.addEventListener('click', () => {
-                    window.open(`mailto:${email[0]}`, '_self');
-                    this.trackEvent('contact_click', { type: 'email', value: email[0] });
-                });
-            }
-        }
-        
-        // Address (open in maps)
-        else if (icon.classList.contains('fa-map-marker-alt')) {
-            const address = text.replace('Morón, Buenos Aires, Argentina', 'Morón Buenos Aires Argentina');
-            item.style.cursor = 'pointer';
-            item.addEventListener('click', () => {
-                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-                window.open(mapsUrl, '_blank', 'noopener,noreferrer');
-                this.trackEvent('contact_click', { type: 'address', value: address });
-            });
-        }
-    }
 
     /**
      * Get social platform from link
@@ -221,7 +172,7 @@ class FooterComponent {
             });
 
             // Observe footer sections
-            this.footer.querySelectorAll('.footer-section, .footer-contact, .footer-social').forEach(section => {
+            this.footer.querySelectorAll('.footer-section, .footer-social').forEach(section => {
                 observer.observe(section);
             });
         }
@@ -271,25 +222,6 @@ class FooterComponent {
         });
     }
 
-    /**
-     * Update contact information
-     */
-    updateContactInfo(contactInfo) {
-        this.contactItems.forEach(item => {
-            const icon = item.querySelector('i');
-            if (!icon) return;
-            
-            if (icon.classList.contains('fa-phone') && contactInfo.phone) {
-                item.querySelector('span').textContent = contactInfo.phone;
-            } else if (icon.classList.contains('fa-envelope') && contactInfo.email) {
-                item.querySelector('span').textContent = contactInfo.email;
-            } else if (icon.classList.contains('fa-map-marker-alt') && contactInfo.address) {
-                item.querySelector('span').textContent = contactInfo.address;
-            } else if (icon.classList.contains('fa-clock') && contactInfo.hours) {
-                item.querySelector('span').textContent = contactInfo.hours;
-            }
-        });
-    }
 
     /**
      * Add back to top button
@@ -385,26 +317,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const style = document.createElement('style');
     style.textContent = `
         .footer-section,
-        .footer-contact,
         .footer-social {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        
+
         .footer-section.animate-in,
-        .footer-contact.animate-in,
         .footer-social.animate-in {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        .contact-item {
-            transition: transform 0.2s ease;
-        }
-        
-        .contact-item[style*="cursor: pointer"]:hover {
-            transform: translateX(5px);
         }
     `;
     document.head.appendChild(style);

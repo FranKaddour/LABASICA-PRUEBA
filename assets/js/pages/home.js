@@ -309,12 +309,8 @@ class HomePage {
      * Update hero parallax effect
      */
     updateHeroParallax() {
-        if (!this.heroImage) return;
-        
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3;
-        
-        this.heroImage.style.transform = `translateY(${rate}px)`;
+        // Parallax effect disabled
+        return;
     }
 
     /**
