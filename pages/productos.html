@@ -162,103 +162,9 @@
                         </div>
                     </div>
 
-                    <!-- Products Grid -->
-                    <div class="cards-container" id="productsGrid">
-                        <!-- Card 1 -->
-                        <div class="product-card card-dark" data-product="1" data-category="facturas">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Croissant<br>Artesanal</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567890</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="product-card card-dark" data-product="2" data-category="alfajores">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Alfajor<br>Santafesino</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567891</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="product-card card-dark" data-product="3" data-category="muffins">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Muffin<br>Blueberry</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567892</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="product-card card-dark" data-product="4" data-category="cookies">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Cookie<br>Choco Chips</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567893</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="product-card card-dark" data-product="5" data-category="tortas">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Torta<br>Chocolate</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567894</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div class="product-card card-dark" data-product="6" data-category="brownie">
-                            <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1599940824399-b87987ceb72a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
-                            <div class="product-content">
-                                <div class="product-info">
-                                    <div class="product-name">Brownie<br>Premium</div>
-                                </div>
-                                <div class="product-bottom">
-                                    <div class="barcode-section">
-                                        <div class="barcode"></div>
-                                        <div class="barcode-number">8 901234 567895</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Products Grid - Dynamic Rendering -->
+                    <div class="products-grid cards-container" id="productsGrid">
+                        <!-- Los productos se cargarán dinámicamente desde el dashboard -->
                     </div>
                 </div>
             </div>
@@ -447,8 +353,8 @@
     <script src="../assets/js/nav-bottom.js" defer></script>
     <script src="../assets/js/newsletter.js" defer></script>
 
-    <!-- Product Rendering System -->
-    <script src="../assets/js/pages/product-renderer.js" defer></script>
+    <!-- Dynamic Product Renderer -->
+    <script src="../assets/js/product-renderer.js" defer></script>
 
     <!-- Page specific JavaScript -->
     <script src="../assets/js/pages/productos.js" defer></script>

@@ -465,15 +465,35 @@ class Dashboard {
      * Cierra sesión y redirige
      */
     logout() {
-        // Limpiar sesión temporal si existe
-        this.clearTempSession();
+        const userName = this.currentUser?.givenName || this.currentUser?.name || 'Usuario';
 
-        // Cerrar sesión de Google si existe
-        if (window.authManager) {
-            window.authManager.signOut();
-        }
+        // Mostrar alert de confirmación
+        this.showCustomAlert({
+            icon: 'fas fa-sign-out-alt',
+            title: 'Cerrar Sesión',
+            message: `¿Estás seguro que deseas cerrar tu sesión, ${userName}?`,
+            type: 'confirm',
+            onConfirm: () => {
+                // Limpiar sesión temporal si existe
+                this.clearTempSession();
 
-        this.redirectToLogin();
+                // Cerrar sesión de Google si existe
+                if (window.authManager) {
+                    window.authManager.signOut();
+                }
+
+                // Mostrar mensaje de despedida
+                this.showCustomAlert({
+                    icon: 'fas fa-heart',
+                    title: '¡Hasta pronto!',
+                    message: `Nos vemos pronto, ${userName}. ¡Que tengas un excelente día! 👋`,
+                    type: 'info',
+                    onConfirm: () => {
+                        this.redirectToLogin();
+                    }
+                });
+            }
+        });
     }
 
     /**
@@ -558,6 +578,120 @@ class Dashboard {
      */
     getCategoryManager() {
         return this.categoryManager;
+    }
+
+    /**
+     * Muestra un alert personalizado con el estilo del sitio
+     */
+    showCustomAlert(options) {
+        const {
+            icon = 'fas fa-info-circle',
+            title = 'Información',
+            message = '',
+            type = 'info', // 'info', 'confirm', 'success', 'warning', 'error'
+            onConfirm = null,
+            onCancel = null,
+            confirmText = 'Aceptar',
+            cancelText = 'Cancelar'
+        } = options;
+
+        // Crear overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'custom-alert-overlay';
+
+        // Crear alert
+        const alert = document.createElement('div');
+        alert.className = 'custom-alert';
+
+        // Crear contenido del alert
+        alert.innerHTML = `
+            <div class="custom-alert-header">
+                <div class="custom-alert-icon">
+                    <i class="${icon}"></i>
+                </div>
+                <h3 class="custom-alert-title">${title}</h3>
+            </div>
+            <div class="custom-alert-body">
+                <p class="custom-alert-message">${message}</p>
+            </div>
+            <div class="custom-alert-actions">
+                ${type === 'confirm' ? `
+                    <button class="custom-alert-btn custom-alert-btn-secondary" data-action="cancel">
+                        ${cancelText}
+                    </button>
+                ` : ''}
+                <button class="custom-alert-btn custom-alert-btn-primary" data-action="confirm">
+                    ${confirmText}
+                </button>
+            </div>
+        `;
+
+        // Agregar alert al overlay
+        overlay.appendChild(alert);
+
+        // Agregar al DOM
+        document.body.appendChild(overlay);
+
+        // Mostrar con animación
+        setTimeout(() => {
+            overlay.classList.add('active');
+        }, 10);
+
+        // Configurar eventos de botones
+        const confirmBtn = alert.querySelector('[data-action="confirm"]');
+        const cancelBtn = alert.querySelector('[data-action="cancel"]');
+
+        // Función para cerrar el alert
+        const closeAlert = () => {
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                if (overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 300);
+        };
+
+        // Event listener para confirmar
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', () => {
+                closeAlert();
+                if (onConfirm) {
+                    onConfirm();
+                }
+            });
+        }
+
+        // Event listener para cancelar
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                closeAlert();
+                if (onCancel) {
+                    onCancel();
+                }
+            });
+        }
+
+        // Cerrar al hacer clic fuera del alert
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeAlert();
+                if (onCancel) {
+                    onCancel();
+                }
+            }
+        });
+
+        // Cerrar con tecla ESC
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                closeAlert();
+                if (onCancel) {
+                    onCancel();
+                }
+                document.removeEventListener('keydown', handleEsc);
+            }
+        };
+        document.addEventListener('keydown', handleEsc);
     }
 }
 

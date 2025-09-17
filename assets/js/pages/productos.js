@@ -225,13 +225,16 @@ class ProductosPage {
         this.initializeModal();
         this.initializeCombos();
 
-        // Inicializar renderizador dinámico
-        if (window.ProductRenderer) {
-            this.productRenderer = new ProductRenderer();
-            // Esperar a que se inicialice
-            await new Promise(resolve => setTimeout(resolve, 500));
+        // Esperar a que la instancia global esté lista
+        await new Promise(resolve => setTimeout(resolve, 100));
+
+        // Usar el renderizador dinámico global si existe
+        if (window.productRenderer) {
+            this.productRenderer = window.productRenderer;
+            console.log('✅ Usando ProductRenderer global existente');
         } else {
             // Fallback a cards estáticas si no está disponible el renderer
+            console.log('⚠️ ProductRenderer no disponible, usando cards estáticas');
             this.initializeCards();
         }
 
