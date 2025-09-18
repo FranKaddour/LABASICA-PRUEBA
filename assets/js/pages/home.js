@@ -33,6 +33,7 @@ class HomePage {
         this.initAnimations();
         this.initIntersectionObserver();
         this.initializeCards();
+        this.initSlider();
         
         this.initialized = true;
         
@@ -49,9 +50,16 @@ class HomePage {
         this.cards = document.querySelectorAll('.card');
         this.heroImage = document.querySelector('.hero-image');
         this.categoryItems = document.querySelectorAll('.category-item');
-        this.cookieCards = document.querySelectorAll('.cookie-card');
         this.viewAllLinks = document.querySelectorAll('.view-all');
         this.bannerBtn = document.querySelector('.shop-product-btn');
+        this.categoryButtons = document.querySelectorAll('.category-btn');
+        this.categoryGrids = document.querySelectorAll('.category-grid');
+        this.sliderContainer = document.querySelector('.slider-container');
+        this.slides = document.querySelectorAll('.slide');
+        this.prevBtn = document.querySelector('.prev-btn');
+        this.nextBtn = document.querySelector('.next-btn');
+        this.dots = document.querySelectorAll('.dot');
+        this.fixedPhotoBox = document.querySelector('.fixed-photo-box');
     }
 
     /**
@@ -68,10 +76,39 @@ class HomePage {
             this.setupCategoryInteraction(item);
         });
 
-        // Cookie cards
-        this.cookieCards.forEach(card => {
-            this.setupCookieCardInteraction(card);
+        // Category buttons
+        this.categoryButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                this.handleCategoryButtonClick(e, button);
+            });
         });
+
+        // Slider controls
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => {
+                this.handlePrevSlide();
+            });
+        }
+
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => {
+                this.handleNextSlide();
+            });
+        }
+
+        // Slider dots
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+            });
+        });
+
+        // Fixed photo box
+        if (this.fixedPhotoBox) {
+            this.fixedPhotoBox.addEventListener('click', () => {
+                this.handlePhotoBoxClick();
+            });
+        }
 
         // View all links
         this.viewAllLinks.forEach(link => {
@@ -150,14 +187,6 @@ class HomePage {
         });
     }
 
-    /**
-     * Setup cookie card interaction
-     */
-    setupCookieCardInteraction(card) {
-        card.addEventListener('click', () => {
-            this.handleCookieCardClick(card);
-        });
-    }
 
     /**
      * Setup hero image interaction
@@ -245,20 +274,122 @@ class HomePage {
     }
 
     /**
-     * Handle cookie card click
+     * Handle category button click
      */
-    handleCookieCardClick(card) {
-        const title = card.querySelector('.cookie-info h3')?.textContent;
-        
-        this.trackEvent('cookie_card_click', { title: title });
-        
-        // Add click animation
-        card.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            card.style.transform = '';
-        }, 200);
+    handleCategoryButtonClick(event, button) {
+        event.preventDefault();
+
+        const category = button.dataset.category;
+        const targetGrid = document.querySelector(`.category-grid[data-category="${category}"]`);
+
+        // Don't do anything if same category is already active
+        if (targetGrid && targetGrid.classList.contains('active')) {
+            return;
+        }
+
+        // Remove active class from all buttons
+        this.categoryButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        // Hide all category grids
+        this.categoryGrids.forEach(grid => {
+            grid.classList.remove('active');
+        });
+
+        // Show selected category grid with subtle delay
+        if (targetGrid) {
+            setTimeout(() => {
+                targetGrid.classList.add('active');
+            }, 100);
+        }
+
+        // Track the event
+        this.trackEvent('category_button_click', { category: category });
     }
 
+    /**
+     * Initialize slider functionality
+     */
+    initSlider() {
+        this.currentSlide = 0;
+        this.totalSlides = this.slides.length;
+
+        if (this.totalSlides > 0) {
+            // Auto-slide every 5 seconds
+            this.startAutoSlide();
+        }
+    }
+
+    /**
+     * Go to specific slide
+     */
+    goToSlide(slideIndex) {
+        if (slideIndex < 0 || slideIndex >= this.totalSlides) return;
+
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+
+        // Update current slide
+        this.currentSlide = slideIndex;
+
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+
+        // Reset auto-slide timer
+        this.resetAutoSlide();
+    }
+
+    /**
+     * Handle previous slide click
+     */
+    handlePrevSlide() {
+        const prevIndex = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
+        this.goToSlide(prevIndex);
+        this.trackEvent('slider_prev_click');
+    }
+
+    /**
+     * Handle next slide click
+     */
+    handleNextSlide() {
+        const nextIndex = this.currentSlide === this.totalSlides - 1 ? 0 : this.currentSlide + 1;
+        this.goToSlide(nextIndex);
+        this.trackEvent('slider_next_click');
+    }
+
+    /**
+     * Start auto-slide functionality
+     */
+    startAutoSlide() {
+        this.autoSlideInterval = setInterval(() => {
+            this.handleNextSlide();
+        }, 5000);
+    }
+
+    /**
+     * Reset auto-slide timer
+     */
+    resetAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.startAutoSlide();
+        }
+    }
+
+    /**
+     * Handle fixed photo box click
+     */
+    handlePhotoBoxClick() {
+        this.trackEvent('photo_box_click', { category: 'sanguches' });
+        // Navigate to products page filtered by sanguches
+        window.location.href = 'pages/productos.html?category=sanguches';
+    }
 
     /**
      * Handle view all click
@@ -374,7 +505,7 @@ class HomePage {
         section.style.transform = 'translateY(0)';
         
         // Add stagger animation to child elements
-        const children = section.querySelectorAll('.card, .category-item, .cookie-card');
+        const children = section.querySelectorAll('.card, .category-item');
         children.forEach((child, index) => {
             setTimeout(() => {
                 child.classList.add('animate-in');
