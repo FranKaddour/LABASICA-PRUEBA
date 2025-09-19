@@ -1959,4 +1959,13 @@
     .mobile-action-btn i {
         font-size: 1.8rem;
     }
+
+    .mobile-social-link {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mobile-social-link i {
+        font-size: 3rem;
+    }
 }

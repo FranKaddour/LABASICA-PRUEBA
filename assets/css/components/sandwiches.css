@@ -704,21 +704,21 @@
     }
 
     .sandwiches-products {
-        grid-template-columns: repeat(6, 1fr);
-        gap: calc(var(--space-4xl) * 2);
-        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: calc(var(--space-4xl) * 1.5);
+        justify-content: space-between;
         max-width: 2400px;
         margin: 0 auto;
     }
 
     .sandwich-card {
-        max-width: 380px;
-        height: 480px;
+        max-width: 650px;
+        height: 680px;
         border-radius: calc(var(--border-radius-xl) * 2);
     }
 
     .sandwich-image {
-        height: 340px;
+        height: 480px;
     }
 
     .sandwich-title {
@@ -726,7 +726,7 @@
     }
 
     .sandwich-info {
-        height: 140px;
+        height: 200px;
         padding: calc(var(--space-lg) * 1.5);
     }
 
