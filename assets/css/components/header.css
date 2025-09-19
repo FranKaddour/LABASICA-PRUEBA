@@ -1856,7 +1856,7 @@
 /* ==================== ULTRA WIDE DESKTOP (2560px+) ==================== */
 @media (min-width: 2560px) {
     .modern-header {
-        height: 90px;
+        height: 110px;
     }
 
     .header-container {
@@ -1865,7 +1865,7 @@
     }
 
     .logo-image {
-        height: 70px;
+        height: 85px;
     }
 
     .nav-list {
@@ -1873,18 +1873,18 @@
     }
 
     .nav-link {
-        font-size: 1.2rem;
-        padding: 1rem 0;
+        font-size: 1.4rem;
+        padding: 1.2rem 0;
     }
 
     .action-btn {
-        padding: 1rem 1.8rem;
-        font-size: 1.3rem;
-        min-width: 140px;
+        padding: 1.2rem 2rem;
+        font-size: 1.5rem;
+        min-width: 160px;
     }
 
     .action-btn i {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .header-actions {
