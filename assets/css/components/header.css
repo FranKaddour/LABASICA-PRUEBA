@@ -75,12 +75,12 @@
     height: 45px;
     width: auto;
     object-fit: contain;
-    display: block;
+    display: block !important;
     transition: opacity 0.3s ease;
     z-index: 25;
     position: relative;
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .logo-image:not([src]),
