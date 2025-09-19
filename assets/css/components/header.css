@@ -1884,7 +1884,7 @@
     }
 
     .action-btn i {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .header-actions {
@@ -1903,5 +1903,19 @@
     .user-name {
         max-width: 140px;
         font-size: 1.1rem;
+    }
+
+    /* Hamburger menu scaling for 2560px */
+    .hamburger-line {
+        width: 56px;
+        height: 6px;
+        background: black;
+        border-radius: 2px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+    }
+
+    .hamburger-line:not(:last-child) {
+        margin-bottom: 9px;
     }
 }
