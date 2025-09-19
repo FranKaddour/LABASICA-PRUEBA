@@ -213,7 +213,7 @@
     background-color: var(--dried-sweets-bg) !important;
     position: relative;
     z-index: var(--z-elevated);
-    padding: 200px 0 200px 0;
+    padding: 6rem 0 5rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -458,7 +458,7 @@
         padding: 6rem 0 7rem 0;
     }
     }
-}
+
 
 /* Hero Section */
 .hero-section {
@@ -559,7 +559,6 @@
 .gradient-background {
     background: var(--gray-light);
     position: relative;
-    padding-top: var(--space-6xl);
     z-index: var(--z-elevated);
 }
 
@@ -578,17 +577,17 @@
 
 
 
-/* ==================== CATALOG TEXT ANIMATIONS ==================== */
+/* ==================== SVG WAVES ==================== */
 
-/* SVG Wave decoration */
-.dried-sweets svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 80px;
-    z-index: 2;
+/* SVG waves outside gradient-background */
+.wave-bottom {
+    display: block !important;
+    
+    margin: 0 !important;
+    padding: 0 !important;
 }
+
+/* ==================== CATALOG TEXT ANIMATIONS ==================== */
 
 .moving-text-top,
 .moving-text-bottom {
