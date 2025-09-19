@@ -569,10 +569,10 @@
         margin: 0 auto;
     }
 
-    .products-section .product-card,
+    .products-section .products-grid .product-card,
     .category-grid .product-card {
-        width: 100% !important;
-        max-width: 480px !important;
+        width: 100%;
+        max-width: 480px;
     }
 
     .product-image {
@@ -642,10 +642,10 @@
         margin: 0 auto;
     }
 
-    .products-section .product-card,
+    .products-section .products-grid .product-card,
     .category-grid .product-card {
-        width: 100% !important;
-        max-width: 700px !important;
+        width: 100%;
+        max-width: 700px;
         border-radius: 400px 400px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -712,10 +712,10 @@
         margin: 0 auto;
     }
 
-    .products-section .product-card,
+    .products-section .products-grid .product-card,
     .category-grid .product-card {
-        width: 100% !important;
-        max-width: 800px !important;
+        width: 100%;
+        max-width: 800px;
         border-radius: 450px 450px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -782,10 +782,10 @@
         margin: 0 auto;
     }
 
-    .products-section .product-card,
+    .products-section .products-grid .product-card,
     .category-grid .product-card {
-        width: 100% !important;
-        max-width: 900px !important;
+        width: 100%;
+        max-width: 900px;
         border-radius: 500px 500px calc(var(--border-radius-2xl) * 1.5) calc(var(--border-radius-2xl) * 1.5);
     }
 
@@ -851,8 +851,8 @@
         gap: var(--space-3xl);
     }
 
-    .product-card,
-    .category-grid .product-card {
+    .products-section .products-grid .product-card:not(.desktop-override),
+    .category-grid .product-card:not(.desktop-override) {
         width: 100%;
         max-width: 320px;
         border-radius: 220px 220px var(--border-radius-lg) var(--border-radius-lg);
@@ -911,8 +911,8 @@
         gap: var(--space-2xl);
     }
 
-    .product-card,
-    .category-grid .product-card {
+    .products-section .products-grid .product-card:not(.desktop-override),
+    .category-grid .product-card:not(.desktop-override) {
         width: 100%;
         max-width: 280px;
         border-radius: 180px 180px var(--border-radius-md) var(--border-radius-md);
