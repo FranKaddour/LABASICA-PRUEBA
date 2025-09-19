@@ -206,6 +206,20 @@
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
 }
 
+/* ==================== BASE STYLES ==================== */
+
+/* Catalog Section - Base styles */
+.dried-sweets {
+    background-color: var(--dried-sweets-bg) !important;
+    position: relative;
+    z-index: var(--z-elevated);
+    padding: 200px 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
 /* Responsive Design for Loader */
 @media (max-width: 968px) {
     .loader-container {
@@ -562,17 +576,6 @@
 
 
 
-/* Catalog Section */
-.dried-sweets {
-        background-color: var(--dried-sweets-bg) !important;
-    position: relative;
-    z-index: var(--z-elevated);
-    padding: 200px 0 200px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-}
 
 
 /* ==================== CATALOG TEXT ANIMATIONS ==================== */
