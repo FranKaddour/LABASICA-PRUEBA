@@ -560,12 +560,12 @@
 
     .products-section .products-grid {
         gap: var(--space-5xl);
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
     .category-grid {
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -632,6 +632,7 @@
     .products-section .products-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.2);
+        max-width: 2400px;
         justify-content: center;
         margin: 0 auto;
     }
@@ -639,6 +640,7 @@
     .category-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.2);
+        max-width: 2400px;
         justify-content: center;
         margin: 0 auto;
     }
@@ -703,6 +705,7 @@
     .products-section .products-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.5);
+        max-width: 2800px;
         justify-content: center;
         margin: 0 auto;
     }
@@ -710,6 +713,7 @@
     .category-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.5);
+        max-width: 2800px;
         justify-content: center;
         margin: 0 auto;
     }
@@ -774,6 +778,7 @@
     .products-section .products-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 2);
+        max-width: 4000px;
         justify-content: center;
         margin: 0 auto;
     }
@@ -781,6 +786,7 @@
     .category-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 2);
+        max-width: 4000px;
         justify-content: center;
         margin: 0 auto;
     }
