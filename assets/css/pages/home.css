@@ -1525,6 +1525,8 @@
 
     .hero-sweet .hero-image {
         height: 450px;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .sweet-categories {
