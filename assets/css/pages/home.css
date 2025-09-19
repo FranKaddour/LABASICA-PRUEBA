@@ -1298,6 +1298,7 @@
     }
 }
 
+
 /* ==================== LARGE DESKTOP STYLES (1440px+) ==================== */
 @media (min-width: 1440px) {
     /* Professional horizontal layout for banner-content-wrapper */
@@ -1369,50 +1370,42 @@
         text-align: right;
         max-width: 250px;
     }
-}
-@media (min-width: 1440px) {
-
     .video-container {
-        width: 950px;
-        height: 520px;
+        width: 1200px;
+        height: 650px;
     }
 
     .letter-l, .letter-b {
-        font-size: 700px;
+        font-size: 550px;
     }
 
-
-    
     .products-grid {
         grid-template-columns: repeat(5, 1fr);
         gap: var(--grid-gap-2xl);
     }
-    
+
     .recommended-grid {
         grid-template-columns: repeat(5, 1fr);
         gap: var(--grid-gap-2xl);
     }
-    
+
     .hero-sweet .hero-image {
         height: 450px;
     }
-    
+
     .sweet-categories {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--grid-gap-lg);
         height: 280px;
     }
 
-    
     .card {
         height: 380px;
     }
-    
+
     .card-image {
         height: 220px;
     }
-    
-}
 }
 
 /* ==================== DESKTOP STYLES (1024px) - Fix banner icon ==================== */
