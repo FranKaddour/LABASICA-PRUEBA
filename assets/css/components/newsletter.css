@@ -738,38 +738,43 @@
     }
 
     .newsletter-left-column {
-        min-width: 800px;
+        min-width: 900px;
     }
 
     .icon-circle {
-        width: 160px;
-        height: 160px;
+        width: 200px;
+        height: 200px;
     }
 
     .icon-circle i {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .title-line-1 {
-        font-size: 6rem;
+        font-size: 7.5rem;
     }
 
     .title-line-2 {
-        font-size: calc(var(--font-size-6xl) * 1.6);
+        font-size: calc(var(--font-size-6xl) * 2);
     }
 
     .feature-item {
-        padding: calc(var(--space-xl) * 2);
+        padding: calc(var(--space-xl) * 2.5);
     }
 
     .feature-icon {
-        width: 80px;
-        height: 80px;
-        font-size: 2.2rem;
+        width: 100px;
+        height: 100px;
+        font-size: 2.8rem;
     }
 
     .feature-text {
-        font-size: calc(var(--font-size-base) * 1.4);
+        font-size: calc(var(--font-size-base) * 1.6);
+    }
+
+    .newsletter-content {
+        padding: calc(var(--space-4xl) * 3);
+        gap: calc(var(--space-6xl) * 2.5);
     }
 }
 
