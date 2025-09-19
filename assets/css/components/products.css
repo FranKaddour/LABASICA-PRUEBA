@@ -643,7 +643,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 550px;
+        max-width: 700px;
         border-radius: 400px 400px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -712,7 +712,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 650px;
+        max-width: 800px;
         border-radius: 450px 450px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -781,7 +781,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 750px;
+        max-width: 900px;
         border-radius: 500px 500px calc(var(--border-radius-2xl) * 1.5) calc(var(--border-radius-2xl) * 1.5);
     }
 
