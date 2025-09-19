@@ -27,7 +27,7 @@ body {
 
 /* Content sections with consistent spacing and subtle separations */
 .content-section {
-    padding: 2.5rem var(--content-padding);
+    /* padding removed */
 }
 
 .content-section:nth-child(even) {
@@ -291,7 +291,7 @@ html {
     }
 
     .content-section {
-        padding: 4rem var(--content-padding);
+        /* padding removed */
     }
 
     .content-section .container {
@@ -313,7 +313,7 @@ html {
     }
 
     .content-section {
-        padding: 5rem var(--content-padding);
+        /* padding removed */
     }
 
     .content-section .container {
@@ -335,7 +335,7 @@ html {
     }
 
     .content-section {
-        padding: 6rem var(--content-padding);
+        /* padding removed */
     }
 
     .content-section .container {
