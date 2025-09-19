@@ -560,6 +560,13 @@
 
     .products-section .products-grid {
         gap: var(--space-5xl);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .category-grid {
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .products-section .product-card {
@@ -586,7 +593,222 @@
         font-size: clamp(6rem, 7vw, 7rem);
         margin: 0 80px;
     }
+
+    .products-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
+
+/* ==================== EXTRA LARGE DESKTOP (1600px+) ==================== */
+@media (min-width: 1600px) {
+    .products-section {
+        padding: calc(var(--section-gap) * 1.5) 0;
+    }
+
+    .products-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 1.6);
+        margin-bottom: 2rem;
+    }
+
+    .category-buttons {
+        gap: var(--space-2xl);
+        margin-bottom: calc(var(--space-5xl) * 1.5);
+    }
+
+    .category-btn {
+        padding: var(--space-xl) var(--space-4xl);
+        font-size: var(--font-size-2xl);
+        border-radius: calc(var(--border-radius-2xl) * 1.5);
+    }
+
+    .category-products {
+        min-height: 900px;
+        margin-top: calc(var(--space-5xl) * 1.5);
+    }
+
+    .products-section .products-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: calc(var(--space-5xl) * 1.2);
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: calc(var(--space-5xl) * 1.2);
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .products-section .product-card {
+        max-width: 400px;
+        border-radius: 400px 400px var(--border-radius-2xl) var(--border-radius-2xl);
+    }
+
+    .product-image {
+        height: 450px;
+    }
+
+    .product-title {
+        font-size: calc(var(--font-size-3xl) * 1.2);
+    }
+
+    .product-price {
+        font-size: calc(var(--font-size-2xl) * 1.1);
+    }
+
+    .text-item {
+        font-size: clamp(7rem, 8vw, 9rem);
+        margin: 0 100px;
+    }
+
+    .products-container {
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 0 var(--space-5xl);
+    }
+}
+
+/* ==================== ULTRA WIDE DESKTOP (1920px+) ==================== */
+@media (min-width: 1920px) {
+    .products-section {
+        padding: calc(var(--section-gap) * 2) 0;
+    }
+
+    .products-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 1.8);
+        margin-bottom: 3rem;
+    }
+
+    .category-buttons {
+        gap: calc(var(--space-2xl) * 1.5);
+        margin-bottom: calc(var(--space-5xl) * 2);
+    }
+
+    .category-btn {
+        padding: calc(var(--space-xl) * 1.2) calc(var(--space-4xl) * 1.2);
+        font-size: calc(var(--font-size-2xl) * 1.1);
+    }
+
+    .category-products {
+        min-height: 1000px;
+        margin-top: calc(var(--space-5xl) * 2);
+    }
+
+    .products-section .products-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: calc(var(--space-5xl) * 1.5);
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: calc(var(--space-5xl) * 1.5);
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .products-section .product-card {
+        max-width: 420px;
+        border-radius: 450px 450px var(--border-radius-2xl) var(--border-radius-2xl);
+    }
+
+    .product-image {
+        height: 500px;
+    }
+
+    .product-title {
+        font-size: calc(var(--font-size-3xl) * 1.4);
+    }
+
+    .product-price {
+        font-size: calc(var(--font-size-2xl) * 1.3);
+    }
+
+    .text-item {
+        font-size: clamp(8rem, 9vw, 11rem);
+        margin: 0 120px;
+    }
+
+    .products-container {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 0 var(--space-6xl);
+    }
+}
+
+/* ==================== SUPER ULTRA WIDE (2560px+) ==================== */
+@media (min-width: 2560px) {
+    .products-section {
+        padding: calc(var(--section-gap) * 2.5) 0;
+    }
+
+    .products-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 2.2);
+        margin-bottom: 4rem;
+    }
+
+    .category-buttons {
+        gap: calc(var(--space-2xl) * 2);
+        margin-bottom: calc(var(--space-5xl) * 2.5);
+    }
+
+    .category-btn {
+        padding: calc(var(--space-xl) * 1.5) calc(var(--space-4xl) * 1.5);
+        font-size: calc(var(--font-size-2xl) * 1.3);
+    }
+
+    .category-products {
+        min-height: 1200px;
+        margin-top: calc(var(--space-5xl) * 2.5);
+    }
+
+    .products-section .products-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: calc(var(--space-5xl) * 2);
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: calc(var(--space-5xl) * 2);
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .products-section .product-card {
+        max-width: 450px;
+        border-radius: 500px 500px calc(var(--border-radius-2xl) * 1.5) calc(var(--border-radius-2xl) * 1.5);
+    }
+
+    .product-image {
+        height: 550px;
+    }
+
+    .product-title {
+        font-size: calc(var(--font-size-3xl) * 1.6);
+    }
+
+    .product-price {
+        font-size: calc(var(--font-size-2xl) * 1.5);
+    }
+
+    .text-item {
+        font-size: clamp(10rem, 11vw, 14rem);
+        margin: 0 150px;
+    }
+
+    .products-container {
+        max-width: 2400px;
+        margin: 0 auto;
+        padding: 0 8rem;
+    }
+}
+
+/* ==================== MOBILE OPTIMIZATIONS ==================== */
 
 /* Small Mobile optimizations */
 @media (max-width: 576px) {

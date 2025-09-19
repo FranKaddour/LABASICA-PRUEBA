@@ -614,6 +614,165 @@
     }
 }
 
+/* ==================== EXTRA LARGE DESKTOP (1600px+) ==================== */
+@media (min-width: 1600px) {
+    .modern-newsletter-section {
+        min-height: 900px;
+        padding: calc(var(--space-6xl) * 1.5) var(--content-padding) 0;
+    }
+
+    .modern-newsletter-section .container {
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .newsletter-content {
+        padding: calc(var(--space-4xl) * 1.5);
+        gap: calc(var(--space-6xl) * 1.2);
+    }
+
+    .newsletter-left-column {
+        min-width: 600px;
+    }
+
+    .icon-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icon-circle i {
+        font-size: 3rem;
+    }
+
+    .title-line-1 {
+        font-size: 5rem;
+    }
+
+    .title-line-2 {
+        font-size: calc(var(--font-size-6xl) * 1.2);
+    }
+
+    .feature-item {
+        padding: calc(var(--space-xl) * 1.2);
+    }
+
+    .feature-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 1.7rem;
+    }
+
+    .feature-text {
+        font-size: calc(var(--font-size-base) * 1.1);
+    }
+}
+
+/* ==================== ULTRA WIDE DESKTOP (1920px+) ==================== */
+@media (min-width: 1920px) {
+    .modern-newsletter-section {
+        min-height: 1000px;
+        padding: calc(var(--space-6xl) * 2) var(--content-padding) 0;
+    }
+
+    .modern-newsletter-section .container {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .newsletter-content {
+        padding: calc(var(--space-4xl) * 2);
+        gap: calc(var(--space-6xl) * 1.5);
+    }
+
+    .newsletter-left-column {
+        min-width: 700px;
+    }
+
+    .icon-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .icon-circle i {
+        font-size: 3.5rem;
+    }
+
+    .title-line-1 {
+        font-size: 5.5rem;
+    }
+
+    .title-line-2 {
+        font-size: calc(var(--font-size-6xl) * 1.4);
+    }
+
+    .feature-item {
+        padding: calc(var(--space-xl) * 1.5);
+    }
+
+    .feature-icon {
+        width: 72px;
+        height: 72px;
+        font-size: 2rem;
+    }
+
+    .feature-text {
+        font-size: calc(var(--font-size-base) * 1.2);
+    }
+}
+
+/* ==================== SUPER ULTRA WIDE (2560px+) ==================== */
+@media (min-width: 2560px) {
+    .modern-newsletter-section {
+        min-height: 1200px;
+        padding: calc(var(--space-6xl) * 2.5) var(--content-padding) 0;
+    }
+
+    .modern-newsletter-section .container {
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .newsletter-content {
+        padding: calc(var(--space-4xl) * 2.5);
+        gap: calc(var(--space-6xl) * 2);
+    }
+
+    .newsletter-left-column {
+        min-width: 800px;
+    }
+
+    .icon-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .icon-circle i {
+        font-size: 4rem;
+    }
+
+    .title-line-1 {
+        font-size: 6rem;
+    }
+
+    .title-line-2 {
+        font-size: calc(var(--font-size-6xl) * 1.6);
+    }
+
+    .feature-item {
+        padding: calc(var(--space-xl) * 2);
+    }
+
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.2rem;
+    }
+
+    .feature-text {
+        font-size: calc(var(--font-size-base) * 1.4);
+    }
+}
+
 /* ==================== ACCESSIBILITY & PERFORMANCE ==================== */
 
 /* Focus states */

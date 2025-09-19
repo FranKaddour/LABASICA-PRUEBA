@@ -522,13 +522,19 @@
     }
 
     .slider-layout {
-        height: 300px;
+        height: 350px;
+    }
+
+    .banner-slider {
+        height: 500px;
     }
 
     .sandwiches-products {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-4xl);
         justify-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .sandwich-card {
@@ -544,7 +550,194 @@
         font-size: var(--font-size-3xl);
     }
 
+    .sandwiches-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 var(--space-4xl);
+    }
 }
+
+/* ==================== EXTRA LARGE DESKTOP (1600px+) ==================== */
+@media (min-width: 1600px) {
+    .sandwiches-section {
+        padding: calc(var(--space-3xl) * 1.5) 0 calc(var(--section-gap) * 1.5) 0;
+    }
+
+    .sandwiches-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 1.6);
+        margin-bottom: calc(var(--space-4xl) * 1.5);
+    }
+
+    .banner-slider {
+        height: 600px;
+        border-radius: calc(var(--border-radius-2xl) * 1.5);
+    }
+
+    .banner-nav-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+
+    .banner-dot {
+        width: 16px;
+        height: 16px;
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(var(--space-4xl) * 1.2);
+        justify-items: center;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .sandwich-card {
+        max-width: 380px;
+        height: 420px;
+        border-radius: calc(var(--border-radius-xl) * 1.5);
+    }
+
+    .sandwich-image {
+        height: 280px;
+    }
+
+    .sandwich-title {
+        font-size: calc(var(--font-size-3xl) * 1.1);
+    }
+
+    .sandwich-info {
+        height: 140px;
+        padding: calc(var(--space-lg) * 1.2);
+    }
+
+    .sandwiches-container {
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 0 var(--space-5xl);
+    }
+}
+
+/* ==================== ULTRA WIDE DESKTOP (1920px+) ==================== */
+@media (min-width: 1920px) {
+    .sandwiches-section {
+        padding: calc(var(--space-3xl) * 2) 0 calc(var(--section-gap) * 2) 0;
+    }
+
+    .sandwiches-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 1.8);
+        margin-bottom: calc(var(--space-4xl) * 2);
+    }
+
+    .banner-slider {
+        height: 700px;
+    }
+
+    .banner-nav-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 1.6rem;
+    }
+
+    .banner-dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(5, 1fr);
+        gap: calc(var(--space-4xl) * 1.5);
+        justify-items: center;
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .sandwich-card {
+        max-width: 360px;
+        height: 440px;
+    }
+
+    .sandwich-image {
+        height: 300px;
+    }
+
+    .sandwich-title {
+        font-size: calc(var(--font-size-3xl) * 1.2);
+    }
+
+    .sandwich-info {
+        height: 140px;
+        padding: calc(var(--space-lg) * 1.3);
+    }
+
+    .sandwiches-container {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 0 var(--space-6xl);
+    }
+}
+
+/* ==================== SUPER ULTRA WIDE (2560px+) ==================== */
+@media (min-width: 2560px) {
+    .sandwiches-section {
+        padding: calc(var(--space-3xl) * 2.5) 0 calc(var(--section-gap) * 2.5) 0;
+    }
+
+    .sandwiches-section .section-header h2 {
+        font-size: calc(var(--font-size-5xl) * 2.2);
+        margin-bottom: calc(var(--space-4xl) * 2.5);
+    }
+
+    .banner-slider {
+        height: 800px;
+    }
+
+    .banner-nav-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+    }
+
+    .banner-dot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(6, 1fr);
+        gap: calc(var(--space-4xl) * 2);
+        justify-items: center;
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .sandwich-card {
+        max-width: 380px;
+        height: 480px;
+        border-radius: calc(var(--border-radius-xl) * 2);
+    }
+
+    .sandwich-image {
+        height: 340px;
+    }
+
+    .sandwich-title {
+        font-size: calc(var(--font-size-3xl) * 1.4);
+    }
+
+    .sandwich-info {
+        height: 140px;
+        padding: calc(var(--space-lg) * 1.5);
+    }
+
+    .sandwiches-container {
+        max-width: 2400px;
+        margin: 0 auto;
+        padding: 0 8rem;
+    }
+}
+
+/* ==================== MOBILE OPTIMIZATIONS ==================== */
 
 /* Small Mobile optimizations */
 @media (max-width: 576px) {

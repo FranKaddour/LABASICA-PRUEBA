@@ -302,10 +302,72 @@
     }
 }
 
+/* ==================== EXTRA LARGE DESKTOP OVERRIDES (1600px+) ==================== */
+@media (min-width: 1600px) {
+    :root {
+        --content-padding: 80px;
+        --content-margin: 80px;
+        --container-max: 1700px;
+        --section-gap: 120px;
+
+        /* Typography adjustments for larger screens */
+        --font-size-3xl: 2.8rem;
+        --font-size-4xl: 3.8rem;
+        --font-size-5xl: 4.5rem;
+
+        /* Enhanced spacing for large screens */
+        --space-7xl: 80px;
+        --space-8xl: 100px;
+
+        /* Larger grid gaps */
+        --grid-gap-3xl: 40px;
+        --grid-gap-4xl: 50px;
+    }
+}
+
 /* ==================== ULTRA WIDE OVERRIDES (1920px+) ==================== */
 @media (min-width: 1920px) {
     :root {
-        --container-max: var(--container-xxl);
+        --content-padding: 100px;
+        --content-margin: 100px;
+        --container-max: 2000px;
+        --section-gap: 150px;
+
+        /* Typography adjustments */
+        --font-size-3xl: 3.2rem;
+        --font-size-4xl: 4.2rem;
+        --font-size-5xl: 5rem;
+
+        /* Enhanced spacing */
+        --space-9xl: 120px;
+        --space-10xl: 150px;
+
+        /* Larger grid gaps */
+        --grid-gap-5xl: 60px;
+        --grid-gap-6xl: 80px;
+    }
+}
+
+/* ==================== SUPER ULTRA WIDE OVERRIDES (2560px+) ==================== */
+@media (min-width: 2560px) {
+    :root {
+        --content-padding: 120px;
+        --content-margin: 120px;
+        --container-max: 2400px;
+        --section-gap: 200px;
+
+        /* Typography adjustments */
+        --font-size-3xl: 3.6rem;
+        --font-size-4xl: 4.8rem;
+        --font-size-5xl: 5.5rem;
+
+        /* Enhanced spacing */
+        --space-11xl: 180px;
+        --space-12xl: 200px;
+
+        /* Larger grid gaps */
+        --grid-gap-7xl: 100px;
+        --grid-gap-8xl: 120px;
     }
 }
 

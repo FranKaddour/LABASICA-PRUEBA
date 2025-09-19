@@ -269,16 +269,82 @@ html {
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
     .container {
-        max-width: var(--container-xxl);
+        max-width: var(--container-xl);
         min-height: 600px;
         margin: 0 auto;
         padding: 0 var(--space-4xl);
     }
 
     .content-section .container {
-        max-width: var(--container-xxl);
+        max-width: var(--container-xl);
         min-height: 600px;
         margin: 0 auto;
+    }
+}
+
+/* ==================== EXTRA LARGE DESKTOP (1600px+) ==================== */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1700px;
+        margin: 0 auto;
+        padding: 0 var(--space-5xl);
+    }
+
+    .content-section {
+        padding: 4rem var(--content-padding);
+    }
+
+    .content-section .container {
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        padding-top: 80px;
+    }
+}
+
+/* ==================== ULTRA WIDE DESKTOP (1920px+) ==================== */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 0 var(--space-6xl);
+    }
+
+    .content-section {
+        padding: 5rem var(--content-padding);
+    }
+
+    .content-section .container {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        padding-top: 100px;
+    }
+}
+
+/* ==================== SUPER ULTRA WIDE (2560px+) ==================== */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 2400px;
+        margin: 0 auto;
+        padding: 0 8rem;
+    }
+
+    .content-section {
+        padding: 6rem var(--content-padding);
+    }
+
+    .content-section .container {
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        padding-top: 120px;
     }
 }
 
