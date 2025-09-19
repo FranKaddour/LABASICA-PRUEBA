@@ -1372,12 +1372,12 @@
         max-width: 250px;
     }
     .video-container {
-        width: 1200px;
-        height: 650px;
+        width: 1000px;
+        height: 500px;
     }
 
     .letter-l, .letter-b {
-        font-size: 550px;
+        font-size: 400px;
     }
 
     .products-grid {
