@@ -627,21 +627,22 @@
     }
 
     .products-section .products-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.2);
-        max-width: 1700px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .category-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.2);
-        max-width: 1700px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .products-section .product-card {
-        max-width: 400px;
+        width: 100%;
+        max-width: 500px;
         border-radius: 400px 400px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -695,21 +696,22 @@
     }
 
     .products-section .products-grid {
-        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.5);
-        max-width: 2000px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .category-grid {
-        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 1.5);
-        max-width: 2000px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .products-section .product-card {
-        max-width: 420px;
+        width: 100%;
+        max-width: 600px;
         border-radius: 450px 450px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -763,21 +765,22 @@
     }
 
     .products-section .products-grid {
-        grid-template-columns: repeat(6, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 2);
-        max-width: 2400px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .category-grid {
-        grid-template-columns: repeat(6, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: calc(var(--space-5xl) * 2);
-        max-width: 2400px;
+        justify-content: center;
         margin: 0 auto;
     }
 
     .products-section .product-card {
-        max-width: 450px;
+        width: 100%;
+        max-width: 700px;
         border-radius: 500px 500px calc(var(--border-radius-2xl) * 1.5) calc(var(--border-radius-2xl) * 1.5);
     }
 
