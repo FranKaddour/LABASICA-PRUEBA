@@ -302,12 +302,111 @@
     line-height: var(--line-height-tight);
 }
 
-.sandwich-price {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
+
+/* ==================== BANNER SLIDER STYLES ==================== */
+.banner-slider-section {
+    margin-bottom: var(--space-4xl);
+    position: relative;
+}
+
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: var(--border-radius-2xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Banner Navigation */
+.banner-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+.banner-nav-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
     color: var(--primary-brown);
-    margin-bottom: 0;
-    font-family: var(--font-body);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner-nav-btn:hover {
+    background: var(--accent-orange);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.banner-dots {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.banner-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-dot.active {
+    background: var(--accent-orange);
+    transform: scale(1.2);
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
@@ -343,9 +442,6 @@
         font-size: var(--font-size-xl);
     }
 
-    .sandwich-price {
-        font-size: var(--font-size-lg);
-    }
 }
 
 /* Medium screens (between tablet and desktop) */
@@ -401,9 +497,6 @@
         font-size: var(--font-size-2xl);
     }
 
-    .sandwich-price {
-        font-size: var(--font-size-xl);
-    }
 
     .photo-overlay h3 {
         font-size: var(--font-size-2xl);
@@ -437,9 +530,6 @@
         font-size: var(--font-size-3xl);
     }
 
-    .sandwich-price {
-        font-size: var(--font-size-2xl);
-    }
 }
 
 /* Small Mobile optimizations */
@@ -448,21 +538,24 @@
         font-size: calc(var(--font-size-5xl) * 1.5);
     }
 
-    .slider-layout {
-        display: flex;
-        flex-direction: row;
-        height: 300px;
+    .banner-slider {
+        height: 250px;
+    }
+
+    .banner-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .banner-nav {
+        padding: 0;
+        margin-top: var(--space-lg);
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
-    }
-
-    .image-slider {
-        flex: 2;
-        height: 300px;
-    }
-
-    .fixed-photo-box {
-        flex: 1;
-        height: 300px;
     }
 
     .slider-controls {
@@ -495,9 +588,6 @@
         font-size: var(--font-size-lg);
     }
 
-    .sandwich-price {
-        font-size: var(--font-size-base);
-    }
 }
 
 /* Extra Small Mobile */
@@ -508,6 +598,26 @@
 
     .sandwiches-container {
         padding: 0 var(--space-lg);
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .banner-slider {
+        height: 220px;
+    }
+
+    .banner-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .banner-nav {
+        padding: 0;
+        margin-top: var(--space-md);
     }
 
     .sandwich-card {
@@ -523,9 +633,6 @@
         font-size: var(--font-size-base);
     }
 
-    .sandwich-price {
-        font-size: var(--font-size-sm);
-    }
 }
 
 /* ==================== ACCESSIBILITY ==================== */
@@ -547,8 +654,7 @@
         border-color: var(--text-dark);
     }
 
-    .sandwich-title,
-    .sandwich-price {
+    .sandwich-title {
         color: var(--text-dark);
     }
 

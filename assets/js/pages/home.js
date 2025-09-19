@@ -577,3 +577,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Export for other scripts
 window.HomePage = HomePage;
+
+/* ==================== BANNER SLIDER FUNCTIONALITY ==================== */
+
+// Banner slider variables
+let currentSlideIndex = 0;
+let totalSlides = 3;
+let slideInterval;
+
+// Initialize banner slider
+function initBannerSlider() {
+    showBannerSlide(0);
+
+    // Auto-play slider
+    slideInterval = setInterval(nextBannerSlide, 5000);
+
+    // Add event listeners for mouse hover to pause auto-play
+    const bannerSlider = document.querySelector('.banner-slider');
+    if (bannerSlider) {
+        bannerSlider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        bannerSlider.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextBannerSlide, 5000);
+        });
+    }
+}
+
+function showBannerSlide(index) {
+    const slides = document.querySelectorAll('.banner-slide');
+    const dots = document.querySelectorAll('.banner-dot');
+
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Add active class to current slide and dot
+    if (slides[index]) {
+        slides[index].classList.add('active');
+    }
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+}
+
+function changeBannerSlide(direction) {
+    currentSlideIndex += direction;
+
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = totalSlides - 1;
+    }
+
+    showBannerSlide(currentSlideIndex);
+}
+
+function currentBannerSlide(index) {
+    currentSlideIndex = index - 1;
+    showBannerSlide(currentSlideIndex);
+}
+
+function nextBannerSlide() {
+    changeBannerSlide(1);
+}
+
+// Initialize banner slider when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.banner-slider')) {
+        initBannerSlider();
+    }
+});

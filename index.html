@@ -107,10 +107,6 @@
                     </div>
                 </div>
 
-                <div class="text-container">
-                    <p>COCINANDO CON AMOR</p>
-                    <p class="gold-text">LA BASICA</p>
-                </div>
             </div>
         </section>
 
@@ -119,17 +115,6 @@
             
             <!-- Types of Products Catalog -->
             <section id="catalog" class="dried-sweets content-section">
-                <!-- Texto en movimiento arriba -->
-                <div class="catalog-text-top">
-                    <div class="catalog-marquee left-to-right">
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                    </div>
-                </div>
 
                 <div class="container">
                     <div class="catalog-grid">
@@ -153,17 +138,6 @@
                     </div>
                 </div>
 
-                <!-- Texto en movimiento abajo -->
-                <div class="catalog-text-bottom">
-                    <div class="catalog-marquee right-to-left">
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                        <span class="catalog-text-item">DICEN QUE SOMOS BÁSICOS... BÁSICAMENTE IRRESISTIBLES</span>
-                    </div>
-                </div>
             </section>
         </div>
 
@@ -391,41 +365,47 @@
                     <h2>Sanguches de Miga</h2>
                 </div>
 
-                <!-- Slider y cuadrado lateral -->
-                <div class="slider-layout">
-                    <!-- Slider de imágenes (2/3) -->
-                    <div class="image-slider">
-                        <div class="slider-container">
-                            <div class="slide active">
-                                <img src="images/1.png" alt="Sanguche de miga 1">
-                            </div>
-                            <div class="slide">
-                                <img src="images/2.png" alt="Sanguche de miga 2">
-                            </div>
-                            <div class="slide">
-                                <img src="images/3.png" alt="Sanguche de miga 3">
+                <!-- Banner Slider Section -->
+                <div class="banner-slider-section">
+                    <div class="banner-slider">
+                        <div class="banner-slide active" data-slide="1">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="images/1.png" alt="Sanguche de miga 1" loading="lazy">
+                                </div>
                             </div>
                         </div>
-                        <!-- Controles del slider -->
-                        <div class="slider-controls">
-                            <button class="slider-btn prev-btn">‹</button>
-                            <div class="slider-dots">
-                                <span class="dot active" data-slide="0"></span>
-                                <span class="dot" data-slide="1"></span>
-                                <span class="dot" data-slide="2"></span>
+
+                        <div class="banner-slide" data-slide="2">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="images/2.png" alt="Sanguche de miga 2" loading="lazy">
+                                </div>
                             </div>
-                            <button class="slider-btn next-btn">›</button>
+                        </div>
+
+                        <div class="banner-slide" data-slide="3">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="images/3.png" alt="Sanguche de miga 3" loading="lazy">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Cuadrado con foto fija (1/3) -->
-                    <div class="fixed-photo-box">
-                        <img src="images/1.png" alt="Ver todos los sanguches">
-                        <div class="photo-overlay">
-                            <h3>Sanguches de Miga</h3>
-                            <p>Ver todos los productos</p>
-                            <span class="cta-arrow">→</span>
+                    <!-- Slider Navigation -->
+                    <div class="banner-nav">
+                        <button class="banner-nav-btn prev-btn" onclick="changeBannerSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="banner-dots">
+                            <button class="banner-dot active" onclick="currentBannerSlide(1)"></button>
+                            <button class="banner-dot" onclick="currentBannerSlide(2)"></button>
+                            <button class="banner-dot" onclick="currentBannerSlide(3)"></button>
                         </div>
+                        <button class="banner-nav-btn next-btn" onclick="changeBannerSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -438,7 +418,6 @@
                         </div>
                         <div class="sandwich-info">
                             <h3 class="sandwich-title">Sanguche Clásico</h3>
-                            <div class="sandwich-price">$8.99</div>
                         </div>
                     </div>
 
@@ -449,20 +428,9 @@
                         </div>
                         <div class="sandwich-info">
                             <h3 class="sandwich-title">Sanguche Especial</h3>
-                            <div class="sandwich-price">$10.99</div>
                         </div>
                     </div>
 
-                    <div class="sandwich-card">
-                        <div class="sandwich-image">
-                            <img class="main-image" src="images/3.png" alt="Sanguche Premium">
-                            <img class="hover-image" src="images/1.png" alt="Sanguche Premium - Vista adicional">
-                        </div>
-                        <div class="sandwich-info">
-                            <h3 class="sandwich-title">Sanguche Premium</h3>
-                            <div class="sandwich-price">$12.99</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
