@@ -522,7 +522,7 @@
     .category-grid .product-card {
         border-radius: 320px 320px var(--border-radius-2xl) var(--border-radius-2xl);
         width: 100%;
-        max-width: 310px;
+        max-width: 420px;
         margin: 0 auto;
     }
 
@@ -531,7 +531,7 @@
         grid-column: auto;
         justify-self: center;
         width: 100%;
-        max-width: 310px;
+        max-width: 420px;
     }
 
     .product-image {
@@ -570,7 +570,8 @@
     }
 
     .products-section .product-card {
-        max-width: 350px;
+        width: 100%;
+        max-width: 480px;
     }
 
     .product-image {
@@ -642,7 +643,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 500px;
+        max-width: 550px;
         border-radius: 400px 400px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -711,7 +712,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 600px;
+        max-width: 650px;
         border-radius: 450px 450px var(--border-radius-2xl) var(--border-radius-2xl);
     }
 
@@ -780,7 +781,7 @@
 
     .products-section .product-card {
         width: 100%;
-        max-width: 700px;
+        max-width: 750px;
         border-radius: 500px 500px calc(var(--border-radius-2xl) * 1.5) calc(var(--border-radius-2xl) * 1.5);
     }
 
