@@ -255,21 +255,30 @@ html {
 @media (min-width: 1024px) {
     .container {
         max-width: var(--container-desktop);
+        margin: 0 auto;
+        padding: 0 var(--space-4xl);
     }
-    
+
     .content-section .container {
         max-width: var(--container-desktop);
+        margin: 0 auto;
+        padding: 0 var(--space-4xl);
     }
 }
 
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
     .container {
-        max-width: var(--container-xl);
+        max-width: var(--container-xxl);
+        min-height: 600px;
+        margin: 0 auto;
+        padding: 0 var(--space-4xl);
     }
-    
+
     .content-section .container {
-        max-width: var(--container-xl);
+        max-width: var(--container-xxl);
+        min-height: 600px;
+        margin: 0 auto;
     }
 }
 

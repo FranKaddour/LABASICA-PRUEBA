@@ -223,6 +223,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    justify-items: center;
 }
 
 .sandwich-card {
@@ -312,7 +313,7 @@
 .banner-slider {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     border-radius: var(--border-radius-2xl);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -328,6 +329,14 @@
     transition: opacity 0.6s ease-in-out;
 }
 
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 .banner-slide.active {
     opacity: 1;
 }
@@ -336,9 +345,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
 .banner-image {
@@ -354,7 +361,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
+    display: block;
 }
 
 /* Banner Navigation */
@@ -515,6 +523,12 @@
 
     .slider-layout {
         height: 300px;
+    }
+
+    .sandwiches-products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4xl);
+        justify-items: center;
     }
 
     .sandwich-card {

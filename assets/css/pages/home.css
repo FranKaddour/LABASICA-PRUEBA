@@ -263,6 +263,23 @@
         font-size: 300px;
         animation-duration: 15s;
     }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
+
+    .sweet-categories {
+        height: 280px;
+    }
+
+    .category-image {
+        height: 120px;
+    }
 }
 
 /* Extra Small Mobile - 430px */
@@ -278,6 +295,23 @@
 
     .letter-b {
         font-size: 280px;
+    }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
+
+    .sweet-categories {
+        height: 260px;
+    }
+
+    .category-image {
+        height: 110px;
     }
 }
 
@@ -295,6 +329,23 @@
     .letter-b {
         font-size: 200px;
     }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
+
+    .sweet-categories {
+        height: 240px;
+    }
+
+    .category-image {
+        height: 100px;
+    }
 }
 
 /* Extra Small Mobile - 390px */
@@ -305,6 +356,23 @@
 
     .letter-b {
         font-size: 240px;
+    }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
+
+    .sweet-categories {
+        height: 220px;
+    }
+
+    .category-image {
+        height: 90px;
     }
 }
 
@@ -322,6 +390,31 @@
     .letter-b {
         font-size: 180px;
     }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .sweet-categories {
+        height: 200px;
+    }
+
+    .category-image {
+        height: 80px;
+    }
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
+
+    .sweet-categories {
+        height: 340px;
+    }
+
+    .category-image {
+        height: 150px;
+    }
 }
 
 /* Extra Small Mobile - 360px */
@@ -332,6 +425,24 @@
 
     .letter-b {
         font-size: 180px;
+    }
+
+    .container {
+        margin: 0 var(--space-md);
+    }
+
+
+    .sweet-categories {
+        height: 180px;
+    }
+
+    .category-image {
+        height: 70px;
+    }
+
+    .dried-sweets {
+        padding: 6rem 0 7rem 0;
+    }
     }
 }
 
@@ -465,6 +576,76 @@
 
 
 /* ==================== CATALOG TEXT ANIMATIONS ==================== */
+
+.moving-text-top,
+.moving-text-bottom {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    overflow: hidden;
+    z-index: var(--z-behind);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    background: var(--gray-light);
+}
+
+.moving-text-top {
+    top: 0;
+}
+
+.moving-text-bottom {
+    bottom: 0;
+}
+
+.moving-marquee {
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    align-items: center;
+}
+
+.moving-marquee.right-to-left {
+    animation: marquee-right-to-left 25s linear infinite;
+}
+
+.moving-marquee.left-to-right {
+    animation: marquee-left-to-right 23s linear infinite;
+}
+
+.moving-text-item {
+    display: inline-block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--font-weight-extrabold);
+    text-transform: uppercase;
+    margin: 0 60px;
+    letter-spacing: 2px;
+    position: relative;
+    white-space: nowrap;
+    font-family: var(--font-titles);
+    color: var(--dried-sweets-bg);
+}
+
+@keyframes marquee-right-to-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+@keyframes marquee-left-to-right {
+    0% {
+        transform: translateX(-33.333%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 
 .catalog-grid {
@@ -1034,7 +1215,11 @@
     .letter-l, .letter-b {
         font-size: 350px;
     }
-    
+
+    .dried-sweets {
+        padding: 100px 0 100px 0;
+    }
+
     .section-header {
         flex-direction: row;
         justify-content: space-between;
@@ -1158,6 +1343,10 @@
     .letter-b {
         bottom: -5px;
     }
+
+    .dried-sweets {
+        padding: 100px 0 100px 0;
+    }
 }
 
 /* ==================== DESKTOP STYLES (1024px+) ==================== */
@@ -1173,6 +1362,10 @@
 
     .letter-l, .letter-b {
         font-size: 480px;
+    }
+
+    .dried-sweets {
+        padding: 100px 0 100px 0;
     }
 
     .section-header h2 {
@@ -1406,6 +1599,27 @@
 
     .card-image {
         height: 220px;
+    }
+
+    .dried-sweets {
+        padding: 100px 0 100px 0;
+    }
+
+    .catalog-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .hero-sweet .hero-image {
+        height: 600px;
+    }
+
+    .sweet-categories {
+        height: 600px;
+    }
+
+    .category-image {
+        height: 280px;
     }
 }
 
