@@ -816,6 +816,10 @@
         margin: 0 150px;
     }
 
+    .products-section .collection-display-back {
+        top: 53%;
+    }
+
     .products-container {
         margin: 0 auto;
         padding: 0 8rem;
