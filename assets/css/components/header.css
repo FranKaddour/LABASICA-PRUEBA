@@ -1918,4 +1918,45 @@
     .hamburger-line:not(:last-child) {
         margin-bottom: 9px;
     }
+
+    /* Mobile navigation scaling for 2560px */
+    .mobile-nav {
+        width: min(600px, 85vw);
+    }
+
+    .mobile-nav-header {
+        padding: 2rem 2.5rem;
+    }
+
+    .mobile-nav-close {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .mobile-nav-content {
+        padding: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .mobile-nav-link {
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        gap: 1.5rem;
+    }
+
+    .mobile-nav-icon {
+        font-size: 2rem;
+        width: 40px;
+    }
+
+    .mobile-action-btn {
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        gap: 1rem;
+    }
+
+    .mobile-action-btn i {
+        font-size: 1.8rem;
+    }
 }
